@@ -6,6 +6,7 @@ Lyon Part-Dieu <-> Geneve.
 Site publie : <https://krono-plus-aura.github.io>
 
 Depot attendu : `krono-plus-aura/krono-plus-aura.github.io`.
+Publication automatique : GitHub Actions depuis la branche `main`.
 
 ---
 
