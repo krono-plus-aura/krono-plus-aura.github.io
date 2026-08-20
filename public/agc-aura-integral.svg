@@ -1,0 +1,164 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 160" role="img" aria-labelledby="title description">
+  <title id="title">AGC Auvergne-Rhône-Alpes complet</title>
+  <desc id="description">Rame AGC argentée et bleue visible de bout en bout, avec deux cabines identiques et une porte signalant la seconde classe en vert et la première classe en rouge.</desc>
+  <defs>
+    <linearGradient id="silverBody" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FAFCFD"/>
+      <stop offset="0.48" stop-color="#DDE3E7"/>
+      <stop offset="1" stop-color="#9DA9B0"/>
+    </linearGradient>
+    <linearGradient id="silverSkirt" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#B9C3C9"/>
+      <stop offset="1" stop-color="#6E7C84"/>
+    </linearGradient>
+    <linearGradient id="auraBlue" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3039A7"/>
+      <stop offset="0.55" stop-color="#26369B"/>
+      <stop offset="1" stop-color="#132B82"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#253B48"/>
+      <stop offset="0.52" stop-color="#111F29"/>
+      <stop offset="1" stop-color="#40535E"/>
+    </linearGradient>
+    <linearGradient id="glassShine" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.03"/>
+      <stop offset="0.46" stop-color="#D8F2FF" stop-opacity="0.38"/>
+      <stop offset="0.54" stop-color="#FFFFFF" stop-opacity="0.05"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+
+    <g id="wheel-set">
+      <rect x="-25" y="117" width="50" height="10" rx="4" fill="#26363F"/>
+      <circle cx="-15" cy="128" r="11.5" fill="#17242B"/>
+      <circle cx="-15" cy="128" r="5.7" fill="#8B989F"/>
+      <circle cx="-15" cy="128" r="2.4" fill="#D9E0E4"/>
+      <circle cx="15" cy="128" r="11.5" fill="#17242B"/>
+      <circle cx="15" cy="128" r="5.7" fill="#8B989F"/>
+      <circle cx="15" cy="128" r="2.4" fill="#D9E0E4"/>
+      <path d="M-19 114h38M-7 114v9M7 114v9" stroke="#70818B" stroke-width="2" stroke-linecap="round"/>
+    </g>
+
+    <g id="right-cab">
+      <path d="M0 24h43c31 0 56 14 72 42l14 26c6 12 2 24-10 31l-12 6H0Z" fill="url(#silverBody)" stroke="#81919A" stroke-width="1.4"/>
+      <path d="M0 24h43c29 0 53 14 69 40l9 17H91C78 58 58 44 32 42H0Z" fill="url(#auraBlue)"/>
+      <path d="M45 34c25 2 45 15 59 40l6 11H72c-9-20-19-34-31-43Z" fill="url(#glass)" stroke="#657982" stroke-width="1.4"/>
+      <path d="M52 39c14 3 27 12 37 26l-5 3C75 57 65 50 52 47Z" fill="#E0F5FF" opacity="0.28"/>
+      <path d="M0 24h38c29 0 52 10 69 32l-9 9C82 49 64 42 40 42H0Z" fill="#FFFFFF" opacity="0.95"/>
+      <path d="M71 88c17-2 34-1 52 4l5 11c-22 8-43 10-63 7Z" fill="#F7F9FA"/>
+      <path d="M65 107h62c-1 9-6 15-15 19l-7 3H56Z" fill="url(#silverSkirt)"/>
+      <rect x="8" y="45" width="22" height="28" rx="2.5" fill="url(#glass)" stroke="#8298A3" stroke-width="1.2"/>
+      <path d="M5 80h31M6 85h26" stroke="#6E7F88" stroke-width="1" opacity="0.75"/>
+      <circle cx="98" cy="99" r="7" fill="#DDE4E7" stroke="#596A73" stroke-width="2"/>
+      <circle cx="98" cy="99" r="3.1" fill="#FFF3BE"/>
+      <circle cx="116" cy="98" r="6" fill="#DDE4E7" stroke="#596A73" stroke-width="2"/>
+      <circle cx="116" cy="98" r="2.6" fill="#FFF3BE"/>
+      <circle cx="121" cy="85" r="3" fill="#E84B61"/>
+      <path d="M119 122h17" stroke="#24343D" stroke-width="4" stroke-linecap="round"/>
+      <rect x="128" y="117" width="9" height="10" rx="2" fill="#17242B"/>
+      <circle cx="139" cy="122" r="3" fill="#8D9BA2"/>
+      <path d="M4 29h20M4 33h25" stroke="#1C2F82" stroke-width="2" opacity="0.7"/>
+    </g>
+  </defs>
+
+  <ellipse cx="320" cy="141" rx="302" ry="7.5" fill="#18313E" opacity="0.13"/>
+
+  <g>
+    <use href="#wheel-set" transform="translate(78 0)"/>
+    <use href="#wheel-set" transform="translate(184 0)"/>
+    <use href="#wheel-set" transform="translate(266 0)"/>
+    <use href="#wheel-set" transform="translate(374 0)"/>
+    <use href="#wheel-set" transform="translate(456 0)"/>
+    <use href="#wheel-set" transform="translate(562 0)"/>
+  </g>
+
+  <rect x="116" y="25" width="408" height="102" rx="4" fill="url(#silverBody)" stroke="#8998A1" stroke-width="1.4"/>
+  <path d="M116 25h408v18H116Z" fill="url(#auraBlue)"/>
+  <path d="M116 39h408" stroke="#4E55B9" stroke-width="3"/>
+  <path d="M116 99h408v28H116Z" fill="url(#silverSkirt)"/>
+  <path d="M116 96h408" stroke="#F6F8F9" stroke-width="2" opacity="0.9"/>
+
+  <g fill="#22313A" opacity="0.9">
+    <rect x="126" y="28" width="25" height="5" rx="1.5"/>
+    <rect x="155" y="28" width="25" height="5" rx="1.5"/>
+    <rect x="207" y="28" width="25" height="5" rx="1.5"/>
+    <rect x="260" y="28" width="25" height="5" rx="1.5"/>
+    <rect x="355" y="28" width="25" height="5" rx="1.5"/>
+    <rect x="408" y="28" width="25" height="5" rx="1.5"/>
+    <rect x="460" y="28" width="25" height="5" rx="1.5"/>
+    <rect x="489" y="28" width="25" height="5" rx="1.5"/>
+  </g>
+
+  <g fill="url(#glass)" stroke="#899BA5" stroke-width="1.1">
+    <rect x="119" y="47" width="25" height="29" rx="2"/>
+    <rect x="148" y="47" width="21" height="29" rx="2"/>
+    <rect x="195" y="47" width="28" height="29" rx="2"/>
+    <rect x="227" y="47" width="27" height="29" rx="2"/>
+    <rect x="258" y="47" width="27" height="29" rx="2"/>
+    <rect x="355" y="47" width="27" height="29" rx="2"/>
+    <rect x="386" y="47" width="27" height="29" rx="2"/>
+    <rect x="417" y="47" width="28" height="29" rx="2"/>
+    <rect x="471" y="47" width="21" height="29" rx="2"/>
+    <rect x="496" y="47" width="25" height="29" rx="2"/>
+  </g>
+  <path d="M119 47h402v29H119Z" fill="url(#glassShine)" opacity="0.44"/>
+
+  <g>
+    <rect x="171" y="41" width="23" height="62" rx="3" fill="#EEF1F2" stroke="#A1ADB3" stroke-width="1.2"/>
+    <rect x="176" y="47" width="13" height="28" rx="1.6" fill="url(#glass)"/>
+    <path d="M182.5 80v18" stroke="#7E8D95" stroke-width="1.2"/>
+    <circle cx="188" cy="82" r="1.2" fill="#4E5D65"/>
+
+    <rect x="446" y="41" width="23" height="62" rx="3" fill="#EEF1F2" stroke="#A1ADB3" stroke-width="1.2"/>
+    <rect x="451" y="47" width="13" height="28" rx="1.6" fill="url(#glass)"/>
+    <path d="M457.5 80v18" stroke="#7E8D95" stroke-width="1.2"/>
+    <circle cx="452" cy="82" r="1.2" fill="#4E5D65"/>
+  </g>
+
+  <g>
+    <rect x="300" y="39" width="40" height="66" rx="3" fill="#F5F7F8" stroke="#929FA6" stroke-width="1.3"/>
+    <path d="M302 42h18v60h-18Z" fill="#19A765"/>
+    <path d="M320 42h18v60h-18Z" fill="#D51E3C"/>
+    <rect x="305" y="47" width="12" height="27" rx="1.5" fill="url(#glass)"/>
+    <rect x="323" y="47" width="12" height="27" rx="1.5" fill="url(#glass)"/>
+    <path d="M320 42v60" stroke="#F7FAFB" stroke-width="1.3"/>
+    <text x="311" y="94" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="900" fill="#FFFFFF">2</text>
+    <text x="329" y="94" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="900" fill="#FFFFFF">1</text>
+  </g>
+
+  <g fill="#2F414B" opacity="0.92">
+    <path d="M235 25h8v94h-8Z"/>
+    <path d="M397 25h8v94h-8Z"/>
+  </g>
+  <g stroke="#A0ABB1" stroke-width="1" opacity="0.8">
+    <path d="M121 44v76M194 43v75M286 42v77M354 42v77M470 43v76M519 43v76"/>
+  </g>
+
+  <g font-family="Arial, sans-serif">
+    <circle cx="364" cy="87" r="9" fill="#25A9E0"/>
+    <path d="M359 88l5-6 5 6-5 4Z" fill="#FFFFFF"/>
+    <text x="378" y="88" font-size="9" font-weight="700" fill="#1685B5">La Région</text>
+    <text x="378" y="97" font-size="6.5" font-weight="700" fill="#437F9A">Auvergne-Rhône-Alpes</text>
+  </g>
+
+  <g fill="#32444D">
+    <rect x="132" y="105" width="27" height="9" rx="2"/>
+    <rect x="211" y="105" width="25" height="9" rx="2"/>
+    <rect x="274" y="105" width="24" height="9" rx="2"/>
+    <rect x="342" y="105" width="24" height="9" rx="2"/>
+    <rect x="404" y="105" width="25" height="9" rx="2"/>
+    <rect x="481" y="105" width="27" height="9" rx="2"/>
+  </g>
+
+  <use href="#right-cab" transform="translate(140 0) scale(-1 1)"/>
+  <use href="#right-cab" transform="translate(500 0)"/>
+
+  <g font-family="Arial, sans-serif" font-weight="700">
+    <rect x="66" y="73" width="25" height="13" rx="2" fill="#CF145F"/>
+    <text x="78.5" y="82.5" text-anchor="middle" font-size="7" fill="#FFFFFF">SNCF</text>
+    <rect x="549" y="73" width="25" height="13" rx="2" fill="#CF145F"/>
+    <text x="561.5" y="82.5" text-anchor="middle" font-size="7" fill="#FFFFFF">SNCF</text>
+    <text x="40" y="113" font-size="7" fill="#42525A">27551</text>
+    <text x="578" y="113" font-size="7" fill="#42525A">27551</text>
+  </g>
+</svg>

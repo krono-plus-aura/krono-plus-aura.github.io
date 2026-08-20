@@ -1,0 +1,56 @@
+name: Contrôles et publication
+
+# Se déclenche à chaque modification enregistrée sur la branche principale,
+# ou manuellement depuis l'onglet Actions.
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  controles:
+    name: Contrôles de la base tarifaire
+    runs-on: ubuntu-latest
+    steps:
+      - name: Récupérer le projet
+        uses: actions/checkout@v4
+
+      - name: Installer Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Régénérer le secours hors ligne depuis la base tarifaire
+        run: node scripts/sync-app-from-tariff-base.mjs
+
+      - name: Vérifier la cohérence de la base tarifaire
+        run: node scripts/verify-app-data.mjs
+
+      - name: Lancer les tests du projet
+        run: node --test tests/audit-recommendations.test.mjs
+
+      - name: Préparer le site à publier
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: public
+
+  publication:
+    name: Mise en ligne
+    needs: controles
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploiement.outputs.page_url }}
+    steps:
+      - name: Publier sur GitHub Pages
+        id: deploiement
+        uses: actions/deploy-pages@v4

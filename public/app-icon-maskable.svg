@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Icône adaptative Surclassement KRONO +</title>
+  <desc id="desc">Monogramme K plus blanc sur un fond prune et fuchsia.</desc>
+  <defs>
+    <linearGradient id="background" x1="48" y1="32" x2="472" y2="488" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#4F1A60"/>
+      <stop offset="0.56" stop-color="#8B146F"/>
+      <stop offset="1" stop-color="#E0526E"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" fill="url(#background)"/>
+  <circle cx="424" cy="80" r="112" fill="#FFFFFF" opacity="0.08"/>
+  <circle cx="64" cy="464" r="140" fill="#FFFFFF" opacity="0.055"/>
+  <g fill="#FFFFFF">
+    <path d="M153 139h58v91l80-91h73l-96 108 106 126h-74l-72-88-17 19v69h-58V139Z"/>
+    <path d="M354 204h30v39h39v30h-39v39h-30v-39h-39v-30h39v-39Z"/>
+  </g>
+</svg>

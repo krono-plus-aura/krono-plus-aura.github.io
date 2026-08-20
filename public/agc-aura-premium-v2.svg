@@ -1,0 +1,196 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-14 0 748 180" role="img" aria-labelledby="title description">
+  <title id="title">AGC Auvergne-Rhône-Alpes premium</title>
+  <desc id="description">Illustration latérale détaillée d'une rame AGC argentée et bleue, complète de cabine à cabine. La porte mixte seconde et première classe est placée immédiatement derrière la cabine de tête.</desc>
+  <defs>
+    <linearGradient id="body-metal" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FCFDFE"/>
+      <stop offset="0.2" stop-color="#EEF2F4"/>
+      <stop offset="0.58" stop-color="#C7D0D5"/>
+      <stop offset="1" stop-color="#8C999F"/>
+    </linearGradient>
+    <linearGradient id="lower-metal" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#AEB9BF"/>
+      <stop offset="0.5" stop-color="#849199"/>
+      <stop offset="1" stop-color="#58666E"/>
+    </linearGradient>
+    <linearGradient id="aura-blue" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#4058C3"/>
+      <stop offset="0.42" stop-color="#2D45AF"/>
+      <stop offset="1" stop-color="#142B85"/>
+    </linearGradient>
+    <linearGradient id="cab-blue" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4D69D1"/>
+      <stop offset="0.48" stop-color="#2D49B5"/>
+      <stop offset="1" stop-color="#172D86"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#344B59"/>
+      <stop offset="0.48" stop-color="#101F28"/>
+      <stop offset="1" stop-color="#40545F"/>
+    </linearGradient>
+    <linearGradient id="glass-reflect" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.02"/>
+      <stop offset="0.4" stop-color="#D5F1FF" stop-opacity="0.3"/>
+      <stop offset="0.48" stop-color="#FFFFFF" stop-opacity="0.07"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="light-glow" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#FFE7A0"/>
+    </linearGradient>
+
+    <g id="bogie">
+      <path d="M-31 124h62l-5 14h-52Z" fill="#27353D"/>
+      <path d="M-22 122h44M-11 122v12M11 122v12" stroke="#74848D" stroke-width="2" stroke-linecap="round"/>
+      <circle cx="-19" cy="140" r="12.5" fill="#17242A"/>
+      <circle cx="-19" cy="140" r="6.2" fill="#829098"/>
+      <circle cx="-19" cy="140" r="2.4" fill="#D7DEE2"/>
+      <circle cx="19" cy="140" r="12.5" fill="#17242A"/>
+      <circle cx="19" cy="140" r="6.2" fill="#829098"/>
+      <circle cx="19" cy="140" r="2.4" fill="#D7DEE2"/>
+      <path d="M-25 127l8 7m42-7-8 7" stroke="#9AA7AE" stroke-width="1.4"/>
+    </g>
+
+    <g id="cab-right">
+      <path d="M0 31h42c35 0 64 15 82 44l18 31c8 14 4 27-10 36l-17 9H0Z" fill="url(#body-metal)" stroke="#7E8C94" stroke-width="1.4"/>
+      <path d="M0 31h43c34 0 61 15 79 43l11 19h-35C83 66 60 51 30 49H0Z" fill="url(#cab-blue)"/>
+      <path d="M46 41c27 3 49 18 64 43l8 14H75c-10-24-23-40-38-49Z" fill="url(#glass)" stroke="#667981" stroke-width="1.3"/>
+      <path d="M53 46c15 3 28 12 39 27l-5 4C77 65 67 58 53 54Z" fill="#D9F4FF" opacity="0.26"/>
+      <path d="M78 93h43" stroke="#9BA8AE" stroke-width="1.2" opacity="0.7"/>
+      <path d="M0 31h35c33 0 59 12 78 35l-9 10C86 58 65 49 38 49H0Z" fill="#FFFFFF" opacity="0.97"/>
+      <path d="M79 101c19-2 39 0 58 6l4 11c-24 9-47 11-68 7Z" fill="#F9FBFC"/>
+      <path d="M70 121h70c-2 10-8 18-18 23l-10 7H61Z" fill="url(#lower-metal)"/>
+      <rect x="8" y="53" width="24" height="31" rx="2" fill="url(#glass)" stroke="#778A94" stroke-width="1.2"/>
+      <path d="M7 91h31M7 97h27" stroke="#6E7D85" stroke-width="1" opacity="0.72"/>
+      <path d="M14 105h17v11H14zM34 102h11v15H34z" fill="none" stroke="#77858D" stroke-width="1"/>
+      <circle cx="105" cy="112" r="7.5" fill="#DDE5E9" stroke="#52636C" stroke-width="2"/>
+      <circle cx="105" cy="112" r="3.4" fill="url(#light-glow)"/>
+      <circle cx="127" cy="110" r="6.5" fill="#DDE5E9" stroke="#52636C" stroke-width="2"/>
+      <circle cx="127" cy="110" r="2.9" fill="url(#light-glow)"/>
+      <circle cx="134" cy="97" r="3.2" fill="#E44E62"/>
+      <path d="M119 143h24" stroke="#1D2C34" stroke-width="4.5" stroke-linecap="round"/>
+      <rect x="136" y="137" width="12" height="12" rx="2" fill="#17242A"/>
+      <circle cx="151" cy="143" r="3.2" fill="#8A999F"/>
+      <path d="M94 60l4 27M102 58l3 29" stroke="#899AA3" stroke-width="1.2" opacity="0.8"/>
+      <rect x="5" y="39" width="26" height="4" rx="1.5" fill="#172A78" opacity="0.7"/>
+    </g>
+  </defs>
+
+  <ellipse cx="360" cy="158" rx="336" ry="8" fill="#18313E" opacity="0.13"/>
+
+  <g>
+    <use href="#bogie" transform="translate(76 0)"/>
+    <use href="#bogie" transform="translate(188 0)"/>
+    <use href="#bogie" transform="translate(278 0)"/>
+    <use href="#bogie" transform="translate(442 0)"/>
+    <use href="#bogie" transform="translate(532 0)"/>
+    <use href="#bogie" transform="translate(644 0)"/>
+  </g>
+
+  <path d="M116 33h488v102H116Z" fill="url(#body-metal)" stroke="#84929A" stroke-width="1.3"/>
+  <path d="M116 31h488v20H116Z" fill="url(#aura-blue)"/>
+  <path d="M116 47h488" stroke="#5369C4" stroke-width="2.6"/>
+  <path d="M116 103h488v32H116Z" fill="url(#lower-metal)"/>
+  <path d="M116 100h488" stroke="#F8FAFB" stroke-width="2" opacity="0.86"/>
+
+  <g fill="#17242D" opacity="0.8">
+    <rect x="121" y="35" width="24" height="4" rx="1.2"/><rect x="149" y="35" width="24" height="4" rx="1.2"/>
+    <rect x="177" y="35" width="24" height="4" rx="1.2"/><rect x="205" y="35" width="24" height="4" rx="1.2"/>
+    <rect x="256" y="35" width="24" height="4" rx="1.2"/><rect x="284" y="35" width="24" height="4" rx="1.2"/>
+    <rect x="312" y="35" width="24" height="4" rx="1.2"/><rect x="340" y="35" width="24" height="4" rx="1.2"/>
+    <rect x="368" y="35" width="24" height="4" rx="1.2"/><rect x="396" y="35" width="24" height="4" rx="1.2"/>
+    <rect x="471" y="35" width="24" height="4" rx="1.2"/><rect x="499" y="35" width="24" height="4" rx="1.2"/>
+    <rect x="527" y="35" width="24" height="4" rx="1.2"/><rect x="555" y="35" width="24" height="4" rx="1.2"/>
+  </g>
+  <g fill="#B7C2C8" stroke="#88969E" stroke-width="0.8">
+    <rect x="267" y="25" width="42" height="8" rx="2"/>
+    <rect x="378" y="25" width="42" height="8" rx="2"/>
+    <rect x="326" y="27" width="28" height="6" rx="2"/>
+  </g>
+
+  <path d="M119 53h482v38H119Z" fill="#53616A" opacity="0.16"/>
+  <g fill="url(#glass)" stroke="#8798A1" stroke-width="1.1">
+    <rect x="120" y="55" width="25" height="34" rx="2"/>
+    <rect x="149" y="55" width="22" height="34" rx="2"/>
+    <rect x="201" y="55" width="28" height="34" rx="2"/>
+    <rect x="255" y="55" width="28" height="34" rx="2"/>
+    <rect x="287" y="55" width="28" height="34" rx="2"/>
+    <rect x="319" y="55" width="28" height="34" rx="2"/>
+    <rect x="351" y="55" width="28" height="34" rx="2"/>
+    <rect x="383" y="55" width="28" height="34" rx="2"/>
+    <rect x="415" y="55" width="28" height="34" rx="2"/>
+    <rect x="479" y="55" width="24" height="34" rx="2"/>
+    <rect x="507" y="55" width="22" height="34" rx="2"/>
+    <rect x="570" y="55" width="25" height="34" rx="2"/>
+  </g>
+  <path d="M120 55h475v34H120Z" fill="url(#glass-reflect)" opacity="0.5"/>
+
+  <g>
+    <rect x="172" y="49" width="27" height="69" rx="3" fill="#EEF1F3" stroke="#9AA6AC" stroke-width="1.2"/>
+    <rect x="178" y="56" width="15" height="31" rx="1.6" fill="url(#glass)"/>
+    <path d="M185.5 92v20" stroke="#7B8990" stroke-width="1.2"/>
+    <rect x="172" y="57" width="5" height="48" rx="1" fill="#1CB394"/>
+    <text x="174.5" y="75" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" font-weight="900" fill="#FFFFFF">2</text>
+  </g>
+
+  <g>
+    <rect x="443" y="49" width="28" height="69" rx="3" fill="#EEF1F3" stroke="#9AA6AC" stroke-width="1.2"/>
+    <rect x="449" y="56" width="16" height="31" rx="1.6" fill="url(#glass)"/>
+    <path d="M457 92v20" stroke="#7B8990" stroke-width="1.2"/>
+    <rect x="466" y="57" width="5" height="48" rx="1" fill="#1CB394"/>
+    <text x="468.5" y="75" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" font-weight="900" fill="#FFFFFF">2</text>
+  </g>
+
+  <g>
+    <rect x="530" y="48" width="38" height="72" rx="3" fill="#F4F6F7" stroke="#929FA6" stroke-width="1.3"/>
+    <rect x="536" y="55" width="12" height="33" rx="1.6" fill="url(#glass)"/>
+    <rect x="550" y="55" width="12" height="33" rx="1.6" fill="url(#glass)"/>
+    <path d="M549 49v69" stroke="#8C989E" stroke-width="1"/>
+    <rect x="530" y="55" width="6" height="53" rx="1" fill="#18A96B"/>
+    <rect x="562" y="55" width="6" height="53" rx="1" fill="#D51D3F"/>
+    <text x="533" y="76" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" font-weight="900" fill="#FFFFFF">2</text>
+    <text x="565" y="76" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" font-weight="900" fill="#FFFFFF">1</text>
+    <circle cx="544" cy="94" r="1.3" fill="#5E6D74"/>
+    <circle cx="554" cy="94" r="1.3" fill="#5E6D74"/>
+  </g>
+
+  <g fill="#1D2C34">
+    <path d="M237 31h13v101h-13Z"/>
+    <path d="M470 31h13v101h-13Z"/>
+  </g>
+  <g stroke="#77878F" stroke-width="1.2" opacity="0.75">
+    <path d="M240 35v93M243 35v93M246 35v93"/>
+    <path d="M473 35v93M476 35v93M479 35v93"/>
+  </g>
+
+  <g stroke="#9EA9AF" stroke-width="0.9" opacity="0.8">
+    <path d="M119 49v80M200 49v80M253 49v80M316 49v80M380 49v80M414 49v80M505 49v80M572 49v80M599 49v80"/>
+  </g>
+
+  <g font-family="Arial, sans-serif">
+    <circle cx="392" cy="101" r="9" fill="#25A9E0"/>
+    <path d="M387 102l5-7 5 7-5 4Z" fill="#FFFFFF"/>
+    <text x="405" y="101" font-size="9" font-weight="700" fill="#1796C7">La Région</text>
+    <text x="405" y="110" font-size="6.4" font-weight="700" fill="#4A879F">Auvergne-Rhône-Alpes</text>
+  </g>
+
+  <g fill="#31424B">
+    <rect x="129" y="109" width="27" height="10" rx="2"/><rect x="204" y="108" width="27" height="11" rx="2"/>
+    <rect x="263" y="108" width="28" height="11" rx="2"/><rect x="301" y="108" width="24" height="11" rx="2"/>
+    <rect x="338" y="108" width="26" height="11" rx="2"/><rect x="376" y="108" width="27" height="11" rx="2"/>
+    <rect x="414" y="108" width="27" height="11" rx="2"/><rect x="486" y="108" width="25" height="11" rx="2"/>
+    <path d="M158 122h18l-3 8h-12ZM491 122h19l-3 8h-13Z"/>
+  </g>
+
+  <use href="#cab-right" transform="translate(140 0) scale(-1 1)"/>
+  <use href="#cab-right" transform="translate(580 0)"/>
+
+  <g font-family="Arial, sans-serif" font-weight="700">
+    <rect x="66" y="83" width="27" height="14" rx="2" fill="#CF145F"/>
+    <text x="79.5" y="93" text-anchor="middle" font-size="7.2" fill="#FFFFFF">SNCF</text>
+    <rect x="627" y="83" width="27" height="14" rx="2" fill="#CF145F"/>
+    <text x="640.5" y="93" text-anchor="middle" font-size="7.2" fill="#FFFFFF">SNCF</text>
+    <text x="39" y="126" font-size="7" fill="#384A53">27692</text>
+    <text x="659" y="126" font-size="7" fill="#384A53">27692</text>
+  </g>
+</svg>

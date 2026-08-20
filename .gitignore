@@ -1,0 +1,9 @@
+# Systeme
+.DS_Store
+
+# Dependances (le projet n'en a aucune, garde par securite)
+/node_modules
+
+# Artefacts locaux
+/dist/
+/outputs/

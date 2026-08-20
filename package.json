@@ -1,0 +1,16 @@
+{
+  "name": "surclassement-krono-plus",
+  "version": "1.0.0",
+  "private": true,
+  "displayName": "Surclassement KRONO +",
+  "description": "Application interne de calcul du surclassement TER Lyon Part-Dieu <-> Geneve.",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "sync": "node scripts/sync-app-from-tariff-base.mjs",
+    "verify": "node scripts/verify-app-data.mjs",
+    "test": "node scripts/sync-app-from-tariff-base.mjs && node scripts/verify-app-data.mjs && node --test tests/audit-recommendations.test.mjs"
+  }
+}

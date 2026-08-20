@@ -1,0 +1,1578 @@
+{
+  "meta": {
+    "year": 2026,
+    "label": "Tarifs TER 2026",
+    "version": "2026-08-20",
+    "currency": "EUR",
+    "unit": "centimes",
+    "directionMode": "symmetric",
+    "directionLabel": "Les mêmes montants s’appliquent dans les deux sens.",
+    "sources": [
+      "TER Auvergne-Rhône-Alpes",
+      "Trainline — cartes Familles Nombreuses"
+    ]
+  },
+  "stations": [
+    {
+      "id": "lyon-part-dieu",
+      "name": "Lyon Part-Dieu"
+    },
+    {
+      "id": "meximieux-perouges",
+      "name": "Meximieux – Pérouges"
+    },
+    {
+      "id": "amberieu-en-bugey",
+      "name": "Ambérieu-en-Bugey"
+    },
+    {
+      "id": "tenay-hauteville",
+      "name": "Tenay-Hauteville"
+    },
+    {
+      "id": "virieu-le-grand-belley",
+      "name": "Virieu-le-Grand – Belley"
+    },
+    {
+      "id": "culoz",
+      "name": "Culoz"
+    },
+    {
+      "id": "seyssel-corbonod",
+      "name": "Seyssel – Corbonod"
+    },
+    {
+      "id": "bellegarde-sur-valserine",
+      "name": "Bellegarde-sur-Valserine"
+    },
+    {
+      "id": "geneve",
+      "name": "Genève"
+    }
+  ],
+  "discounts": [
+    {
+      "id": "none",
+      "label": "Aucune — Plein tarif",
+      "status": "Aucune réduction sélectionnée : le plein tarif est bien appliqué."
+    },
+    {
+      "id": "illico-liberte-weekday",
+      "label": "illico LIBERTÉ — Semaine (-25 %)",
+      "status": "La réduction illico LIBERTÉ Semaine est bien appliquée."
+    },
+    {
+      "id": "illico-liberte-weekend",
+      "label": "illico LIBERTÉ — Week-end / jour férié (-50 %)",
+      "status": "La réduction illico LIBERTÉ Week-end / jour férié est bien appliquée."
+    },
+    {
+      "id": "illico-jeunes",
+      "label": "illico LIBERTÉ JEUNES (-50 %)",
+      "status": "La réduction illico LIBERTÉ JEUNES est bien appliquée."
+    },
+    {
+      "id": "liberte-nationale",
+      "label": "Carte Liberté SNCF (-25 %)",
+      "status": "La réduction Carte Liberté SNCF est bien appliquée."
+    },
+    {
+      "id": "famille-nombreuse-30",
+      "label": "Carte Familles Nombreuses (-30 %)",
+      "status": "La réduction Carte Familles Nombreuses 30 % est bien appliquée."
+    },
+    {
+      "id": "famille-nombreuse-40",
+      "label": "Carte Familles Nombreuses (-40 %)",
+      "status": "La réduction Carte Familles Nombreuses 40 % est bien appliquée."
+    },
+    {
+      "id": "famille-nombreuse-50",
+      "label": "Carte Familles Nombreuses (-50 %)",
+      "status": "La réduction Carte Familles Nombreuses 50 % est bien appliquée."
+    },
+    {
+      "id": "famille-nombreuse-75",
+      "label": "Carte Familles Nombreuses (-75 %)",
+      "status": "La réduction Carte Familles Nombreuses 75 % est bien appliquée."
+    }
+  ],
+  "pairs": {
+    "lyon-part-dieu|amberieu-en-bugey": {
+      "km": 47,
+      "fares": {
+        "none": [
+          1240,
+          1880
+        ],
+        "illico-liberte-weekday": [
+          930,
+          1410
+        ],
+        "illico-liberte-weekend": [
+          620,
+          940
+        ],
+        "illico-jeunes": [
+          620,
+          940
+        ],
+        "liberte-nationale": [
+          930,
+          1410
+        ],
+        "famille-nombreuse-30": [
+          710,
+          1210
+        ],
+        "famille-nombreuse-40": [
+          610,
+          1110
+        ],
+        "famille-nombreuse-50": [
+          510,
+          1010
+        ],
+        "famille-nombreuse-75": [
+          260,
+          760
+        ]
+      }
+    },
+    "lyon-part-dieu|tenay-hauteville": {
+      "km": 65,
+      "fares": {
+        "none": [
+          1630,
+          2480
+        ],
+        "illico-liberte-weekday": [
+          1230,
+          1860
+        ],
+        "illico-liberte-weekend": [
+          820,
+          1240
+        ],
+        "illico-jeunes": [
+          820,
+          1240
+        ],
+        "liberte-nationale": [
+          1230,
+          1860
+        ],
+        "famille-nombreuse-30": [
+          930,
+          1590
+        ],
+        "famille-nombreuse-40": [
+          800,
+          1460
+        ],
+        "famille-nombreuse-50": [
+          660,
+          1320
+        ],
+        "famille-nombreuse-75": [
+          330,
+          990
+        ]
+      }
+    },
+    "lyon-part-dieu|virieu-le-grand-belley": {
+      "km": 86,
+      "fares": {
+        "none": [
+          2020,
+          3070
+        ],
+        "illico-liberte-weekday": [
+          1520,
+          2310
+        ],
+        "illico-liberte-weekend": [
+          1010,
+          1540
+        ],
+        "illico-jeunes": [
+          1010,
+          1540
+        ],
+        "liberte-nationale": [
+          1520,
+          2310
+        ],
+        "famille-nombreuse-30": [
+          1150,
+          1970
+        ],
+        "famille-nombreuse-40": [
+          980,
+          1800
+        ],
+        "famille-nombreuse-50": [
+          820,
+          1640
+        ],
+        "famille-nombreuse-75": [
+          410,
+          1230
+        ]
+      }
+    },
+    "lyon-part-dieu|culoz": {
+      "km": 97,
+      "fares": {
+        "none": [
+          2240,
+          3410
+        ],
+        "illico-liberte-weekday": [
+          1680,
+          2560
+        ],
+        "illico-liberte-weekend": [
+          1120,
+          1710
+        ],
+        "illico-jeunes": [
+          1120,
+          1710
+        ],
+        "liberte-nationale": [
+          1680,
+          2560
+        ],
+        "famille-nombreuse-30": [
+          1270,
+          2180
+        ],
+        "famille-nombreuse-40": [
+          1090,
+          2000
+        ],
+        "famille-nombreuse-50": [
+          910,
+          1820
+        ],
+        "famille-nombreuse-75": [
+          460,
+          1370
+        ]
+      }
+    },
+    "lyon-part-dieu|seyssel-corbonod": {
+      "km": 112,
+      "fares": {
+        "none": [
+          2580,
+          3910
+        ],
+        "illico-liberte-weekday": [
+          1940,
+          2940
+        ],
+        "illico-liberte-weekend": [
+          1290,
+          1960
+        ],
+        "illico-jeunes": [
+          1290,
+          1960
+        ],
+        "liberte-nationale": [
+          1940,
+          2940
+        ],
+        "famille-nombreuse-30": [
+          1460,
+          2500
+        ],
+        "famille-nombreuse-40": [
+          1250,
+          2290
+        ],
+        "famille-nombreuse-50": [
+          1040,
+          2080
+        ],
+        "famille-nombreuse-75": [
+          520,
+          1560
+        ]
+      }
+    },
+    "lyon-part-dieu|bellegarde-sur-valserine": {
+      "km": 131,
+      "fares": {
+        "none": [
+          2890,
+          4400
+        ],
+        "illico-liberte-weekday": [
+          2170,
+          3300
+        ],
+        "illico-liberte-weekend": [
+          1450,
+          2200
+        ],
+        "illico-jeunes": [
+          1450,
+          2200
+        ],
+        "liberte-nationale": [
+          2170,
+          3300
+        ],
+        "famille-nombreuse-30": [
+          1640,
+          2800
+        ],
+        "famille-nombreuse-40": [
+          1410,
+          2570
+        ],
+        "famille-nombreuse-50": [
+          1170,
+          2330
+        ],
+        "famille-nombreuse-75": [
+          590,
+          1750
+        ]
+      }
+    },
+    "lyon-part-dieu|geneve": {
+      "km": 173,
+      "fares": {
+        "none": [
+          3510,
+          5330
+        ],
+        "illico-liberte-weekday": [
+          2640,
+          4000
+        ],
+        "illico-liberte-weekend": [
+          1760,
+          2670
+        ],
+        "illico-jeunes": [
+          1760,
+          2670
+        ],
+        "liberte-nationale": [
+          2640,
+          4000
+        ],
+        "famille-nombreuse-30": [
+          1980,
+          3380
+        ],
+        "famille-nombreuse-40": [
+          1700,
+          3100
+        ],
+        "famille-nombreuse-50": [
+          1410,
+          2810
+        ],
+        "famille-nombreuse-75": [
+          710,
+          2110
+        ]
+      }
+    },
+    "amberieu-en-bugey|tenay-hauteville": {
+      "km": 18,
+      "fares": {
+        "none": [
+          540,
+          820
+        ],
+        "illico-liberte-weekday": [
+          410,
+          620
+        ],
+        "illico-liberte-weekend": [
+          270,
+          410
+        ],
+        "illico-jeunes": [
+          270,
+          410
+        ],
+        "liberte-nationale": [
+          410,
+          620
+        ],
+        "famille-nombreuse-30": [
+          310,
+          530
+        ],
+        "famille-nombreuse-40": [
+          270,
+          490
+        ],
+        "famille-nombreuse-50": [
+          220,
+          440
+        ],
+        "famille-nombreuse-75": [
+          120,
+          330
+        ]
+      }
+    },
+    "amberieu-en-bugey|virieu-le-grand-belley": {
+      "km": 39,
+      "fares": {
+        "none": [
+          1040,
+          1580
+        ],
+        "illico-liberte-weekday": [
+          780,
+          1190
+        ],
+        "illico-liberte-weekend": [
+          520,
+          790
+        ],
+        "illico-jeunes": [
+          520,
+          790
+        ],
+        "liberte-nationale": [
+          780,
+          1190
+        ],
+        "famille-nombreuse-30": [
+          600,
+          1020
+        ],
+        "famille-nombreuse-40": [
+          510,
+          930
+        ],
+        "famille-nombreuse-50": [
+          430,
+          850
+        ],
+        "famille-nombreuse-75": [
+          220,
+          640
+        ]
+      }
+    },
+    "amberieu-en-bugey|culoz": {
+      "km": 50,
+      "fares": {
+        "none": [
+          1280,
+          1940
+        ],
+        "illico-liberte-weekday": [
+          960,
+          1460
+        ],
+        "illico-liberte-weekend": [
+          640,
+          970
+        ],
+        "illico-jeunes": [
+          640,
+          970
+        ],
+        "liberte-nationale": [
+          960,
+          1460
+        ],
+        "famille-nombreuse-30": [
+          730,
+          1250
+        ],
+        "famille-nombreuse-40": [
+          630,
+          1150
+        ],
+        "famille-nombreuse-50": [
+          520,
+          1040
+        ],
+        "famille-nombreuse-75": [
+          260,
+          780
+        ]
+      }
+    },
+    "amberieu-en-bugey|seyssel-corbonod": {
+      "km": 65,
+      "fares": {
+        "none": [
+          1600,
+          2420
+        ],
+        "illico-liberte-weekday": [
+          1200,
+          1820
+        ],
+        "illico-liberte-weekend": [
+          800,
+          1210
+        ],
+        "illico-jeunes": [
+          800,
+          1210
+        ],
+        "liberte-nationale": [
+          1200,
+          1820
+        ],
+        "famille-nombreuse-30": [
+          910,
+          1550
+        ],
+        "famille-nombreuse-40": [
+          780,
+          1420
+        ],
+        "famille-nombreuse-50": [
+          650,
+          1290
+        ],
+        "famille-nombreuse-75": [
+          330,
+          970
+        ]
+      }
+    },
+    "amberieu-en-bugey|bellegarde-sur-valserine": {
+      "km": 84,
+      "fares": {
+        "none": [
+          1930,
+          2930
+        ],
+        "illico-liberte-weekday": [
+          1450,
+          2200
+        ],
+        "illico-liberte-weekend": [
+          970,
+          1470
+        ],
+        "illico-jeunes": [
+          970,
+          1470
+        ],
+        "liberte-nationale": [
+          1450,
+          2200
+        ],
+        "famille-nombreuse-30": [
+          1100,
+          1880
+        ],
+        "famille-nombreuse-40": [
+          940,
+          1720
+        ],
+        "famille-nombreuse-50": [
+          780,
+          1560
+        ],
+        "famille-nombreuse-75": [
+          390,
+          1170
+        ]
+      }
+    },
+    "amberieu-en-bugey|geneve": {
+      "km": 126,
+      "fares": {
+        "none": [
+          2590,
+          3940
+        ],
+        "illico-liberte-weekday": [
+          1950,
+          2960
+        ],
+        "illico-liberte-weekend": [
+          1300,
+          1970
+        ],
+        "illico-jeunes": [
+          1300,
+          1970
+        ],
+        "liberte-nationale": [
+          1950,
+          2960
+        ],
+        "famille-nombreuse-30": [
+          1470,
+          2520
+        ],
+        "famille-nombreuse-40": [
+          1260,
+          2310
+        ],
+        "famille-nombreuse-50": [
+          1050,
+          2100
+        ],
+        "famille-nombreuse-75": [
+          530,
+          1580
+        ]
+      }
+    },
+    "tenay-hauteville|virieu-le-grand-belley": {
+      "km": 21,
+      "fares": {
+        "none": [
+          590,
+          900
+        ],
+        "illico-liberte-weekday": [
+          450,
+          680
+        ],
+        "illico-liberte-weekend": [
+          300,
+          450
+        ],
+        "illico-jeunes": [
+          300,
+          450
+        ],
+        "liberte-nationale": [
+          450,
+          680
+        ],
+        "famille-nombreuse-30": [
+          340,
+          580
+        ],
+        "famille-nombreuse-40": [
+          290,
+          530
+        ],
+        "famille-nombreuse-50": [
+          240,
+          480
+        ],
+        "famille-nombreuse-75": [
+          120,
+          360
+        ]
+      }
+    },
+    "tenay-hauteville|culoz": {
+      "km": 32,
+      "fares": {
+        "none": [
+          900,
+          1370
+        ],
+        "illico-liberte-weekday": [
+          680,
+          1030
+        ],
+        "illico-liberte-weekend": [
+          450,
+          690
+        ],
+        "illico-jeunes": [
+          450,
+          690
+        ],
+        "liberte-nationale": [
+          680,
+          1030
+        ],
+        "famille-nombreuse-30": [
+          520,
+          890
+        ],
+        "famille-nombreuse-40": [
+          450,
+          820
+        ],
+        "famille-nombreuse-50": [
+          370,
+          740
+        ],
+        "famille-nombreuse-75": [
+          190,
+          560
+        ]
+      }
+    },
+    "tenay-hauteville|seyssel-corbonod": {
+      "km": 47,
+      "fares": {
+        "none": [
+          1200,
+          1820
+        ],
+        "illico-liberte-weekday": [
+          900,
+          1370
+        ],
+        "illico-liberte-weekend": [
+          600,
+          910
+        ],
+        "illico-jeunes": [
+          600,
+          910
+        ],
+        "liberte-nationale": [
+          900,
+          1370
+        ],
+        "famille-nombreuse-30": [
+          690,
+          1170
+        ],
+        "famille-nombreuse-40": [
+          590,
+          1070
+        ],
+        "famille-nombreuse-50": [
+          490,
+          970
+        ],
+        "famille-nombreuse-75": [
+          250,
+          730
+        ]
+      }
+    },
+    "tenay-hauteville|bellegarde-sur-valserine": {
+      "km": 66,
+      "fares": {
+        "none": [
+          1580,
+          2400
+        ],
+        "illico-liberte-weekday": [
+          1190,
+          1800
+        ],
+        "illico-liberte-weekend": [
+          790,
+          1200
+        ],
+        "illico-jeunes": [
+          790,
+          1200
+        ],
+        "liberte-nationale": [
+          1190,
+          1800
+        ],
+        "famille-nombreuse-30": [
+          900,
+          1530
+        ],
+        "famille-nombreuse-40": [
+          770,
+          1400
+        ],
+        "famille-nombreuse-50": [
+          640,
+          1270
+        ],
+        "famille-nombreuse-75": [
+          320,
+          950
+        ]
+      }
+    },
+    "tenay-hauteville|geneve": {
+      "km": 108,
+      "fares": {
+        "none": [
+          2190,
+          3320
+        ],
+        "illico-liberte-weekday": [
+          1650,
+          2490
+        ],
+        "illico-liberte-weekend": [
+          1100,
+          1660
+        ],
+        "illico-jeunes": [
+          1100,
+          1660
+        ],
+        "liberte-nationale": [
+          1650,
+          2490
+        ],
+        "famille-nombreuse-30": [
+          1240,
+          2120
+        ],
+        "famille-nombreuse-40": [
+          1070,
+          1950
+        ],
+        "famille-nombreuse-50": [
+          890,
+          1770
+        ],
+        "famille-nombreuse-75": [
+          450,
+          1330
+        ]
+      }
+    },
+    "virieu-le-grand-belley|culoz": {
+      "km": 11,
+      "fares": {
+        "none": [
+          380,
+          580
+        ],
+        "illico-liberte-weekday": [
+          290,
+          440
+        ],
+        "illico-liberte-weekend": [
+          190,
+          290
+        ],
+        "illico-jeunes": [
+          190,
+          290
+        ],
+        "liberte-nationale": [
+          290,
+          440
+        ],
+        "famille-nombreuse-30": [
+          230,
+          380
+        ],
+        "famille-nombreuse-40": [
+          200,
+          350
+        ],
+        "famille-nombreuse-50": [
+          160,
+          310
+        ],
+        "famille-nombreuse-75": [
+          120,
+          230
+        ]
+      }
+    },
+    "virieu-le-grand-belley|seyssel-corbonod": {
+      "km": 26,
+      "fares": {
+        "none": [
+          750,
+          1140
+        ],
+        "illico-liberte-weekday": [
+          570,
+          860
+        ],
+        "illico-liberte-weekend": [
+          380,
+          570
+        ],
+        "illico-jeunes": [
+          380,
+          570
+        ],
+        "liberte-nationale": [
+          570,
+          860
+        ],
+        "famille-nombreuse-30": [
+          430,
+          740
+        ],
+        "famille-nombreuse-40": [
+          370,
+          680
+        ],
+        "famille-nombreuse-50": [
+          310,
+          620
+        ],
+        "famille-nombreuse-75": [
+          160,
+          470
+        ]
+      }
+    },
+    "virieu-le-grand-belley|bellegarde-sur-valserine": {
+      "km": 45,
+      "fares": {
+        "none": [
+          1140,
+          1730
+        ],
+        "illico-liberte-weekday": [
+          860,
+          1300
+        ],
+        "illico-liberte-weekend": [
+          570,
+          870
+        ],
+        "illico-jeunes": [
+          570,
+          870
+        ],
+        "liberte-nationale": [
+          860,
+          1300
+        ],
+        "famille-nombreuse-30": [
+          660,
+          1120
+        ],
+        "famille-nombreuse-40": [
+          560,
+          1020
+        ],
+        "famille-nombreuse-50": [
+          470,
+          930
+        ],
+        "famille-nombreuse-75": [
+          240,
+          700
+        ]
+      }
+    },
+    "virieu-le-grand-belley|geneve": {
+      "km": 87,
+      "fares": {
+        "none": [
+          1800,
+          2730
+        ],
+        "illico-liberte-weekday": [
+          1350,
+          2050
+        ],
+        "illico-liberte-weekend": [
+          900,
+          1370
+        ],
+        "illico-jeunes": [
+          900,
+          1370
+        ],
+        "liberte-nationale": [
+          1350,
+          2050
+        ],
+        "famille-nombreuse-30": [
+          1020,
+          1750
+        ],
+        "famille-nombreuse-40": [
+          870,
+          1600
+        ],
+        "famille-nombreuse-50": [
+          730,
+          1460
+        ],
+        "famille-nombreuse-75": [
+          370,
+          1100
+        ]
+      }
+    },
+    "culoz|seyssel-corbonod": {
+      "km": 15,
+      "fares": {
+        "none": [
+          460,
+          690
+        ],
+        "illico-liberte-weekday": [
+          350,
+          520
+        ],
+        "illico-liberte-weekend": [
+          230,
+          350
+        ],
+        "illico-jeunes": [
+          230,
+          350
+        ],
+        "liberte-nationale": [
+          350,
+          520
+        ],
+        "famille-nombreuse-30": [
+          260,
+          450
+        ],
+        "famille-nombreuse-40": [
+          230,
+          420
+        ],
+        "famille-nombreuse-50": [
+          190,
+          380
+        ],
+        "famille-nombreuse-75": [
+          120,
+          290
+        ]
+      }
+    },
+    "culoz|bellegarde-sur-valserine": {
+      "km": 34,
+      "fares": {
+        "none": [
+          900,
+          1370
+        ],
+        "illico-liberte-weekday": [
+          680,
+          1030
+        ],
+        "illico-liberte-weekend": [
+          450,
+          690
+        ],
+        "illico-jeunes": [
+          450,
+          690
+        ],
+        "liberte-nationale": [
+          680,
+          1030
+        ],
+        "famille-nombreuse-30": [
+          520,
+          890
+        ],
+        "famille-nombreuse-40": [
+          450,
+          820
+        ],
+        "famille-nombreuse-50": [
+          370,
+          740
+        ],
+        "famille-nombreuse-75": [
+          190,
+          560
+        ]
+      }
+    },
+    "culoz|geneve": {
+      "km": 76,
+      "fares": {
+        "none": [
+          1580,
+          2400
+        ],
+        "illico-liberte-weekday": [
+          1190,
+          1800
+        ],
+        "illico-liberte-weekend": [
+          790,
+          1200
+        ],
+        "illico-jeunes": [
+          790,
+          1200
+        ],
+        "liberte-nationale": [
+          1190,
+          1800
+        ],
+        "famille-nombreuse-30": [
+          900,
+          1530
+        ],
+        "famille-nombreuse-40": [
+          770,
+          1400
+        ],
+        "famille-nombreuse-50": [
+          640,
+          1270
+        ],
+        "famille-nombreuse-75": [
+          320,
+          950
+        ]
+      }
+    },
+    "seyssel-corbonod|bellegarde-sur-valserine": {
+      "km": 19,
+      "fares": {
+        "none": [
+          510,
+          780
+        ],
+        "illico-liberte-weekday": [
+          390,
+          590
+        ],
+        "illico-liberte-weekend": [
+          260,
+          390
+        ],
+        "illico-jeunes": [
+          260,
+          390
+        ],
+        "liberte-nationale": [
+          390,
+          590
+        ],
+        "famille-nombreuse-30": [
+          300,
+          510
+        ],
+        "famille-nombreuse-40": [
+          260,
+          470
+        ],
+        "famille-nombreuse-50": [
+          210,
+          420
+        ],
+        "famille-nombreuse-75": [
+          120,
+          320
+        ]
+      }
+    },
+    "seyssel-corbonod|geneve": {
+      "km": 61,
+      "fares": {
+        "none": [
+          1260,
+          1910
+        ],
+        "illico-liberte-weekday": [
+          950,
+          1440
+        ],
+        "illico-liberte-weekend": [
+          630,
+          960
+        ],
+        "illico-jeunes": [
+          630,
+          960
+        ],
+        "liberte-nationale": [
+          950,
+          1440
+        ],
+        "famille-nombreuse-30": [
+          730,
+          1240
+        ],
+        "famille-nombreuse-40": [
+          620,
+          1130
+        ],
+        "famille-nombreuse-50": [
+          520,
+          1030
+        ],
+        "famille-nombreuse-75": [
+          260,
+          770
+        ]
+      }
+    },
+    "bellegarde-sur-valserine|geneve": {
+      "km": 42,
+      "fares": {
+        "none": [
+          900,
+          1370
+        ],
+        "illico-liberte-weekday": [
+          680,
+          1030
+        ],
+        "illico-liberte-weekend": [
+          450,
+          690
+        ],
+        "illico-jeunes": [
+          450,
+          690
+        ],
+        "liberte-nationale": [
+          680,
+          1030
+        ],
+        "famille-nombreuse-30": [
+          520,
+          890
+        ],
+        "famille-nombreuse-40": [
+          450,
+          820
+        ],
+        "famille-nombreuse-50": [
+          370,
+          740
+        ],
+        "famille-nombreuse-75": [
+          190,
+          560
+        ]
+      }
+    },
+    "lyon-part-dieu|meximieux-perouges": {
+      "km": 33,
+      "fares": {
+        "none": [
+          960,
+          1460
+        ],
+        "illico-liberte-weekday": [
+          720,
+          1100
+        ],
+        "illico-liberte-weekend": [
+          480,
+          730
+        ],
+        "illico-jeunes": [
+          480,
+          730
+        ],
+        "liberte-nationale": [
+          720,
+          1100
+        ],
+        "famille-nombreuse-30": [
+          560,
+          950
+        ],
+        "famille-nombreuse-40": [
+          480,
+          870
+        ],
+        "famille-nombreuse-50": [
+          400,
+          790
+        ],
+        "famille-nombreuse-75": [
+          200,
+          590
+        ]
+      }
+    },
+    "meximieux-perouges|amberieu-en-bugey": {
+      "km": 14,
+      "fares": {
+        "none": [
+          430,
+          660
+        ],
+        "illico-liberte-weekday": [
+          330,
+          500
+        ],
+        "illico-liberte-weekend": [
+          220,
+          330
+        ],
+        "illico-jeunes": [
+          220,
+          330
+        ],
+        "liberte-nationale": [
+          330,
+          500
+        ],
+        "famille-nombreuse-30": [
+          250,
+          430
+        ],
+        "famille-nombreuse-40": [
+          210,
+          390
+        ],
+        "famille-nombreuse-50": [
+          180,
+          360
+        ],
+        "famille-nombreuse-75": [
+          120,
+          270
+        ]
+      }
+    },
+    "meximieux-perouges|tenay-hauteville": {
+      "km": 32,
+      "fares": {
+        "none": [
+          900,
+          1370
+        ],
+        "illico-liberte-weekday": [
+          680,
+          1030
+        ],
+        "illico-liberte-weekend": [
+          450,
+          690
+        ],
+        "illico-jeunes": [
+          450,
+          690
+        ],
+        "liberte-nationale": [
+          680,
+          1030
+        ],
+        "famille-nombreuse-30": [
+          520,
+          890
+        ],
+        "famille-nombreuse-40": [
+          450,
+          820
+        ],
+        "famille-nombreuse-50": [
+          370,
+          740
+        ],
+        "famille-nombreuse-75": [
+          190,
+          560
+        ]
+      }
+    },
+    "meximieux-perouges|virieu-le-grand-belley": {
+      "km": 53,
+      "fares": {
+        "none": [
+          1320,
+          2000
+        ],
+        "illico-liberte-weekday": [
+          990,
+          1500
+        ],
+        "illico-liberte-weekend": [
+          660,
+          1000
+        ],
+        "illico-jeunes": [
+          660,
+          1000
+        ],
+        "liberte-nationale": [
+          990,
+          1500
+        ],
+        "famille-nombreuse-30": [
+          750,
+          1290
+        ],
+        "famille-nombreuse-40": [
+          650,
+          1190
+        ],
+        "famille-nombreuse-50": [
+          540,
+          1080
+        ],
+        "famille-nombreuse-75": [
+          270,
+          810
+        ]
+      }
+    },
+    "meximieux-perouges|culoz": {
+      "km": 64,
+      "fares": {
+        "none": [
+          1580,
+          2400
+        ],
+        "illico-liberte-weekday": [
+          1190,
+          1800
+        ],
+        "illico-liberte-weekend": [
+          790,
+          1200
+        ],
+        "illico-jeunes": [
+          790,
+          1200
+        ],
+        "liberte-nationale": [
+          1190,
+          1800
+        ],
+        "famille-nombreuse-30": [
+          900,
+          1530
+        ],
+        "famille-nombreuse-40": [
+          770,
+          1400
+        ],
+        "famille-nombreuse-50": [
+          640,
+          1270
+        ],
+        "famille-nombreuse-75": [
+          320,
+          950
+        ]
+      }
+    },
+    "meximieux-perouges|seyssel-corbonod": {
+      "km": 79,
+      "fares": {
+        "none": [
+          1850,
+          2820
+        ],
+        "illico-liberte-weekday": [
+          1390,
+          2120
+        ],
+        "illico-liberte-weekend": [
+          930,
+          1410
+        ],
+        "illico-jeunes": [
+          930,
+          1410
+        ],
+        "liberte-nationale": [
+          1390,
+          2120
+        ],
+        "famille-nombreuse-30": [
+          1050,
+          1800
+        ],
+        "famille-nombreuse-40": [
+          900,
+          1650
+        ],
+        "famille-nombreuse-50": [
+          750,
+          1500
+        ],
+        "famille-nombreuse-75": [
+          380,
+          1130
+        ]
+      }
+    },
+    "meximieux-perouges|bellegarde-sur-valserine": {
+      "km": 98,
+      "fares": {
+        "none": [
+          2190,
+          3320
+        ],
+        "illico-liberte-weekday": [
+          1650,
+          2490
+        ],
+        "illico-liberte-weekend": [
+          1100,
+          1660
+        ],
+        "illico-jeunes": [
+          1100,
+          1660
+        ],
+        "liberte-nationale": [
+          1650,
+          2490
+        ],
+        "famille-nombreuse-30": [
+          1240,
+          2120
+        ],
+        "famille-nombreuse-40": [
+          1070,
+          1950
+        ],
+        "famille-nombreuse-50": [
+          890,
+          1770
+        ],
+        "famille-nombreuse-75": [
+          450,
+          1330
+        ]
+      }
+    },
+    "meximieux-perouges|geneve": {
+      "km": 140,
+      "fares": {
+        "none": [
+          2840,
+          4320
+        ],
+        "illico-liberte-weekday": [
+          2130,
+          3240
+        ],
+        "illico-liberte-weekend": [
+          1420,
+          2160
+        ],
+        "illico-jeunes": [
+          1420,
+          2160
+        ],
+        "liberte-nationale": [
+          2130,
+          3240
+        ],
+        "famille-nombreuse-30": [
+          1610,
+          2760
+        ],
+        "famille-nombreuse-40": [
+          1380,
+          2530
+        ],
+        "famille-nombreuse-50": [
+          1150,
+          2300
+        ],
+        "famille-nombreuse-75": [
+          580,
+          1730
+        ]
+      }
+    }
+  }
+}
