@@ -2,15 +2,15 @@
   "id": "/app.html",
   "name": "Surclassement KRONO +",
   "short_name": "KRONO +",
-  "description": "Application interne de calcul du surclassement TER Lyon Part-Dieu ↔ Genève.",
+  "description": "Calcul du surclassement TER individuel ou en groupe entre Lyon Part-Dieu et Genève.",
   "lang": "fr-FR",
   "start_url": "/app.html",
   "scope": "/",
   "display": "standalone",
   "display_override": ["window-controls-overlay", "standalone", "minimal-ui"],
   "orientation": "any",
-  "background_color": "#6E1E78",
-  "theme_color": "#6E1E78",
+  "background_color": "#7F2171",
+  "theme_color": "#7F2171",
   "icons": [
     {
       "src": "/icon-192.png",

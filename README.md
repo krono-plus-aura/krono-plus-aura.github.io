@@ -1,77 +1,105 @@
 # Surclassement KRONO +
 
-Application interne de calcul du surclassement TER (2de -> 1re classe) sur l'axe
-Lyon Part-Dieu <-> Geneve.
+Application interne de calcul du surclassement TER de la 2de vers la 1re classe
+sur l’axe Lyon Part-Dieu ↔ Genève.
 
-Site publie : <https://krono-plus-aura.github.io>
+Site public : <https://krono-plus-aura.github.io>
 
-Depot attendu : `krono-plus-aura/krono-plus-aura.github.io`.
-Publication automatique : GitHub Actions depuis la branche `main`.
+L’application est statique, gratuite et publiée automatiquement par GitHub
+Pages depuis la branche `main`. Elle reste utilisable hors connexion après une
+première ouverture avec Internet.
 
----
+## Version de référence
 
-## Mettre a jour les tarifs (procedure courante)
+Cette version reprend à l’identique l’application finale validée :
 
-1. Ouvrir `public/tarifs-base.json` sur GitHub et cliquer sur le crayon.
-2. Modifier les montants concernes. **Les montants sont en centimes** :
-   12,40 EUR s'ecrit `1240`. Chaque relation contient `[prix 2de, prix 1re]`.
-3. Mettre a jour l'en-tete `meta` : `year`, `label` et `version` (date du jour).
-4. Cliquer sur **Commit changes** avec un libelle clair (ex. « Tarifs 2027 »).
-5. Onglet **Actions** : attendre le voyant.
-   - **Vert** : les controles sont passes, le site est publie.
-   - **Rouge** : rien n'est publie. Ouvrir la ligne rouge pour lire l'erreur.
+- 9 gares ;
+- 36 relations directes, valables dans les deux sens ;
+- 19 profils tarifaires : 12 adultes et 7 enfants ;
+- 684 couples relation/profil ;
+- 1 368 montants de classe, enregistrés en centimes ;
+- calcul automatique du surclassement : prix 1re − prix 2de.
 
-### Revenir en arriere
+La base active porte la version tarifaire `2026-08-24`, révision `6`.
 
-Onglet **Commits** > ouvrir la modification fautive > bouton **Revert**.
-Le site repart sur la version precedente en quelques minutes.
+## Règles absolues
 
-### Regles tarifaires a respecter
+- `public/tarifs-base.json` est l’unique source des tarifs de l’application.
+- Aucun tarif manquant ne doit être calculé, déduit, arrondi ou inventé.
+- Les deux montants d’une ligne sont toujours recopiés tels qu’ils ont été
+  vérifiés : `[prix 2de, prix 1re]`.
+- Les montants sont exprimés en centimes : `1240` signifie 12,40 €.
+- Le surclassement n’est jamais enregistré dans la base ; l’application le
+  calcule automatiquement.
+- Le rendu visuel et le comportement de la PWA sont figés, sauf demande
+  explicite du propriétaire.
 
-- Ne jamais calculer, deduire ou inventer un tarif manquant. En cas de doute,
-  s'arreter et demander le justificatif.
-- Aucun montant ne descend sous **1,20 EUR** (plancher tarifaire reel).
-- Sur les cartes Familles Nombreuses, l'ecart 1re/2de est **identique** quel que
-  soit le taux (30/40/50/75 %), sauf quand le plancher s'applique.
-- Le surclassement n'est jamais saisi : il est toujours calcule
-  (`prix 1re - prix 2de`).
+## Organisation du dépôt
 
-Ces trois regles sont verifiees automatiquement a chaque publication.
+| Fichier ou dossier | Rôle |
+| --- | --- |
+| `public/app.html` | Simulateur visible par les contrôleurs : interface, calculs et animations. |
+| `public/index.html` | Ouvre automatiquement le simulateur depuis l’adresse principale. |
+| `public/tarifs-base.json` | Source unique des gares, profils et prix. |
+| `public/tarifs.html` | Tableau de contrôle de la base, non lié depuis le simulateur. |
+| `public/tarifs-secours.css` | Fichier de secours généré automatiquement. Ne pas modifier manuellement. |
+| `public/sw.js` | Mise en cache et fonctionnement hors connexion. |
+| `public/manifest.webmanifest` | Installation sur l’écran d’accueil et identité de la PWA. |
+| `public/*.png`, `public/*.svg`, `public/*.webp` | Logos, icônes et visuels de l’application. |
+| `scripts/sync-app-from-tariff-base.mjs` | Synchronise le cache et les fichiers générés avec la base tarifaire. |
+| `scripts/verify-app-data.mjs` | Vérifie l’intégralité de la matrice tarifaire et les règles de sécurité. |
+| `tests/audit-recommendations.test.mjs` | Contrôle le rendu attendu, les profils, GitHub Pages et le mode hors connexion. |
+| `.github/workflows/publication.yml` | Lance les contrôles puis publie `public/` sur GitHub Pages. |
+| `docs/Guide_utilisateur_GitHub_Pages.md` | Guide simple d'accès, d'installation et de dépannage pour les contrôleurs. |
+| `docs/Guide_mise_a_jour_tarifs.md` | Procédure sans ligne de commande pour l'Excel, la conversion JSON et la publication. |
 
----
+## Séparation entre utilisation et maintenance
 
-## Organisation du projet
+Les contrôleurs utilisent uniquement le site public. La modification des tarifs
+se fait dans le dépôt GitHub et nécessite un compte disposant d’un accès en
+écriture. Le simulateur ne contient aucun bouton public permettant de modifier
+la base.
 
-- `public/tarifs-base.json` : **source unique** des gares, profils et montants.
-- `public/app.html` : le simulateur (interface, calcul, animations).
-- `public/index.html` : redirige la racine du site vers le simulateur.
-- `public/tarifs.html` : la base tarifaire en tableau (non liee depuis le simulateur).
-- `public/tarifs-secours.css` : **genere automatiquement**, ne jamais editer a la main.
-- `public/sw.js` : fonctionnement hors ligne (reseau d'abord, cache en secours).
-- `scripts/sync-app-from-tariff-base.mjs` : regenere le secours CSS depuis la base.
-- `scripts/verify-app-data.mjs` : controle l'integralite de la matrice tarifaire.
+Hamza et son responsable doivent chacun utiliser leur propre compte GitHub. Il
+ne faut jamais partager un mot de passe.
 
-Perimetre actuel : 9 gares, 36 relations valables dans les deux sens,
-9 profils tarifaires, 648 montants.
+## Mise à jour rapide des tarifs
 
-## Verifications en local (optionnel, pour un developpeur)
+1. Préparer et vérifier les nouveaux prix dans le fichier Excel de référence.
+2. Produire un `tarifs-base.json` qui conserve exactement la structure actuelle.
+3. Comparer chaque montant Excel/JSON sans recalculer les prix.
+4. Sur GitHub, ouvrir `public/tarifs-base.json`, cliquer sur le crayon et
+   remplacer le contenu complet.
+5. Enregistrer avec **Commit changes** et un message clair.
+6. Ouvrir l’onglet **Actions** :
+   - voyant vert : contrôles réussis et publication effectuée ;
+   - voyant rouge : publication bloquée, l’ancienne version reste en ligne.
+7. Ouvrir l’application une fois avec Internet sur chaque téléphone pour
+   actualiser son cache hors connexion.
 
-Aucune dependance a installer. Node.js 20 ou superieur suffit :
+Le guide détaillé `docs/Guide_mise_a_jour_tarifs.md`, également fourni en PDF
+dans le pack de sauvegarde, explique la conversion Excel → JSON et contient
+deux prompts prêts à utiliser avec une IA : un audit, puis la conversion.
 
-```
+## Contrôles locaux facultatifs
+
+Pour un développeur disposant de Node.js 22 ou supérieur :
+
+```text
 npm test
 ```
 
-## Si le perimetre change
+Cette commande régénère les fichiers dérivés, contrôle les 36 relations et les
+19 profils, puis simule une coupure réseau pour vérifier le cache hors
+connexion.
 
-Ajouter une gare, une carte de reduction ou une regle asymetrique depasse la
-simple mise a jour de prix : il faut adapter la base, les controles
-(`scripts/verify-app-data.mjs`) et le generateur du secours CSS. A confier a un
-developpeur.
+## Retour à la version précédente
 
-## Hebergement
+L’historique Git est conservé. En cas de problème, revenir au dernier commit
+validé depuis l’interface GitHub, puis attendre la nouvelle exécution verte de
+l’onglet **Actions**. Ne jamais effacer l’historique du dépôt.
 
-Site statique publie par GitHub Pages via le workflow
-`.github/workflows/publication.yml`. Aucun serveur, aucune base de donnees,
-aucun cout. Le depot contient l'historique complet : il fait office de
-sauvegarde.
+## Hébergement
+
+GitHub Pages publie uniquement le dossier `public/`. Aucun serveur, abonnement,
+offre payante ou carte bancaire n’est nécessaire.

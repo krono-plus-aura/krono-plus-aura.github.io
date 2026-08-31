@@ -1,7 +1,8 @@
-const CACHE_NAME = "surclassement-krono-plus-v10";
-const APP_SHELL = [
-  "/app.html",
-  "/tarifs.html",
+const CACHE_NAME = "krono-2026-08-24-r6";
+const OFFLINE_DOCUMENT = "/app.html";
+const NAVIGATION_FALLBACKS = [OFFLINE_DOCUMENT];
+const REQUIRED_SHELL = [
+  OFFLINE_DOCUMENT,
   "/tarifs-base.json",
   "/tarifs-secours.css",
   "/manifest.webmanifest",
@@ -10,43 +11,75 @@ const APP_SHELL = [
   "/icon-maskable-512.png",
   "/apple-touch-icon.png",
   "/agc-aura-final.png",
+  "/sncf-ter-aura.webp",
 ];
+const OPTIONAL_SHELL = ["/", "/tarifs.html"];
+
+async function fetchAndCache(cache, url) {
+  const request = new Request(url, { cache: "reload", credentials: "same-origin" });
+  const response = await fetch(request);
+  if (!response.ok) throw new Error(`Préchargement impossible : ${url}`);
+  await cache.put(url, response.clone());
+  return response;
+}
 
 self.addEventListener("install", (event) => {
-  event.waitUntil(
-    caches.open(CACHE_NAME).then((cache) => cache.addAll(APP_SHELL)),
-  );
-  self.skipWaiting();
+  event.waitUntil((async () => {
+    const cache = await caches.open(CACHE_NAME);
+    await Promise.all(REQUIRED_SHELL.map((url) => fetchAndCache(cache, url)));
+    await Promise.allSettled(OPTIONAL_SHELL.map((url) => fetchAndCache(cache, url)));
+    await self.skipWaiting();
+  })());
 });
 
 self.addEventListener("activate", (event) => {
-  event.waitUntil(
-    caches
-      .keys()
-      .then((keys) =>
-        Promise.all(keys.filter((key) => key !== CACHE_NAME).map((key) => caches.delete(key))),
-      )
-      .then(() => self.clients.claim()),
-  );
+  event.waitUntil((async () => {
+    const keys = await caches.keys();
+    await Promise.all(keys
+      .filter((key) => key.startsWith("krono-") && key !== CACHE_NAME)
+      .map((key) => caches.delete(key)));
+    await self.clients.claim();
+  })());
 });
+
+self.addEventListener("message", (event) => {
+  if (event.data?.type === "SKIP_WAITING") self.skipWaiting();
+});
+
+async function cachedNavigation(request) {
+  try {
+    const response = await fetch(request);
+    if (!response.ok) throw new Error(`Navigation indisponible : ${response.status}`);
+    const cache = await caches.open(CACHE_NAME);
+    await cache.put(request, response.clone());
+    return response;
+  } catch (_) {
+    const exact = await caches.match(request, { ignoreSearch: true });
+    if (exact) return exact;
+    for (const fallback of NAVIGATION_FALLBACKS) {
+      const cached = await caches.match(fallback, { ignoreSearch: true });
+      if (cached) return cached;
+    }
+    return Response.error();
+  }
+}
+
+async function cacheFirst(request) {
+  const cached = await caches.match(request, { ignoreSearch: true });
+  if (cached) return cached;
+  const response = await fetch(request);
+  if (response.ok) {
+    const cache = await caches.open(CACHE_NAME);
+    await cache.put(request, response.clone());
+  }
+  return response;
+}
 
 self.addEventListener("fetch", (event) => {
   if (event.request.method !== "GET") return;
-
-  event.respondWith(
-    fetch(event.request)
-      .then((response) => {
-        if (response.ok && new URL(event.request.url).origin === self.location.origin) {
-          const copy = response.clone();
-          caches.open(CACHE_NAME).then((cache) => cache.put(event.request, copy));
-        }
-        return response;
-      })
-      .catch(async () => {
-        const cached = await caches.match(event.request, { ignoreSearch: true });
-        if (cached) return cached;
-        if (event.request.mode === "navigate") return caches.match("/app.html");
-        return Response.error();
-      }),
-  );
+  const url = new URL(event.request.url);
+  if (url.origin !== self.location.origin) return;
+  event.respondWith(event.request.mode === "navigate"
+    ? cachedNavigation(event.request)
+    : cacheFirst(event.request));
 });
