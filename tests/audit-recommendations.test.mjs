@@ -4,13 +4,14 @@ import test from "node:test";
 import { runInNewContext } from "node:vm";
 
 const read = (path) => readFile(new URL(`../${path}`, import.meta.url), "utf8");
-const [app, fallback, manifestText, serviceWorker, baseText, workflow, home, tariffTable] = await Promise.all([
+const [app, fallback, manifestText, serviceWorker, baseText, workflow, tariffWorkflow, home, tariffTable] = await Promise.all([
   read("public/app.html"),
   read("public/tarifs-secours.css"),
   read("public/manifest.webmanifest"),
   read("public/sw.js"),
   read("public/tarifs-base.json"),
   read(".github/workflows/publication.yml"),
+  read(".github/workflows/mise-a-jour-tarifs.yml"),
   read("public/index.html"),
   read("public/tarifs.html"),
 ]);
@@ -225,8 +226,22 @@ test("GitHub Pages conserve le lien public stable et la publication contrôlée"
   assert.match(tariffTable, /href="\/app\.html"/);
   assert.match(workflow, /sync-app-from-tariff-base\.mjs/);
   assert.match(workflow, /verify-app-data\.mjs/);
-  assert.match(workflow, /audit-recommendations\.test\.mjs/);
+  assert.match(workflow, /node --test tests\/\*\.test\.mjs/);
+  assert.match(workflow, /paths-ignore:[\s\S]*gestion-tarifs/);
   assert.match(workflow, /upload-pages-artifact/);
   assert.match(workflow, /deploy-pages/);
   assert.match(workflow, /path: public/);
+  assert.match(tariffWorkflow, /import-tarifs-excel\.py/);
+  assert.match(tariffWorkflow, /contents: write/);
+  assert.match(tariffWorkflow, /pages: write/);
+  assert.match(tariffWorkflow, /id-token: write/);
+  assert.match(tariffWorkflow, /verify-app-data\.mjs/);
+  assert.match(tariffWorkflow, /node --test tests\/\*\.test\.mjs/);
+  assert.match(tariffWorkflow, /git push origin HEAD:main/);
+  assert.match(tariffWorkflow, /upload-pages-artifact/);
+  assert.match(tariffWorkflow, /deploy-pages/);
+  assert.match(tariffWorkflow, /path: public/);
+  assert.doesNotMatch(tariffWorkflow, /tarifs-production/);
+  assert.doesNotMatch(tariffWorkflow, /TARIFS_APPROVAL_ENABLED/);
+  assert.doesNotMatch(tariffWorkflow, /deuxième personne/);
 });

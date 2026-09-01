@@ -11,6 +11,6 @@
   "scripts": {
     "sync": "node scripts/sync-app-from-tariff-base.mjs",
     "verify": "node scripts/verify-app-data.mjs",
-    "test": "node scripts/sync-app-from-tariff-base.mjs && node scripts/verify-app-data.mjs && node --test tests/audit-recommendations.test.mjs"
+    "test": "node scripts/sync-app-from-tariff-base.mjs && node scripts/verify-app-data.mjs && node --test tests/*.test.mjs"
   }
 }
