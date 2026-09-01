@@ -83,7 +83,7 @@ for (const [key, route] of Object.entries(data.pairs)) {
   assert.deepEqual(Object.keys(route.fares), profileIds, `Profils incomplets : ${key}`);
   for (const [profileId, fares] of Object.entries(route.fares)) {
     assert.equal(fares.length, 2, `Deux classes attendues : ${key} / ${profileId}`);
-    assert.ok(fares.every((fare) => Number.isInteger(fare) && fare > 0), `Tarif invalide : ${key} / ${profileId}`);
+    assert.ok(fares.every((fare) => Number.isInteger(fare) && fare >= 120), `Tarif inférieur au plancher de 1,20 € : ${key} / ${profileId}`);
     assert.ok(fares[1] >= fares[0], `La 1re doit être supérieure ou égale à la 2de : ${key} / ${profileId}`);
   }
   assert.deepEqual(route.fares["adult-military"], route.fares["adult-famille-nombreuse-75"], `Équivalence militaire incorrecte : ${key}`);

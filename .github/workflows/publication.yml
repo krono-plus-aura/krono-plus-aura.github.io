@@ -5,6 +5,8 @@ name: Contrôles et publication
 on:
   push:
     branches: [main]
+    paths-ignore:
+      - 'gestion-tarifs/**'
   workflow_dispatch:
 
 permissions:
@@ -36,7 +38,7 @@ jobs:
         run: node scripts/verify-app-data.mjs
 
       - name: Lancer les tests du projet
-        run: node --test tests/audit-recommendations.test.mjs
+        run: node --test tests/*.test.mjs
 
       - name: Préparer le site à publier
         uses: actions/upload-pages-artifact@v3

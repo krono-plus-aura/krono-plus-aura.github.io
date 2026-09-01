@@ -1,0 +1,100 @@
+name: Mettre à jour les tarifs depuis Excel
+
+# Hamza ou son responsable remplace uniquement le classeur dans
+# gestion-tarifs/. GitHub contrôle, génère et publie ensuite la base.
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'gestion-tarifs/Base_tarifaire_KRONO_plus.xlsx'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  mise-a-jour:
+    name: Contrôler l'Excel et préparer le site
+    runs-on: ubuntu-latest
+    steps:
+      - name: Récupérer le projet et son historique
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Installer Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Installer Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Recopier et contrôler tous les tarifs de l'Excel
+        run: |
+          python3 scripts/import-tarifs-excel.py \
+            --excel gestion-tarifs/Base_tarifaire_KRONO_plus.xlsx \
+            --base public/tarifs-base.json \
+            --output preparation/tarifs-base.json \
+            --report preparation/rapport.md \
+            --allow-no-change
+
+      - name: Appliquer la base contrôlée et régénérer le hors connexion
+        run: |
+          cp preparation/tarifs-base.json public/tarifs-base.json
+          cp preparation/rapport.md gestion-tarifs/dernier-rapport.md
+          node scripts/sync-app-from-tariff-base.mjs
+
+      - name: Vérifier l'intégralité de l'application
+        run: |
+          node scripts/verify-app-data.mjs
+          node --test tests/*.test.mjs
+
+      - name: Afficher le rapport de contrôle
+        run: cat preparation/rapport.md >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Vérifier qu'aucune mise à jour plus récente n'attend
+        run: |
+          git fetch origin main
+          test "$(git rev-parse origin/main)" = "$GITHUB_SHA"
+
+      - name: Enregistrer les fichiers générés s'ils ont changé
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add \
+            public/tarifs-base.json \
+            public/tarifs-secours.css \
+            public/sw.js \
+            gestion-tarifs/dernier-rapport.md
+          if git diff --cached --quiet; then
+            echo "Les fichiers publiés sont déjà à jour."
+          else
+            git commit -m "Appliquer les tarifs contrôlés depuis Excel"
+            git push origin HEAD:main
+          fi
+
+      - name: Préparer le site à publier
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: public
+
+  publication:
+    name: Mise en ligne
+    needs: mise-a-jour
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploiement.outputs.page_url }}
+    steps:
+      - name: Publier sur GitHub Pages
+        id: deploiement
+        uses: actions/deploy-pages@v4

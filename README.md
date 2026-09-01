@@ -48,8 +48,11 @@ La base active porte la version tarifaire `2026-08-24`, révision `6`.
 | `public/*.png`, `public/*.svg`, `public/*.webp` | Logos, icônes et visuels de l’application. |
 | `scripts/sync-app-from-tariff-base.mjs` | Synchronise le cache et les fichiers générés avec la base tarifaire. |
 | `scripts/verify-app-data.mjs` | Vérifie l’intégralité de la matrice tarifaire et les règles de sécurité. |
+| `scripts/import-tarifs-excel.py` | Recopie et contrôle les prix de l'Excel sans calcul ni arrondi. |
 | `tests/audit-recommendations.test.mjs` | Contrôle le rendu attendu, les profils, GitHub Pages et le mode hors connexion. |
 | `.github/workflows/publication.yml` | Lance les contrôles puis publie `public/` sur GitHub Pages. |
+| `.github/workflows/mise-a-jour-tarifs.yml` | Contrôle l'Excel, génère la base et publie les tarifs automatiquement. |
+| `gestion-tarifs/Base_tarifaire_KRONO_plus.xlsx` | Seul fichier à remplacer lors d'une mise à jour tarifaire courante. |
 | `docs/Guide_utilisateur_GitHub_Pages.md` | Guide simple d'accès, d'installation et de dépannage pour les contrôleurs. |
 | `docs/Guide_mise_a_jour_tarifs.md` | Procédure sans ligne de commande pour l'Excel, la conversion JSON et la publication. |
 
@@ -65,21 +68,19 @@ ne faut jamais partager un mot de passe.
 
 ## Mise à jour rapide des tarifs
 
-1. Préparer et vérifier les nouveaux prix dans le fichier Excel de référence.
-2. Produire un `tarifs-base.json` qui conserve exactement la structure actuelle.
-3. Comparer chaque montant Excel/JSON sans recalculer les prix.
-4. Sur GitHub, ouvrir `public/tarifs-base.json`, cliquer sur le crayon et
-   remplacer le contenu complet.
-5. Enregistrer avec **Commit changes** et un message clair.
-6. Ouvrir l’onglet **Actions** :
-   - voyant vert : contrôles réussis et publication effectuée ;
-   - voyant rouge : publication bloquée, l’ancienne version reste en ligne.
-7. Ouvrir l’application une fois avec Internet sur chaque téléphone pour
-   actualiser son cache hors connexion.
+1. Ouvrir `gestion-tarifs/Base_tarifaire_KRONO_plus.xlsx`.
+2. Modifier uniquement les colonnes **Prix 2de (€)** et **Prix 1re (€)**.
+3. Enregistrer le fichier sans changer son nom.
+4. Remplacer cet Excel dans le dossier `gestion-tarifs` sur GitHub, puis cliquer
+   sur **Commit changes**.
+5. Attendre le voyant vert dans **Actions**.
+
+GitHub contrôle les 684 lignes et les 1 368 montants, génère le JSON et le cache
+hors connexion, puis publie le site. Il n'y a aucun JSON à modifier, aucune IA
+à utiliser et aucune commande à saisir.
 
 Le guide détaillé `docs/Guide_mise_a_jour_tarifs.md`, également fourni en PDF
-dans le pack de sauvegarde, explique la conversion Excel → JSON et contient
-deux prompts prêts à utiliser avec une IA : un audit, puis la conversion.
+dans le pack de sauvegarde, illustre cette procédure.
 
 ## Contrôles locaux facultatifs
 
