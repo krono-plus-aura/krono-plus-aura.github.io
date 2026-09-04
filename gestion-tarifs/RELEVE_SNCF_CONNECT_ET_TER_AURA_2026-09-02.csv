@@ -1,0 +1,685 @@
+﻿Départ;Arrivée;Voyageur;Profil / carte;Identifiant profil;Clé relation;Prix 2de (€);Prix 1re (€);Source;Date de vérification;Statut;Écart vs valeur actuelle
+Lyon Part-Dieu;Meximieux – Pérouges;Adulte;Aucune — Plein tarif;adult-none;lyon-part-dieu|meximieux-perouges;9,60;14,60;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Meximieux – Pérouges;Adulte;illico LIBERTÉ — Semaine (-25 %);adult-illico-liberte-weekday;lyon-part-dieu|meximieux-perouges;7,20;11,00;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Meximieux – Pérouges;Adulte;illico LIBERTÉ — Week-end / Jour férié (-50 %);adult-illico-liberte-weekend;lyon-part-dieu|meximieux-perouges;4,80;7,30;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Meximieux – Pérouges;Adulte;illico LIBERTÉ — Accompagnant, Week-end / Jour férié (-50 %);adult-illico-liberte-weekend-companion;lyon-part-dieu|meximieux-perouges;4,80;7,30;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Meximieux – Pérouges;Adulte;illico LIBERTÉ JEUNES (-50 %);adult-illico-jeunes;lyon-part-dieu|meximieux-perouges;4,80;7,30;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Meximieux – Pérouges;Adulte;Carte Liberté SNCF (-25 %);adult-liberte-nationale;lyon-part-dieu|meximieux-perouges;7,20;11,00;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Meximieux – Pérouges;Adulte;Carte Familles Nombreuses (-30 %);adult-famille-nombreuse-30;lyon-part-dieu|meximieux-perouges;5,60;9,50;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Meximieux – Pérouges;Adulte;Carte Familles Nombreuses (-40 %);adult-famille-nombreuse-40;lyon-part-dieu|meximieux-perouges;4,80;8,70;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Meximieux – Pérouges;Adulte;Carte Familles Nombreuses (-50 %);adult-famille-nombreuse-50;lyon-part-dieu|meximieux-perouges;4,00;7,90;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Meximieux – Pérouges;Adulte;Carte Familles Nombreuses (-75 %);adult-famille-nombreuse-75;lyon-part-dieu|meximieux-perouges;2,00;5,90;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Meximieux – Pérouges;Adulte;Carte Militaire (-75 %);adult-military;lyon-part-dieu|meximieux-perouges;2,40;3,70;TER Auvergne-Rhône-Alpes;2026-09-02;lu directement;"écart (ancienne 2de 2,00 ; ancienne 1re 5,90)"
+Lyon Part-Dieu;Meximieux – Pérouges;Adulte;Carte Famille Militaire (-40 %);adult-family-military;lyon-part-dieu|meximieux-perouges;5,80;8,80;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Meximieux – Pérouges;Enfant;Aucune — Tarif Enfant 4–11 ans;child-none;lyon-part-dieu|meximieux-perouges;4,80;7,30;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Meximieux – Pérouges;Enfant;illico LIBERTÉ — Accompagnant, Week-end / Jour férié;child-illico-liberte-weekend-companion;lyon-part-dieu|meximieux-perouges;2,40;3,70;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Meximieux – Pérouges;Enfant;Carte Famille Militaire;child-family-military;lyon-part-dieu|meximieux-perouges;2,90;4,40;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Meximieux – Pérouges;Enfant;Carte Familles Nombreuses (-30 %);child-famille-nombreuse-30;lyon-part-dieu|meximieux-perouges;2,80;4,80;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Meximieux – Pérouges;Enfant;Carte Familles Nombreuses (-40 %);child-famille-nombreuse-40;lyon-part-dieu|meximieux-perouges;2,40;4,40;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Meximieux – Pérouges;Enfant;Carte Familles Nombreuses (-50 %);child-famille-nombreuse-50;lyon-part-dieu|meximieux-perouges;2,00;4,00;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Meximieux – Pérouges;Enfant;Carte Familles Nombreuses (-75 %);child-famille-nombreuse-75;lyon-part-dieu|meximieux-perouges;1,20;3,00;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Ambérieu-en-Bugey;Adulte;Aucune — Plein tarif;adult-none;lyon-part-dieu|amberieu-en-bugey;12,40;18,80;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Ambérieu-en-Bugey;Adulte;illico LIBERTÉ — Semaine (-25 %);adult-illico-liberte-weekday;lyon-part-dieu|amberieu-en-bugey;9,30;14,10;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Ambérieu-en-Bugey;Adulte;illico LIBERTÉ — Week-end / Jour férié (-50 %);adult-illico-liberte-weekend;lyon-part-dieu|amberieu-en-bugey;6,20;9,40;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Ambérieu-en-Bugey;Adulte;illico LIBERTÉ — Accompagnant, Week-end / Jour férié (-50 %);adult-illico-liberte-weekend-companion;lyon-part-dieu|amberieu-en-bugey;6,20;9,40;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Ambérieu-en-Bugey;Adulte;illico LIBERTÉ JEUNES (-50 %);adult-illico-jeunes;lyon-part-dieu|amberieu-en-bugey;6,20;9,40;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Ambérieu-en-Bugey;Adulte;Carte Liberté SNCF (-25 %);adult-liberte-nationale;lyon-part-dieu|amberieu-en-bugey;9,30;14,10;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Ambérieu-en-Bugey;Adulte;Carte Familles Nombreuses (-30 %);adult-famille-nombreuse-30;lyon-part-dieu|amberieu-en-bugey;7,10;12,10;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Ambérieu-en-Bugey;Adulte;Carte Familles Nombreuses (-40 %);adult-famille-nombreuse-40;lyon-part-dieu|amberieu-en-bugey;6,10;11,10;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Ambérieu-en-Bugey;Adulte;Carte Familles Nombreuses (-50 %);adult-famille-nombreuse-50;lyon-part-dieu|amberieu-en-bugey;5,10;10,10;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Ambérieu-en-Bugey;Adulte;Carte Familles Nombreuses (-75 %);adult-famille-nombreuse-75;lyon-part-dieu|amberieu-en-bugey;2,60;7,60;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Ambérieu-en-Bugey;Adulte;Carte Militaire (-75 %);adult-military;lyon-part-dieu|amberieu-en-bugey;3,10;4,70;TER Auvergne-Rhône-Alpes;2026-09-02;lu directement;"écart (ancienne 2de 2,60 ; ancienne 1re 7,60)"
+Lyon Part-Dieu;Ambérieu-en-Bugey;Adulte;Carte Famille Militaire (-40 %);adult-family-military;lyon-part-dieu|amberieu-en-bugey;7,50;11,30;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Ambérieu-en-Bugey;Enfant;Aucune — Tarif Enfant 4–11 ans;child-none;lyon-part-dieu|amberieu-en-bugey;6,20;9,40;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Ambérieu-en-Bugey;Enfant;illico LIBERTÉ — Accompagnant, Week-end / Jour férié;child-illico-liberte-weekend-companion;lyon-part-dieu|amberieu-en-bugey;3,10;4,70;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Ambérieu-en-Bugey;Enfant;Carte Famille Militaire;child-family-military;lyon-part-dieu|amberieu-en-bugey;3,80;5,70;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Ambérieu-en-Bugey;Enfant;Carte Familles Nombreuses (-30 %);child-famille-nombreuse-30;lyon-part-dieu|amberieu-en-bugey;3,60;6,10;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Ambérieu-en-Bugey;Enfant;Carte Familles Nombreuses (-40 %);child-famille-nombreuse-40;lyon-part-dieu|amberieu-en-bugey;3,10;5,60;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Ambérieu-en-Bugey;Enfant;Carte Familles Nombreuses (-50 %);child-famille-nombreuse-50;lyon-part-dieu|amberieu-en-bugey;2,60;5,10;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Ambérieu-en-Bugey;Enfant;Carte Familles Nombreuses (-75 %);child-famille-nombreuse-75;lyon-part-dieu|amberieu-en-bugey;1,30;3,80;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Tenay-Hauteville;Adulte;Aucune — Plein tarif;adult-none;lyon-part-dieu|tenay-hauteville;16,30;24,80;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Tenay-Hauteville;Adulte;illico LIBERTÉ — Semaine (-25 %);adult-illico-liberte-weekday;lyon-part-dieu|tenay-hauteville;12,30;18,60;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Tenay-Hauteville;Adulte;illico LIBERTÉ — Week-end / Jour férié (-50 %);adult-illico-liberte-weekend;lyon-part-dieu|tenay-hauteville;8,20;12,40;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Tenay-Hauteville;Adulte;illico LIBERTÉ — Accompagnant, Week-end / Jour férié (-50 %);adult-illico-liberte-weekend-companion;lyon-part-dieu|tenay-hauteville;8,20;12,40;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Tenay-Hauteville;Adulte;illico LIBERTÉ JEUNES (-50 %);adult-illico-jeunes;lyon-part-dieu|tenay-hauteville;8,20;12,40;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Tenay-Hauteville;Adulte;Carte Liberté SNCF (-25 %);adult-liberte-nationale;lyon-part-dieu|tenay-hauteville;12,30;18,60;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Tenay-Hauteville;Adulte;Carte Familles Nombreuses (-30 %);adult-famille-nombreuse-30;lyon-part-dieu|tenay-hauteville;9,30;15,90;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Tenay-Hauteville;Adulte;Carte Familles Nombreuses (-40 %);adult-famille-nombreuse-40;lyon-part-dieu|tenay-hauteville;8,00;14,60;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Tenay-Hauteville;Adulte;Carte Familles Nombreuses (-50 %);adult-famille-nombreuse-50;lyon-part-dieu|tenay-hauteville;6,60;13,20;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Tenay-Hauteville;Adulte;Carte Familles Nombreuses (-75 %);adult-famille-nombreuse-75;lyon-part-dieu|tenay-hauteville;3,30;9,90;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Tenay-Hauteville;Adulte;Carte Militaire (-75 %);adult-military;lyon-part-dieu|tenay-hauteville;4,10;6,20;TER Auvergne-Rhône-Alpes;2026-09-02;lu directement;"écart (ancienne 2de 3,30 ; ancienne 1re 9,90)"
+Lyon Part-Dieu;Tenay-Hauteville;Adulte;Carte Famille Militaire (-40 %);adult-family-military;lyon-part-dieu|tenay-hauteville;9,80;14,90;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Tenay-Hauteville;Enfant;Aucune — Tarif Enfant 4–11 ans;child-none;lyon-part-dieu|tenay-hauteville;8,20;12,40;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Tenay-Hauteville;Enfant;illico LIBERTÉ — Accompagnant, Week-end / Jour férié;child-illico-liberte-weekend-companion;lyon-part-dieu|tenay-hauteville;4,10;6,20;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Tenay-Hauteville;Enfant;Carte Famille Militaire;child-family-military;lyon-part-dieu|tenay-hauteville;4,90;7,50;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Tenay-Hauteville;Enfant;Carte Familles Nombreuses (-30 %);child-famille-nombreuse-30;lyon-part-dieu|tenay-hauteville;4,70;8,00;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Tenay-Hauteville;Enfant;Carte Familles Nombreuses (-40 %);child-famille-nombreuse-40;lyon-part-dieu|tenay-hauteville;4,00;7,30;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Tenay-Hauteville;Enfant;Carte Familles Nombreuses (-50 %);child-famille-nombreuse-50;lyon-part-dieu|tenay-hauteville;3,30;6,60;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Tenay-Hauteville;Enfant;Carte Familles Nombreuses (-75 %);child-famille-nombreuse-75;lyon-part-dieu|tenay-hauteville;1,70;5,00;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Virieu-le-Grand – Belley;Adulte;Aucune — Plein tarif;adult-none;lyon-part-dieu|virieu-le-grand-belley;20,20;30,70;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Virieu-le-Grand – Belley;Adulte;illico LIBERTÉ — Semaine (-25 %);adult-illico-liberte-weekday;lyon-part-dieu|virieu-le-grand-belley;15,20;23,10;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Virieu-le-Grand – Belley;Adulte;illico LIBERTÉ — Week-end / Jour férié (-50 %);adult-illico-liberte-weekend;lyon-part-dieu|virieu-le-grand-belley;10,10;15,40;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Virieu-le-Grand – Belley;Adulte;illico LIBERTÉ — Accompagnant, Week-end / Jour férié (-50 %);adult-illico-liberte-weekend-companion;lyon-part-dieu|virieu-le-grand-belley;10,10;15,40;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Virieu-le-Grand – Belley;Adulte;illico LIBERTÉ JEUNES (-50 %);adult-illico-jeunes;lyon-part-dieu|virieu-le-grand-belley;10,10;15,40;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Virieu-le-Grand – Belley;Adulte;Carte Liberté SNCF (-25 %);adult-liberte-nationale;lyon-part-dieu|virieu-le-grand-belley;15,20;23,10;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Virieu-le-Grand – Belley;Adulte;Carte Familles Nombreuses (-30 %);adult-famille-nombreuse-30;lyon-part-dieu|virieu-le-grand-belley;11,50;19,70;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Virieu-le-Grand – Belley;Adulte;Carte Familles Nombreuses (-40 %);adult-famille-nombreuse-40;lyon-part-dieu|virieu-le-grand-belley;9,80;18,00;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Virieu-le-Grand – Belley;Adulte;Carte Familles Nombreuses (-50 %);adult-famille-nombreuse-50;lyon-part-dieu|virieu-le-grand-belley;8,20;16,40;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Virieu-le-Grand – Belley;Adulte;Carte Familles Nombreuses (-75 %);adult-famille-nombreuse-75;lyon-part-dieu|virieu-le-grand-belley;4,10;12,30;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Virieu-le-Grand – Belley;Adulte;Carte Militaire (-75 %);adult-military;lyon-part-dieu|virieu-le-grand-belley;5,10;7,70;TER Auvergne-Rhône-Alpes;2026-09-02;lu directement;"écart (ancienne 2de 4,10 ; ancienne 1re 12,30)"
+Lyon Part-Dieu;Virieu-le-Grand – Belley;Adulte;Carte Famille Militaire (-40 %);adult-family-military;lyon-part-dieu|virieu-le-grand-belley;12,20;18,50;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Virieu-le-Grand – Belley;Enfant;Aucune — Tarif Enfant 4–11 ans;child-none;lyon-part-dieu|virieu-le-grand-belley;10,10;15,40;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Virieu-le-Grand – Belley;Enfant;illico LIBERTÉ — Accompagnant, Week-end / Jour férié;child-illico-liberte-weekend-companion;lyon-part-dieu|virieu-le-grand-belley;5,10;7,70;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Virieu-le-Grand – Belley;Enfant;Carte Famille Militaire;child-family-military;lyon-part-dieu|virieu-le-grand-belley;6,10;9,30;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Virieu-le-Grand – Belley;Enfant;Carte Familles Nombreuses (-30 %);child-famille-nombreuse-30;lyon-part-dieu|virieu-le-grand-belley;5,80;9,90;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Virieu-le-Grand – Belley;Enfant;Carte Familles Nombreuses (-40 %);child-famille-nombreuse-40;lyon-part-dieu|virieu-le-grand-belley;4,90;9,00;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Virieu-le-Grand – Belley;Enfant;Carte Familles Nombreuses (-50 %);child-famille-nombreuse-50;lyon-part-dieu|virieu-le-grand-belley;4,10;8,20;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Virieu-le-Grand – Belley;Enfant;Carte Familles Nombreuses (-75 %);child-famille-nombreuse-75;lyon-part-dieu|virieu-le-grand-belley;2,10;6,20;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Culoz;Adulte;Aucune — Plein tarif;adult-none;lyon-part-dieu|culoz;22,40;34,10;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Culoz;Adulte;illico LIBERTÉ — Semaine (-25 %);adult-illico-liberte-weekday;lyon-part-dieu|culoz;16,80;25,60;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Culoz;Adulte;illico LIBERTÉ — Week-end / Jour férié (-50 %);adult-illico-liberte-weekend;lyon-part-dieu|culoz;11,20;17,10;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Culoz;Adulte;illico LIBERTÉ — Accompagnant, Week-end / Jour férié (-50 %);adult-illico-liberte-weekend-companion;lyon-part-dieu|culoz;11,20;17,10;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Culoz;Adulte;illico LIBERTÉ JEUNES (-50 %);adult-illico-jeunes;lyon-part-dieu|culoz;11,20;17,10;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Culoz;Adulte;Carte Liberté SNCF (-25 %);adult-liberte-nationale;lyon-part-dieu|culoz;16,80;25,60;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Culoz;Adulte;Carte Familles Nombreuses (-30 %);adult-famille-nombreuse-30;lyon-part-dieu|culoz;12,70;21,80;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Culoz;Adulte;Carte Familles Nombreuses (-40 %);adult-famille-nombreuse-40;lyon-part-dieu|culoz;10,90;20,00;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Culoz;Adulte;Carte Familles Nombreuses (-50 %);adult-famille-nombreuse-50;lyon-part-dieu|culoz;9,10;18,20;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Culoz;Adulte;Carte Familles Nombreuses (-75 %);adult-famille-nombreuse-75;lyon-part-dieu|culoz;4,60;13,70;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Culoz;Adulte;Carte Militaire (-75 %);adult-military;lyon-part-dieu|culoz;5,60;8,60;TER Auvergne-Rhône-Alpes;2026-09-02;lu directement;"écart (ancienne 2de 4,60 ; ancienne 1re 13,70)"
+Lyon Part-Dieu;Culoz;Adulte;Carte Famille Militaire (-40 %);adult-family-military;lyon-part-dieu|culoz;13,50;20,50;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Culoz;Enfant;Aucune — Tarif Enfant 4–11 ans;child-none;lyon-part-dieu|culoz;11,20;17,10;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Culoz;Enfant;illico LIBERTÉ — Accompagnant, Week-end / Jour férié;child-illico-liberte-weekend-companion;lyon-part-dieu|culoz;5,60;8,60;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Culoz;Enfant;Carte Famille Militaire;child-family-military;lyon-part-dieu|culoz;6,80;10,30;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Culoz;Enfant;Carte Familles Nombreuses (-30 %);child-famille-nombreuse-30;lyon-part-dieu|culoz;6,40;10,90;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Culoz;Enfant;Carte Familles Nombreuses (-40 %);child-famille-nombreuse-40;lyon-part-dieu|culoz;5,50;10,00;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Culoz;Enfant;Carte Familles Nombreuses (-50 %);child-famille-nombreuse-50;lyon-part-dieu|culoz;4,60;9,10;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Culoz;Enfant;Carte Familles Nombreuses (-75 %);child-famille-nombreuse-75;lyon-part-dieu|culoz;2,30;6,90;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Seyssel – Corbonod;Adulte;Aucune — Plein tarif;adult-none;lyon-part-dieu|seyssel-corbonod;25,80;39,10;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Seyssel – Corbonod;Adulte;illico LIBERTÉ — Semaine (-25 %);adult-illico-liberte-weekday;lyon-part-dieu|seyssel-corbonod;19,40;29,40;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Seyssel – Corbonod;Adulte;illico LIBERTÉ — Week-end / Jour férié (-50 %);adult-illico-liberte-weekend;lyon-part-dieu|seyssel-corbonod;12,90;19,60;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Seyssel – Corbonod;Adulte;illico LIBERTÉ — Accompagnant, Week-end / Jour férié (-50 %);adult-illico-liberte-weekend-companion;lyon-part-dieu|seyssel-corbonod;12,90;19,60;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Seyssel – Corbonod;Adulte;illico LIBERTÉ JEUNES (-50 %);adult-illico-jeunes;lyon-part-dieu|seyssel-corbonod;12,90;19,60;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Seyssel – Corbonod;Adulte;Carte Liberté SNCF (-25 %);adult-liberte-nationale;lyon-part-dieu|seyssel-corbonod;19,40;29,40;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Seyssel – Corbonod;Adulte;Carte Familles Nombreuses (-30 %);adult-famille-nombreuse-30;lyon-part-dieu|seyssel-corbonod;14,60;25,00;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Seyssel – Corbonod;Adulte;Carte Familles Nombreuses (-40 %);adult-famille-nombreuse-40;lyon-part-dieu|seyssel-corbonod;12,50;22,90;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Seyssel – Corbonod;Adulte;Carte Familles Nombreuses (-50 %);adult-famille-nombreuse-50;lyon-part-dieu|seyssel-corbonod;10,40;20,80;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Seyssel – Corbonod;Adulte;Carte Familles Nombreuses (-75 %);adult-famille-nombreuse-75;lyon-part-dieu|seyssel-corbonod;5,20;15,60;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Seyssel – Corbonod;Adulte;Carte Militaire (-75 %);adult-military;lyon-part-dieu|seyssel-corbonod;6,50;9,80;TER Auvergne-Rhône-Alpes;2026-09-02;lu directement;"écart (ancienne 2de 5,20 ; ancienne 1re 15,60)"
+Lyon Part-Dieu;Seyssel – Corbonod;Adulte;Carte Famille Militaire (-40 %);adult-family-military;lyon-part-dieu|seyssel-corbonod;15,50;23,50;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Seyssel – Corbonod;Enfant;Aucune — Tarif Enfant 4–11 ans;child-none;lyon-part-dieu|seyssel-corbonod;12,90;19,60;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Seyssel – Corbonod;Enfant;illico LIBERTÉ — Accompagnant, Week-end / Jour férié;child-illico-liberte-weekend-companion;lyon-part-dieu|seyssel-corbonod;6,50;9,80;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Seyssel – Corbonod;Enfant;Carte Famille Militaire;child-family-military;lyon-part-dieu|seyssel-corbonod;7,80;11,80;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Seyssel – Corbonod;Enfant;Carte Familles Nombreuses (-30 %);child-famille-nombreuse-30;lyon-part-dieu|seyssel-corbonod;7,30;12,50;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Seyssel – Corbonod;Enfant;Carte Familles Nombreuses (-40 %);child-famille-nombreuse-40;lyon-part-dieu|seyssel-corbonod;6,30;11,50;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Seyssel – Corbonod;Enfant;Carte Familles Nombreuses (-50 %);child-famille-nombreuse-50;lyon-part-dieu|seyssel-corbonod;5,20;10,40;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Seyssel – Corbonod;Enfant;Carte Familles Nombreuses (-75 %);child-famille-nombreuse-75;lyon-part-dieu|seyssel-corbonod;2,60;7,80;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Bellegarde-sur-Valserine;Adulte;Aucune — Plein tarif;adult-none;lyon-part-dieu|bellegarde-sur-valserine;28,90;44,00;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Bellegarde-sur-Valserine;Adulte;illico LIBERTÉ — Semaine (-25 %);adult-illico-liberte-weekday;lyon-part-dieu|bellegarde-sur-valserine;21,70;33,00;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Bellegarde-sur-Valserine;Adulte;illico LIBERTÉ — Week-end / Jour férié (-50 %);adult-illico-liberte-weekend;lyon-part-dieu|bellegarde-sur-valserine;14,50;22,00;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Bellegarde-sur-Valserine;Adulte;illico LIBERTÉ — Accompagnant, Week-end / Jour férié (-50 %);adult-illico-liberte-weekend-companion;lyon-part-dieu|bellegarde-sur-valserine;14,50;22,00;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Bellegarde-sur-Valserine;Adulte;illico LIBERTÉ JEUNES (-50 %);adult-illico-jeunes;lyon-part-dieu|bellegarde-sur-valserine;14,50;22,00;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Bellegarde-sur-Valserine;Adulte;Carte Liberté SNCF (-25 %);adult-liberte-nationale;lyon-part-dieu|bellegarde-sur-valserine;21,70;33,00;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Bellegarde-sur-Valserine;Adulte;Carte Familles Nombreuses (-30 %);adult-famille-nombreuse-30;lyon-part-dieu|bellegarde-sur-valserine;16,40;28,00;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Bellegarde-sur-Valserine;Adulte;Carte Familles Nombreuses (-40 %);adult-famille-nombreuse-40;lyon-part-dieu|bellegarde-sur-valserine;14,10;25,70;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Bellegarde-sur-Valserine;Adulte;Carte Familles Nombreuses (-50 %);adult-famille-nombreuse-50;lyon-part-dieu|bellegarde-sur-valserine;11,70;23,30;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Bellegarde-sur-Valserine;Adulte;Carte Familles Nombreuses (-75 %);adult-famille-nombreuse-75;lyon-part-dieu|bellegarde-sur-valserine;5,90;17,50;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Bellegarde-sur-Valserine;Adulte;Carte Militaire (-75 %);adult-military;lyon-part-dieu|bellegarde-sur-valserine;7,30;11,00;TER Auvergne-Rhône-Alpes;2026-09-02;lu directement;"écart (ancienne 2de 5,90 ; ancienne 1re 17,50)"
+Lyon Part-Dieu;Bellegarde-sur-Valserine;Adulte;Carte Famille Militaire (-40 %);adult-family-military;lyon-part-dieu|bellegarde-sur-valserine;17,40;26,40;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Bellegarde-sur-Valserine;Enfant;Aucune — Tarif Enfant 4–11 ans;child-none;lyon-part-dieu|bellegarde-sur-valserine;14,50;22,00;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Bellegarde-sur-Valserine;Enfant;illico LIBERTÉ — Accompagnant, Week-end / Jour férié;child-illico-liberte-weekend-companion;lyon-part-dieu|bellegarde-sur-valserine;7,30;11,00;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Bellegarde-sur-Valserine;Enfant;Carte Famille Militaire;child-family-military;lyon-part-dieu|bellegarde-sur-valserine;8,70;13,20;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Bellegarde-sur-Valserine;Enfant;Carte Familles Nombreuses (-30 %);child-famille-nombreuse-30;lyon-part-dieu|bellegarde-sur-valserine;8,20;14,00;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Bellegarde-sur-Valserine;Enfant;Carte Familles Nombreuses (-40 %);child-famille-nombreuse-40;lyon-part-dieu|bellegarde-sur-valserine;7,10;12,90;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Bellegarde-sur-Valserine;Enfant;Carte Familles Nombreuses (-50 %);child-famille-nombreuse-50;lyon-part-dieu|bellegarde-sur-valserine;5,90;11,70;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Bellegarde-sur-Valserine;Enfant;Carte Familles Nombreuses (-75 %);child-famille-nombreuse-75;lyon-part-dieu|bellegarde-sur-valserine;3,00;8,80;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Genève;Adulte;Aucune — Plein tarif;adult-none;lyon-part-dieu|geneve;35,10;53,30;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Genève;Adulte;illico LIBERTÉ — Semaine (-25 %);adult-illico-liberte-weekday;lyon-part-dieu|geneve;26,40;40,00;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Genève;Adulte;illico LIBERTÉ — Week-end / Jour férié (-50 %);adult-illico-liberte-weekend;lyon-part-dieu|geneve;17,60;26,70;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Genève;Adulte;illico LIBERTÉ — Accompagnant, Week-end / Jour férié (-50 %);adult-illico-liberte-weekend-companion;lyon-part-dieu|geneve;17,60;26,70;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Genève;Adulte;illico LIBERTÉ JEUNES (-50 %);adult-illico-jeunes;lyon-part-dieu|geneve;17,60;26,70;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Genève;Adulte;Carte Liberté SNCF (-25 %);adult-liberte-nationale;lyon-part-dieu|geneve;26,40;40,00;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Genève;Adulte;Carte Familles Nombreuses (-30 %);adult-famille-nombreuse-30;lyon-part-dieu|geneve;19,80;33,80;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Genève;Adulte;Carte Familles Nombreuses (-40 %);adult-famille-nombreuse-40;lyon-part-dieu|geneve;17,00;31,00;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Genève;Adulte;Carte Familles Nombreuses (-50 %);adult-famille-nombreuse-50;lyon-part-dieu|geneve;14,10;28,10;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Genève;Adulte;Carte Familles Nombreuses (-75 %);adult-famille-nombreuse-75;lyon-part-dieu|geneve;7,10;21,10;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Genève;Adulte;Carte Militaire (-75 %);adult-military;lyon-part-dieu|geneve;8,80;13,40;TER Auvergne-Rhône-Alpes;2026-09-02;lu directement;"écart (ancienne 2de 7,10 ; ancienne 1re 21,10)"
+Lyon Part-Dieu;Genève;Adulte;Carte Famille Militaire (-40 %);adult-family-military;lyon-part-dieu|geneve;21,10;32,00;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Genève;Enfant;Aucune — Tarif Enfant 4–11 ans;child-none;lyon-part-dieu|geneve;17,60;26,70;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Genève;Enfant;illico LIBERTÉ — Accompagnant, Week-end / Jour férié;child-illico-liberte-weekend-companion;lyon-part-dieu|geneve;8,80;13,40;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Genève;Enfant;Carte Famille Militaire;child-family-military;lyon-part-dieu|geneve;10,60;16,00;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Genève;Enfant;Carte Familles Nombreuses (-30 %);child-famille-nombreuse-30;lyon-part-dieu|geneve;9,90;16,90;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Genève;Enfant;Carte Familles Nombreuses (-40 %);child-famille-nombreuse-40;lyon-part-dieu|geneve;8,50;15,50;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Genève;Enfant;Carte Familles Nombreuses (-50 %);child-famille-nombreuse-50;lyon-part-dieu|geneve;7,10;14,10;SNCF Connect;2026-09-02;lu directement;identique
+Lyon Part-Dieu;Genève;Enfant;Carte Familles Nombreuses (-75 %);child-famille-nombreuse-75;lyon-part-dieu|geneve;3,60;10,60;SNCF Connect;2026-09-02;lu directement;identique
+Meximieux – Pérouges;Ambérieu-en-Bugey;Adulte;Aucune — Plein tarif;adult-none;meximieux-perouges|amberieu-en-bugey;4,30;6,60;SNCF Connect;2026-09-02;lu directement;identique
+Meximieux – Pérouges;Ambérieu-en-Bugey;Adulte;illico LIBERTÉ — Semaine (-25 %);adult-illico-liberte-weekday;meximieux-perouges|amberieu-en-bugey;3,30;5,00;SNCF Connect;2026-09-02;lu directement;identique
+Meximieux – Pérouges;Ambérieu-en-Bugey;Adulte;illico LIBERTÉ — Week-end / Jour férié (-50 %);adult-illico-liberte-weekend;meximieux-perouges|amberieu-en-bugey;2,20;3,30;SNCF Connect;2026-09-02;lu directement;identique
+Meximieux – Pérouges;Ambérieu-en-Bugey;Adulte;illico LIBERTÉ — Accompagnant, Week-end / Jour férié (-50 %);adult-illico-liberte-weekend-companion;meximieux-perouges|amberieu-en-bugey;2,20;3,30;SNCF Connect;2026-09-02;lu directement;identique
+Meximieux – Pérouges;Ambérieu-en-Bugey;Adulte;illico LIBERTÉ JEUNES (-50 %);adult-illico-jeunes;meximieux-perouges|amberieu-en-bugey;2,20;3,30;SNCF Connect;2026-09-02;lu directement;identique
+Meximieux – Pérouges;Ambérieu-en-Bugey;Adulte;Carte Liberté SNCF (-25 %);adult-liberte-nationale;meximieux-perouges|amberieu-en-bugey;3,30;5,00;SNCF Connect;2026-09-02;lu directement;identique
+Meximieux – Pérouges;Ambérieu-en-Bugey;Adulte;Carte Familles Nombreuses (-30 %);adult-famille-nombreuse-30;meximieux-perouges|amberieu-en-bugey;2,50;4,30;SNCF Connect;2026-09-02;lu directement;identique
+Meximieux – Pérouges;Ambérieu-en-Bugey;Adulte;Carte Familles Nombreuses (-40 %);adult-famille-nombreuse-40;meximieux-perouges|amberieu-en-bugey;2,10;3,90;SNCF Connect;2026-09-02;lu directement;identique
+Meximieux – Pérouges;Ambérieu-en-Bugey;Adulte;Carte Familles Nombreuses (-50 %);adult-famille-nombreuse-50;meximieux-perouges|amberieu-en-bugey;1,80;3,60;SNCF Connect;2026-09-02;lu directement;identique
+Meximieux – Pérouges;Ambérieu-en-Bugey;Adulte;Carte Familles Nombreuses (-75 %);adult-famille-nombreuse-75;meximieux-perouges|amberieu-en-bugey;1,20;2,70;SNCF Connect;2026-09-02;lu directement;identique
+Meximieux – Pérouges;Ambérieu-en-Bugey;Adulte;Carte Militaire (-75 %);adult-military;meximieux-perouges|amberieu-en-bugey;1,20;1,80;TER Auvergne-Rhône-Alpes;2026-09-02;lu directement;"écart (ancienne 2de 1,20 ; ancienne 1re 2,70)"
+Meximieux – Pérouges;Ambérieu-en-Bugey;Adulte;Carte Famille Militaire (-40 %);adult-family-military;meximieux-perouges|amberieu-en-bugey;2,60;4,00;SNCF Connect;2026-09-02;lu directement;identique
+Meximieux – Pérouges;Ambérieu-en-Bugey;Enfant;Aucune — Tarif Enfant 4–11 ans;child-none;meximieux-perouges|amberieu-en-bugey;2,20;3,30;SNCF Connect;2026-09-02;lu directement;identique
+Meximieux – Pérouges;Ambérieu-en-Bugey;Enfant;illico LIBERTÉ — Accompagnant, Week-end / Jour férié;child-illico-liberte-weekend-companion;meximieux-perouges|amberieu-en-bugey;1,20;1,80;SNCF Connect;2026-09-02;lu directement;identique
+Meximieux – Pérouges;Ambérieu-en-Bugey;Enfant;Carte Famille Militaire;child-family-military;meximieux-perouges|amberieu-en-bugey;1,30;2,00;SNCF Connect;2026-09-02;lu directement;identique
+Meximieux – Pérouges;Ambérieu-en-Bugey;Enfant;Carte Familles Nombreuses (-30 %);child-famille-nombreuse-30;meximieux-perouges|amberieu-en-bugey;1,30;2,20;SNCF Connect;2026-09-02;lu directement;identique
+Meximieux – Pérouges;Ambérieu-en-Bugey;Enfant;Carte Familles Nombreuses (-40 %);child-famille-nombreuse-40;meximieux-perouges|amberieu-en-bugey;1,20;2,00;SNCF Connect;2026-09-02;lu directement;identique
+Meximieux – Pérouges;Ambérieu-en-Bugey;Enfant;Carte Familles Nombreuses (-50 %);child-famille-nombreuse-50;meximieux-perouges|amberieu-en-bugey;1,20;1,80;SNCF Connect;2026-09-02;lu directement;identique
+Meximieux – Pérouges;Ambérieu-en-Bugey;Enfant;Carte Familles Nombreuses (-75 %);child-famille-nombreuse-75;meximieux-perouges|amberieu-en-bugey;1,20;1,80;SNCF Connect;2026-09-02;lu directement;"écart (ancienne 2de 1,20 ; ancienne 1re 1,40)"
+Meximieux – Pérouges;Tenay-Hauteville;Adulte;Aucune — Plein tarif;adult-none;meximieux-perouges|tenay-hauteville;9,00;13,70;SNCF Connect;2026-09-02;lu directement;identique
+Meximieux – Pérouges;Tenay-Hauteville;Adulte;illico LIBERTÉ — Semaine (-25 %);adult-illico-liberte-weekday;meximieux-perouges|tenay-hauteville;6,80;10,30;SNCF Connect;2026-09-02;lu directement;identique
+Meximieux – Pérouges;Tenay-Hauteville;Adulte;illico LIBERTÉ — Week-end / Jour férié (-50 %);adult-illico-liberte-weekend;meximieux-perouges|tenay-hauteville;4,50;6,90;SNCF Connect;2026-09-02;lu directement;identique
+Meximieux – Pérouges;Tenay-Hauteville;Adulte;illico LIBERTÉ — Accompagnant, Week-end / Jour férié (-50 %);adult-illico-liberte-weekend-companion;meximieux-perouges|tenay-hauteville;4,50;6,90;SNCF Connect;2026-09-02;lu directement;identique
+Meximieux – Pérouges;Tenay-Hauteville;Adulte;illico LIBERTÉ JEUNES (-50 %);adult-illico-jeunes;meximieux-perouges|tenay-hauteville;4,50;6,90;SNCF Connect;2026-09-02;lu directement;identique
+Meximieux – Pérouges;Tenay-Hauteville;Adulte;Carte Liberté SNCF (-25 %);adult-liberte-nationale;meximieux-perouges|tenay-hauteville;6,80;10,30;SNCF Connect;2026-09-02;lu directement;identique
+Meximieux – Pérouges;Tenay-Hauteville;Adulte;Carte Familles Nombreuses (-30 %);adult-famille-nombreuse-30;meximieux-perouges|tenay-hauteville;5,20;8,90;SNCF Connect;2026-09-02;lu directement;identique
+Meximieux – Pérouges;Tenay-Hauteville;Adulte;Carte Familles Nombreuses (-40 %);adult-famille-nombreuse-40;meximieux-perouges|tenay-hauteville;4,50;8,20;SNCF Connect;2026-09-02;lu directement;identique
+Meximieux – Pérouges;Tenay-Hauteville;Adulte;Carte Familles Nombreuses (-50 %);adult-famille-nombreuse-50;meximieux-perouges|tenay-hauteville;3,70;7,40;SNCF Connect;2026-09-02;lu directement;identique
+Meximieux – Pérouges;Tenay-Hauteville;Adulte;Carte Familles Nombreuses (-75 %);adult-famille-nombreuse-75;meximieux-perouges|tenay-hauteville;1,90;5,60;SNCF Connect;2026-09-02;lu directement;identique
+Meximieux – Pérouges;Tenay-Hauteville;Adulte;Carte Militaire (-75 %);adult-military;meximieux-perouges|tenay-hauteville;2,30;3,50;TER Auvergne-Rhône-Alpes;2026-09-02;lu directement;"écart (ancienne 2de 1,90 ; ancienne 1re 5,60)"
+Meximieux – Pérouges;Tenay-Hauteville;Adulte;Carte Famille Militaire (-40 %);adult-family-military;meximieux-perouges|tenay-hauteville;5,40;8,30;SNCF Connect;2026-09-02;lu directement;identique
+Meximieux – Pérouges;Tenay-Hauteville;Enfant;Aucune — Tarif Enfant 4–11 ans;child-none;meximieux-perouges|tenay-hauteville;4,50;6,90;SNCF Connect;2026-09-02;lu directement;identique
+Meximieux – Pérouges;Tenay-Hauteville;Enfant;illico LIBERTÉ — Accompagnant, Week-end / Jour férié;child-illico-liberte-weekend-companion;meximieux-perouges|tenay-hauteville;2,30;3,50;SNCF Connect;2026-09-02;lu directement;identique
+Meximieux – Pérouges;Tenay-Hauteville;Enfant;Carte Famille Militaire;child-family-military;meximieux-perouges|tenay-hauteville;2,70;4,20;SNCF Connect;2026-09-02;lu directement;identique
+Meximieux – Pérouges;Tenay-Hauteville;Enfant;Carte Familles Nombreuses (-30 %);child-famille-nombreuse-30;meximieux-perouges|tenay-hauteville;2,60;4,50;SNCF Connect;2026-09-02;lu directement;identique
+Meximieux – Pérouges;Tenay-Hauteville;Enfant;Carte Familles Nombreuses (-40 %);child-famille-nombreuse-40;meximieux-perouges|tenay-hauteville;2,30;4,10;SNCF Connect;2026-09-02;lu directement;identique
+Meximieux – Pérouges;Tenay-Hauteville;Enfant;Carte Familles Nombreuses (-50 %);child-famille-nombreuse-50;meximieux-perouges|tenay-hauteville;1,90;3,70;SNCF Connect;2026-09-02;lu directement;identique
+Meximieux – Pérouges;Tenay-Hauteville;Enfant;Carte Familles Nombreuses (-75 %);child-famille-nombreuse-75;meximieux-perouges|tenay-hauteville;1,20;2,80;SNCF Connect;2026-09-02;lu directement;identique
+Meximieux – Pérouges;Virieu-le-Grand – Belley;Adulte;Aucune — Plein tarif;adult-none;meximieux-perouges|virieu-le-grand-belley;13,20;20,00;SNCF Connect;2026-09-02;lu directement;identique
+Meximieux – Pérouges;Virieu-le-Grand – Belley;Adulte;illico LIBERTÉ — Semaine (-25 %);adult-illico-liberte-weekday;meximieux-perouges|virieu-le-grand-belley;9,90;15,00;SNCF Connect;2026-09-02;lu directement;identique
+Meximieux – Pérouges;Virieu-le-Grand – Belley;Adulte;illico LIBERTÉ — Week-end / Jour férié (-50 %);adult-illico-liberte-weekend;meximieux-perouges|virieu-le-grand-belley;6,60;10,00;SNCF Connect;2026-09-02;lu directement;identique
+Meximieux – Pérouges;Virieu-le-Grand – Belley;Adulte;illico LIBERTÉ — Accompagnant, Week-end / Jour férié (-50 %);adult-illico-liberte-weekend-companion;meximieux-perouges|virieu-le-grand-belley;6,60;10,00;SNCF Connect;2026-09-02;lu directement;identique
+Meximieux – Pérouges;Virieu-le-Grand – Belley;Adulte;illico LIBERTÉ JEUNES (-50 %);adult-illico-jeunes;meximieux-perouges|virieu-le-grand-belley;6,60;10,00;SNCF Connect;2026-09-02;lu directement;identique
+Meximieux – Pérouges;Virieu-le-Grand – Belley;Adulte;Carte Liberté SNCF (-25 %);adult-liberte-nationale;meximieux-perouges|virieu-le-grand-belley;9,90;15,00;SNCF Connect;2026-09-02;lu directement;identique
+Meximieux – Pérouges;Virieu-le-Grand – Belley;Adulte;Carte Familles Nombreuses (-30 %);adult-famille-nombreuse-30;meximieux-perouges|virieu-le-grand-belley;7,50;12,90;SNCF Connect;2026-09-02;lu directement;identique
+Meximieux – Pérouges;Virieu-le-Grand – Belley;Adulte;Carte Familles Nombreuses (-40 %);adult-famille-nombreuse-40;meximieux-perouges|virieu-le-grand-belley;6,50;11,90;SNCF Connect;2026-09-02;lu directement;identique
+Meximieux – Pérouges;Virieu-le-Grand – Belley;Adulte;Carte Familles Nombreuses (-50 %);adult-famille-nombreuse-50;meximieux-perouges|virieu-le-grand-belley;5,40;10,80;SNCF Connect;2026-09-02;lu directement;identique
+Meximieux – Pérouges;Virieu-le-Grand – Belley;Adulte;Carte Familles Nombreuses (-75 %);adult-famille-nombreuse-75;meximieux-perouges|virieu-le-grand-belley;2,70;8,10;SNCF Connect;2026-09-02;lu directement;identique
+Meximieux – Pérouges;Virieu-le-Grand – Belley;Adulte;Carte Militaire (-75 %);adult-military;meximieux-perouges|virieu-le-grand-belley;3,30;5,00;TER Auvergne-Rhône-Alpes;2026-09-02;lu directement;"écart (ancienne 2de 2,70 ; ancienne 1re 8,10)"
+Meximieux – Pérouges;Virieu-le-Grand – Belley;Adulte;Carte Famille Militaire (-40 %);adult-family-military;meximieux-perouges|virieu-le-grand-belley;8,00;12,00;SNCF Connect;2026-09-02;lu directement;identique
+Meximieux – Pérouges;Virieu-le-Grand – Belley;Enfant;Aucune — Tarif Enfant 4–11 ans;child-none;meximieux-perouges|virieu-le-grand-belley;6,60;10,00;SNCF Connect;2026-09-02;lu directement;identique
+Meximieux – Pérouges;Virieu-le-Grand – Belley;Enfant;illico LIBERTÉ — Accompagnant, Week-end / Jour férié;child-illico-liberte-weekend-companion;meximieux-perouges|virieu-le-grand-belley;3,30;5,00;SNCF Connect;2026-09-02;lu directement;identique
+Meximieux – Pérouges;Virieu-le-Grand – Belley;Enfant;Carte Famille Militaire;child-family-military;meximieux-perouges|virieu-le-grand-belley;4,00;6,00;SNCF Connect;2026-09-02;lu directement;identique
+Meximieux – Pérouges;Virieu-le-Grand – Belley;Enfant;Carte Familles Nombreuses (-30 %);child-famille-nombreuse-30;meximieux-perouges|virieu-le-grand-belley;3,80;6,50;SNCF Connect;2026-09-02;lu directement;identique
+Meximieux – Pérouges;Virieu-le-Grand – Belley;Enfant;Carte Familles Nombreuses (-40 %);child-famille-nombreuse-40;meximieux-perouges|virieu-le-grand-belley;3,30;6,00;SNCF Connect;2026-09-02;lu directement;identique
+Meximieux – Pérouges;Virieu-le-Grand – Belley;Enfant;Carte Familles Nombreuses (-50 %);child-famille-nombreuse-50;meximieux-perouges|virieu-le-grand-belley;2,70;5,40;SNCF Connect;2026-09-02;lu directement;identique
+Meximieux – Pérouges;Virieu-le-Grand – Belley;Enfant;Carte Familles Nombreuses (-75 %);child-famille-nombreuse-75;meximieux-perouges|virieu-le-grand-belley;1,40;4,10;SNCF Connect;2026-09-02;lu directement;identique
+Meximieux – Pérouges;Culoz;Adulte;Aucune — Plein tarif;adult-none;meximieux-perouges|culoz;15,80;24,00;SNCF Connect;2026-09-02;lu directement;identique
+Meximieux – Pérouges;Culoz;Adulte;illico LIBERTÉ — Semaine (-25 %);adult-illico-liberte-weekday;meximieux-perouges|culoz;11,90;18,00;SNCF Connect;2026-09-02;lu directement;identique
+Meximieux – Pérouges;Culoz;Adulte;illico LIBERTÉ — Week-end / Jour férié (-50 %);adult-illico-liberte-weekend;meximieux-perouges|culoz;7,90;12,00;SNCF Connect;2026-09-02;lu directement;identique
+Meximieux – Pérouges;Culoz;Adulte;illico LIBERTÉ — Accompagnant, Week-end / Jour férié (-50 %);adult-illico-liberte-weekend-companion;meximieux-perouges|culoz;7,90;12,00;SNCF Connect;2026-09-02;lu directement;identique
+Meximieux – Pérouges;Culoz;Adulte;illico LIBERTÉ JEUNES (-50 %);adult-illico-jeunes;meximieux-perouges|culoz;7,90;12,00;SNCF Connect;2026-09-02;lu directement;identique
+Meximieux – Pérouges;Culoz;Adulte;Carte Liberté SNCF (-25 %);adult-liberte-nationale;meximieux-perouges|culoz;11,90;18,00;SNCF Connect;2026-09-02;lu directement;identique
+Meximieux – Pérouges;Culoz;Adulte;Carte Familles Nombreuses (-30 %);adult-famille-nombreuse-30;meximieux-perouges|culoz;9,00;15,30;SNCF Connect;2026-09-02;lu directement;identique
+Meximieux – Pérouges;Culoz;Adulte;Carte Familles Nombreuses (-40 %);adult-famille-nombreuse-40;meximieux-perouges|culoz;7,70;14,00;SNCF Connect;2026-09-02;lu directement;identique
+Meximieux – Pérouges;Culoz;Adulte;Carte Familles Nombreuses (-50 %);adult-famille-nombreuse-50;meximieux-perouges|culoz;6,40;12,70;SNCF Connect;2026-09-02;lu directement;identique
+Meximieux – Pérouges;Culoz;Adulte;Carte Familles Nombreuses (-75 %);adult-famille-nombreuse-75;meximieux-perouges|culoz;3,20;9,50;SNCF Connect;2026-09-02;lu directement;identique
+Meximieux – Pérouges;Culoz;Adulte;Carte Militaire (-75 %);adult-military;meximieux-perouges|culoz;4,00;6,00;TER Auvergne-Rhône-Alpes;2026-09-02;lu directement;"écart (ancienne 2de 3,20 ; ancienne 1re 9,50)"
+Meximieux – Pérouges;Culoz;Adulte;Carte Famille Militaire (-40 %);adult-family-military;meximieux-perouges|culoz;9,50;14,40;SNCF Connect;2026-09-02;lu directement;identique
+Meximieux – Pérouges;Culoz;Enfant;Aucune — Tarif Enfant 4–11 ans;child-none;meximieux-perouges|culoz;7,90;12,00;SNCF Connect;2026-09-02;lu directement;identique
+Meximieux – Pérouges;Culoz;Enfant;illico LIBERTÉ — Accompagnant, Week-end / Jour férié;child-illico-liberte-weekend-companion;meximieux-perouges|culoz;4,00;6,00;SNCF Connect;2026-09-02;lu directement;identique
+Meximieux – Pérouges;Culoz;Enfant;Carte Famille Militaire;child-family-military;meximieux-perouges|culoz;4,80;7,20;SNCF Connect;2026-09-02;lu directement;identique
+Meximieux – Pérouges;Culoz;Enfant;Carte Familles Nombreuses (-30 %);child-famille-nombreuse-30;meximieux-perouges|culoz;4,50;7,70;SNCF Connect;2026-09-02;lu directement;identique
+Meximieux – Pérouges;Culoz;Enfant;Carte Familles Nombreuses (-40 %);child-famille-nombreuse-40;meximieux-perouges|culoz;3,90;7,00;SNCF Connect;2026-09-02;lu directement;identique
+Meximieux – Pérouges;Culoz;Enfant;Carte Familles Nombreuses (-50 %);child-famille-nombreuse-50;meximieux-perouges|culoz;3,20;6,40;SNCF Connect;2026-09-02;lu directement;identique
+Meximieux – Pérouges;Culoz;Enfant;Carte Familles Nombreuses (-75 %);child-famille-nombreuse-75;meximieux-perouges|culoz;1,60;4,80;SNCF Connect;2026-09-02;lu directement;identique
+Meximieux – Pérouges;Seyssel – Corbonod;Adulte;Aucune — Plein tarif;adult-none;meximieux-perouges|seyssel-corbonod;18,50;28,20;SNCF Connect;2026-09-02;lu directement;identique
+Meximieux – Pérouges;Seyssel – Corbonod;Adulte;illico LIBERTÉ — Semaine (-25 %);adult-illico-liberte-weekday;meximieux-perouges|seyssel-corbonod;13,90;21,20;SNCF Connect;2026-09-02;lu directement;identique
+Meximieux – Pérouges;Seyssel – Corbonod;Adulte;illico LIBERTÉ — Week-end / Jour férié (-50 %);adult-illico-liberte-weekend;meximieux-perouges|seyssel-corbonod;9,30;14,10;SNCF Connect;2026-09-02;lu directement;identique
+Meximieux – Pérouges;Seyssel – Corbonod;Adulte;illico LIBERTÉ — Accompagnant, Week-end / Jour férié (-50 %);adult-illico-liberte-weekend-companion;meximieux-perouges|seyssel-corbonod;9,30;14,10;SNCF Connect;2026-09-02;lu directement;identique
+Meximieux – Pérouges;Seyssel – Corbonod;Adulte;illico LIBERTÉ JEUNES (-50 %);adult-illico-jeunes;meximieux-perouges|seyssel-corbonod;9,30;14,10;SNCF Connect;2026-09-02;lu directement;identique
+Meximieux – Pérouges;Seyssel – Corbonod;Adulte;Carte Liberté SNCF (-25 %);adult-liberte-nationale;meximieux-perouges|seyssel-corbonod;13,90;21,20;SNCF Connect;2026-09-02;lu directement;identique
+Meximieux – Pérouges;Seyssel – Corbonod;Adulte;Carte Familles Nombreuses (-30 %);adult-famille-nombreuse-30;meximieux-perouges|seyssel-corbonod;10,50;18,00;SNCF Connect;2026-09-02;lu directement;identique
+Meximieux – Pérouges;Seyssel – Corbonod;Adulte;Carte Familles Nombreuses (-40 %);adult-famille-nombreuse-40;meximieux-perouges|seyssel-corbonod;9,00;16,50;SNCF Connect;2026-09-02;lu directement;identique
+Meximieux – Pérouges;Seyssel – Corbonod;Adulte;Carte Familles Nombreuses (-50 %);adult-famille-nombreuse-50;meximieux-perouges|seyssel-corbonod;7,50;15,00;SNCF Connect;2026-09-02;lu directement;identique
+Meximieux – Pérouges;Seyssel – Corbonod;Adulte;Carte Familles Nombreuses (-75 %);adult-famille-nombreuse-75;meximieux-perouges|seyssel-corbonod;3,80;11,30;SNCF Connect;2026-09-02;lu directement;identique
+Meximieux – Pérouges;Seyssel – Corbonod;Adulte;Carte Militaire (-75 %);adult-military;meximieux-perouges|seyssel-corbonod;4,70;7,10;TER Auvergne-Rhône-Alpes;2026-09-02;lu directement;"écart (ancienne 2de 3,80 ; ancienne 1re 11,30)"
+Meximieux – Pérouges;Seyssel – Corbonod;Adulte;Carte Famille Militaire (-40 %);adult-family-military;meximieux-perouges|seyssel-corbonod;11,10;17,00;SNCF Connect;2026-09-02;lu directement;identique
+Meximieux – Pérouges;Seyssel – Corbonod;Enfant;Aucune — Tarif Enfant 4–11 ans;child-none;meximieux-perouges|seyssel-corbonod;9,30;14,10;SNCF Connect;2026-09-02;lu directement;identique
+Meximieux – Pérouges;Seyssel – Corbonod;Enfant;illico LIBERTÉ — Accompagnant, Week-end / Jour férié;child-illico-liberte-weekend-companion;meximieux-perouges|seyssel-corbonod;4,70;7,10;SNCF Connect;2026-09-02;lu directement;identique
+Meximieux – Pérouges;Seyssel – Corbonod;Enfant;Carte Famille Militaire;child-family-military;meximieux-perouges|seyssel-corbonod;5,60;8,50;SNCF Connect;2026-09-02;lu directement;identique
+Meximieux – Pérouges;Seyssel – Corbonod;Enfant;Carte Familles Nombreuses (-30 %);child-famille-nombreuse-30;meximieux-perouges|seyssel-corbonod;5,30;9,00;SNCF Connect;2026-09-02;lu directement;identique
+Meximieux – Pérouges;Seyssel – Corbonod;Enfant;Carte Familles Nombreuses (-40 %);child-famille-nombreuse-40;meximieux-perouges|seyssel-corbonod;4,50;8,30;SNCF Connect;2026-09-02;lu directement;identique
+Meximieux – Pérouges;Seyssel – Corbonod;Enfant;Carte Familles Nombreuses (-50 %);child-famille-nombreuse-50;meximieux-perouges|seyssel-corbonod;3,80;7,50;SNCF Connect;2026-09-02;lu directement;identique
+Meximieux – Pérouges;Seyssel – Corbonod;Enfant;Carte Familles Nombreuses (-75 %);child-famille-nombreuse-75;meximieux-perouges|seyssel-corbonod;1,90;5,70;SNCF Connect;2026-09-02;lu directement;identique
+Meximieux – Pérouges;Bellegarde-sur-Valserine;Adulte;Aucune — Plein tarif;adult-none;meximieux-perouges|bellegarde-sur-valserine;21,90;33,20;SNCF Connect;2026-09-02;lu directement;identique
+Meximieux – Pérouges;Bellegarde-sur-Valserine;Adulte;illico LIBERTÉ — Semaine (-25 %);adult-illico-liberte-weekday;meximieux-perouges|bellegarde-sur-valserine;16,50;24,90;SNCF Connect;2026-09-02;lu directement;identique
+Meximieux – Pérouges;Bellegarde-sur-Valserine;Adulte;illico LIBERTÉ — Week-end / Jour férié (-50 %);adult-illico-liberte-weekend;meximieux-perouges|bellegarde-sur-valserine;11,00;16,60;SNCF Connect;2026-09-02;lu directement;identique
+Meximieux – Pérouges;Bellegarde-sur-Valserine;Adulte;illico LIBERTÉ — Accompagnant, Week-end / Jour férié (-50 %);adult-illico-liberte-weekend-companion;meximieux-perouges|bellegarde-sur-valserine;11,00;16,60;SNCF Connect;2026-09-02;lu directement;identique
+Meximieux – Pérouges;Bellegarde-sur-Valserine;Adulte;illico LIBERTÉ JEUNES (-50 %);adult-illico-jeunes;meximieux-perouges|bellegarde-sur-valserine;11,00;16,60;SNCF Connect;2026-09-02;lu directement;identique
+Meximieux – Pérouges;Bellegarde-sur-Valserine;Adulte;Carte Liberté SNCF (-25 %);adult-liberte-nationale;meximieux-perouges|bellegarde-sur-valserine;16,50;24,90;SNCF Connect;2026-09-02;lu directement;identique
+Meximieux – Pérouges;Bellegarde-sur-Valserine;Adulte;Carte Familles Nombreuses (-30 %);adult-famille-nombreuse-30;meximieux-perouges|bellegarde-sur-valserine;12,40;21,20;SNCF Connect;2026-09-02;lu directement;identique
+Meximieux – Pérouges;Bellegarde-sur-Valserine;Adulte;Carte Familles Nombreuses (-40 %);adult-famille-nombreuse-40;meximieux-perouges|bellegarde-sur-valserine;10,70;19,50;SNCF Connect;2026-09-02;lu directement;identique
+Meximieux – Pérouges;Bellegarde-sur-Valserine;Adulte;Carte Familles Nombreuses (-50 %);adult-famille-nombreuse-50;meximieux-perouges|bellegarde-sur-valserine;8,90;17,70;SNCF Connect;2026-09-02;lu directement;identique
+Meximieux – Pérouges;Bellegarde-sur-Valserine;Adulte;Carte Familles Nombreuses (-75 %);adult-famille-nombreuse-75;meximieux-perouges|bellegarde-sur-valserine;4,50;13,30;SNCF Connect;2026-09-02;lu directement;identique
+Meximieux – Pérouges;Bellegarde-sur-Valserine;Adulte;Carte Militaire (-75 %);adult-military;meximieux-perouges|bellegarde-sur-valserine;5,50;8,30;TER Auvergne-Rhône-Alpes;2026-09-02;lu directement;"écart (ancienne 2de 4,50 ; ancienne 1re 13,30)"
+Meximieux – Pérouges;Bellegarde-sur-Valserine;Adulte;Carte Famille Militaire (-40 %);adult-family-military;meximieux-perouges|bellegarde-sur-valserine;13,20;20,00;SNCF Connect;2026-09-02;lu directement;identique
+Meximieux – Pérouges;Bellegarde-sur-Valserine;Enfant;Aucune — Tarif Enfant 4–11 ans;child-none;meximieux-perouges|bellegarde-sur-valserine;11,00;16,60;SNCF Connect;2026-09-02;lu directement;identique
+Meximieux – Pérouges;Bellegarde-sur-Valserine;Enfant;illico LIBERTÉ — Accompagnant, Week-end / Jour férié;child-illico-liberte-weekend-companion;meximieux-perouges|bellegarde-sur-valserine;5,50;8,30;SNCF Connect;2026-09-02;lu directement;identique
+Meximieux – Pérouges;Bellegarde-sur-Valserine;Enfant;Carte Famille Militaire;child-family-military;meximieux-perouges|bellegarde-sur-valserine;6,60;10,00;SNCF Connect;2026-09-02;lu directement;identique
+Meximieux – Pérouges;Bellegarde-sur-Valserine;Enfant;Carte Familles Nombreuses (-30 %);child-famille-nombreuse-30;meximieux-perouges|bellegarde-sur-valserine;6,20;10,60;SNCF Connect;2026-09-02;lu directement;identique
+Meximieux – Pérouges;Bellegarde-sur-Valserine;Enfant;Carte Familles Nombreuses (-40 %);child-famille-nombreuse-40;meximieux-perouges|bellegarde-sur-valserine;5,40;9,80;SNCF Connect;2026-09-02;lu directement;identique
+Meximieux – Pérouges;Bellegarde-sur-Valserine;Enfant;Carte Familles Nombreuses (-50 %);child-famille-nombreuse-50;meximieux-perouges|bellegarde-sur-valserine;4,50;8,90;SNCF Connect;2026-09-02;lu directement;identique
+Meximieux – Pérouges;Bellegarde-sur-Valserine;Enfant;Carte Familles Nombreuses (-75 %);child-famille-nombreuse-75;meximieux-perouges|bellegarde-sur-valserine;2,30;6,70;SNCF Connect;2026-09-02;lu directement;identique
+Meximieux – Pérouges;Genève;Adulte;Aucune — Plein tarif;adult-none;meximieux-perouges|geneve;28,40;43,20;SNCF Connect;2026-09-02;lu directement;identique
+Meximieux – Pérouges;Genève;Adulte;illico LIBERTÉ — Semaine (-25 %);adult-illico-liberte-weekday;meximieux-perouges|geneve;21,30;32,40;SNCF Connect;2026-09-02;lu directement;identique
+Meximieux – Pérouges;Genève;Adulte;illico LIBERTÉ — Week-end / Jour férié (-50 %);adult-illico-liberte-weekend;meximieux-perouges|geneve;14,20;21,60;SNCF Connect;2026-09-02;lu directement;identique
+Meximieux – Pérouges;Genève;Adulte;illico LIBERTÉ — Accompagnant, Week-end / Jour férié (-50 %);adult-illico-liberte-weekend-companion;meximieux-perouges|geneve;14,20;21,60;SNCF Connect;2026-09-02;lu directement;identique
+Meximieux – Pérouges;Genève;Adulte;illico LIBERTÉ JEUNES (-50 %);adult-illico-jeunes;meximieux-perouges|geneve;14,20;21,60;SNCF Connect;2026-09-02;lu directement;identique
+Meximieux – Pérouges;Genève;Adulte;Carte Liberté SNCF (-25 %);adult-liberte-nationale;meximieux-perouges|geneve;21,30;32,40;SNCF Connect;2026-09-02;lu directement;identique
+Meximieux – Pérouges;Genève;Adulte;Carte Familles Nombreuses (-30 %);adult-famille-nombreuse-30;meximieux-perouges|geneve;16,10;27,60;SNCF Connect;2026-09-02;lu directement;identique
+Meximieux – Pérouges;Genève;Adulte;Carte Familles Nombreuses (-40 %);adult-famille-nombreuse-40;meximieux-perouges|geneve;13,80;25,30;SNCF Connect;2026-09-02;lu directement;identique
+Meximieux – Pérouges;Genève;Adulte;Carte Familles Nombreuses (-50 %);adult-famille-nombreuse-50;meximieux-perouges|geneve;11,50;23,00;SNCF Connect;2026-09-02;lu directement;identique
+Meximieux – Pérouges;Genève;Adulte;Carte Familles Nombreuses (-75 %);adult-famille-nombreuse-75;meximieux-perouges|geneve;5,80;17,30;SNCF Connect;2026-09-02;lu directement;identique
+Meximieux – Pérouges;Genève;Adulte;Carte Militaire (-75 %);adult-military;meximieux-perouges|geneve;7,10;10,80;TER Auvergne-Rhône-Alpes;2026-09-02;lu directement;"écart (ancienne 2de 5,80 ; ancienne 1re 17,30)"
+Meximieux – Pérouges;Genève;Adulte;Carte Famille Militaire (-40 %);adult-family-military;meximieux-perouges|geneve;17,10;26,00;SNCF Connect;2026-09-02;lu directement;identique
+Meximieux – Pérouges;Genève;Enfant;Aucune — Tarif Enfant 4–11 ans;child-none;meximieux-perouges|geneve;14,20;21,60;SNCF Connect;2026-09-02;lu directement;identique
+Meximieux – Pérouges;Genève;Enfant;illico LIBERTÉ — Accompagnant, Week-end / Jour férié;child-illico-liberte-weekend-companion;meximieux-perouges|geneve;7,10;10,80;SNCF Connect;2026-09-02;lu directement;identique
+Meximieux – Pérouges;Genève;Enfant;Carte Famille Militaire;child-family-military;meximieux-perouges|geneve;8,60;13,00;SNCF Connect;2026-09-02;lu directement;identique
+Meximieux – Pérouges;Genève;Enfant;Carte Familles Nombreuses (-30 %);child-famille-nombreuse-30;meximieux-perouges|geneve;8,10;13,80;SNCF Connect;2026-09-02;lu directement;identique
+Meximieux – Pérouges;Genève;Enfant;Carte Familles Nombreuses (-40 %);child-famille-nombreuse-40;meximieux-perouges|geneve;6,90;12,70;SNCF Connect;2026-09-02;lu directement;identique
+Meximieux – Pérouges;Genève;Enfant;Carte Familles Nombreuses (-50 %);child-famille-nombreuse-50;meximieux-perouges|geneve;5,80;11,50;SNCF Connect;2026-09-02;lu directement;identique
+Meximieux – Pérouges;Genève;Enfant;Carte Familles Nombreuses (-75 %);child-famille-nombreuse-75;meximieux-perouges|geneve;2,90;8,70;SNCF Connect;2026-09-02;lu directement;identique
+Ambérieu-en-Bugey;Tenay-Hauteville;Adulte;Aucune — Plein tarif;adult-none;amberieu-en-bugey|tenay-hauteville;5,40;8,20;SNCF Connect;2026-09-02;lu directement;identique
+Ambérieu-en-Bugey;Tenay-Hauteville;Adulte;illico LIBERTÉ — Semaine (-25 %);adult-illico-liberte-weekday;amberieu-en-bugey|tenay-hauteville;4,10;6,20;SNCF Connect;2026-09-02;lu directement;identique
+Ambérieu-en-Bugey;Tenay-Hauteville;Adulte;illico LIBERTÉ — Week-end / Jour férié (-50 %);adult-illico-liberte-weekend;amberieu-en-bugey|tenay-hauteville;2,70;4,10;SNCF Connect;2026-09-02;lu directement;identique
+Ambérieu-en-Bugey;Tenay-Hauteville;Adulte;illico LIBERTÉ — Accompagnant, Week-end / Jour férié (-50 %);adult-illico-liberte-weekend-companion;amberieu-en-bugey|tenay-hauteville;2,70;4,10;SNCF Connect;2026-09-02;lu directement;identique
+Ambérieu-en-Bugey;Tenay-Hauteville;Adulte;illico LIBERTÉ JEUNES (-50 %);adult-illico-jeunes;amberieu-en-bugey|tenay-hauteville;2,70;4,10;SNCF Connect;2026-09-02;lu directement;identique
+Ambérieu-en-Bugey;Tenay-Hauteville;Adulte;Carte Liberté SNCF (-25 %);adult-liberte-nationale;amberieu-en-bugey|tenay-hauteville;4,10;6,20;SNCF Connect;2026-09-02;lu directement;identique
+Ambérieu-en-Bugey;Tenay-Hauteville;Adulte;Carte Familles Nombreuses (-30 %);adult-famille-nombreuse-30;amberieu-en-bugey|tenay-hauteville;3,10;5,30;SNCF Connect;2026-09-02;lu directement;identique
+Ambérieu-en-Bugey;Tenay-Hauteville;Adulte;Carte Familles Nombreuses (-40 %);adult-famille-nombreuse-40;amberieu-en-bugey|tenay-hauteville;2,70;4,90;SNCF Connect;2026-09-02;lu directement;identique
+Ambérieu-en-Bugey;Tenay-Hauteville;Adulte;Carte Familles Nombreuses (-50 %);adult-famille-nombreuse-50;amberieu-en-bugey|tenay-hauteville;2,20;4,40;SNCF Connect;2026-09-02;lu directement;identique
+Ambérieu-en-Bugey;Tenay-Hauteville;Adulte;Carte Familles Nombreuses (-75 %);adult-famille-nombreuse-75;amberieu-en-bugey|tenay-hauteville;1,20;3,30;SNCF Connect;2026-09-02;lu directement;identique
+Ambérieu-en-Bugey;Tenay-Hauteville;Adulte;Carte Militaire (-75 %);adult-military;amberieu-en-bugey|tenay-hauteville;1,40;2,10;TER Auvergne-Rhône-Alpes;2026-09-02;lu directement;"écart (ancienne 2de 1,20 ; ancienne 1re 3,30)"
+Ambérieu-en-Bugey;Tenay-Hauteville;Adulte;Carte Famille Militaire (-40 %);adult-family-military;amberieu-en-bugey|tenay-hauteville;3,30;5,00;SNCF Connect;2026-09-02;lu directement;identique
+Ambérieu-en-Bugey;Tenay-Hauteville;Enfant;Aucune — Tarif Enfant 4–11 ans;child-none;amberieu-en-bugey|tenay-hauteville;2,70;4,10;SNCF Connect;2026-09-02;lu directement;identique
+Ambérieu-en-Bugey;Tenay-Hauteville;Enfant;illico LIBERTÉ — Accompagnant, Week-end / Jour férié;child-illico-liberte-weekend-companion;amberieu-en-bugey|tenay-hauteville;1,40;2,10;SNCF Connect;2026-09-02;lu directement;identique
+Ambérieu-en-Bugey;Tenay-Hauteville;Enfant;Carte Famille Militaire;child-family-military;amberieu-en-bugey|tenay-hauteville;1,70;2,50;SNCF Connect;2026-09-02;lu directement;identique
+Ambérieu-en-Bugey;Tenay-Hauteville;Enfant;Carte Familles Nombreuses (-30 %);child-famille-nombreuse-30;amberieu-en-bugey|tenay-hauteville;1,60;2,70;SNCF Connect;2026-09-02;lu directement;identique
+Ambérieu-en-Bugey;Tenay-Hauteville;Enfant;Carte Familles Nombreuses (-40 %);child-famille-nombreuse-40;amberieu-en-bugey|tenay-hauteville;1,40;2,50;SNCF Connect;2026-09-02;lu directement;identique
+Ambérieu-en-Bugey;Tenay-Hauteville;Enfant;Carte Familles Nombreuses (-50 %);child-famille-nombreuse-50;amberieu-en-bugey|tenay-hauteville;1,20;2,20;SNCF Connect;2026-09-02;lu directement;identique
+Ambérieu-en-Bugey;Tenay-Hauteville;Enfant;Carte Familles Nombreuses (-75 %);child-famille-nombreuse-75;amberieu-en-bugey|tenay-hauteville;1,20;1,80;SNCF Connect;2026-09-02;lu directement;identique
+Ambérieu-en-Bugey;Virieu-le-Grand – Belley;Adulte;Aucune — Plein tarif;adult-none;amberieu-en-bugey|virieu-le-grand-belley;10,40;15,80;SNCF Connect;2026-09-02;lu directement;identique
+Ambérieu-en-Bugey;Virieu-le-Grand – Belley;Adulte;illico LIBERTÉ — Semaine (-25 %);adult-illico-liberte-weekday;amberieu-en-bugey|virieu-le-grand-belley;7,80;11,90;SNCF Connect;2026-09-02;lu directement;identique
+Ambérieu-en-Bugey;Virieu-le-Grand – Belley;Adulte;illico LIBERTÉ — Week-end / Jour férié (-50 %);adult-illico-liberte-weekend;amberieu-en-bugey|virieu-le-grand-belley;5,20;7,90;SNCF Connect;2026-09-02;lu directement;identique
+Ambérieu-en-Bugey;Virieu-le-Grand – Belley;Adulte;illico LIBERTÉ — Accompagnant, Week-end / Jour férié (-50 %);adult-illico-liberte-weekend-companion;amberieu-en-bugey|virieu-le-grand-belley;5,20;7,90;SNCF Connect;2026-09-02;lu directement;identique
+Ambérieu-en-Bugey;Virieu-le-Grand – Belley;Adulte;illico LIBERTÉ JEUNES (-50 %);adult-illico-jeunes;amberieu-en-bugey|virieu-le-grand-belley;5,20;7,90;SNCF Connect;2026-09-02;lu directement;identique
+Ambérieu-en-Bugey;Virieu-le-Grand – Belley;Adulte;Carte Liberté SNCF (-25 %);adult-liberte-nationale;amberieu-en-bugey|virieu-le-grand-belley;7,80;11,90;SNCF Connect;2026-09-02;lu directement;identique
+Ambérieu-en-Bugey;Virieu-le-Grand – Belley;Adulte;Carte Familles Nombreuses (-30 %);adult-famille-nombreuse-30;amberieu-en-bugey|virieu-le-grand-belley;6,00;10,20;SNCF Connect;2026-09-02;lu directement;identique
+Ambérieu-en-Bugey;Virieu-le-Grand – Belley;Adulte;Carte Familles Nombreuses (-40 %);adult-famille-nombreuse-40;amberieu-en-bugey|virieu-le-grand-belley;5,10;9,30;SNCF Connect;2026-09-02;lu directement;identique
+Ambérieu-en-Bugey;Virieu-le-Grand – Belley;Adulte;Carte Familles Nombreuses (-50 %);adult-famille-nombreuse-50;amberieu-en-bugey|virieu-le-grand-belley;4,30;8,50;SNCF Connect;2026-09-02;lu directement;identique
+Ambérieu-en-Bugey;Virieu-le-Grand – Belley;Adulte;Carte Familles Nombreuses (-75 %);adult-famille-nombreuse-75;amberieu-en-bugey|virieu-le-grand-belley;2,20;6,40;SNCF Connect;2026-09-02;lu directement;identique
+Ambérieu-en-Bugey;Virieu-le-Grand – Belley;Adulte;Carte Militaire (-75 %);adult-military;amberieu-en-bugey|virieu-le-grand-belley;2,60;4,00;TER Auvergne-Rhône-Alpes;2026-09-02;lu directement;"écart (ancienne 2de 2,20 ; ancienne 1re 6,40)"
+Ambérieu-en-Bugey;Virieu-le-Grand – Belley;Adulte;Carte Famille Militaire (-40 %);adult-family-military;amberieu-en-bugey|virieu-le-grand-belley;6,30;9,50;SNCF Connect;2026-09-02;lu directement;identique
+Ambérieu-en-Bugey;Virieu-le-Grand – Belley;Enfant;Aucune — Tarif Enfant 4–11 ans;child-none;amberieu-en-bugey|virieu-le-grand-belley;5,20;7,90;SNCF Connect;2026-09-02;lu directement;identique
+Ambérieu-en-Bugey;Virieu-le-Grand – Belley;Enfant;illico LIBERTÉ — Accompagnant, Week-end / Jour férié;child-illico-liberte-weekend-companion;amberieu-en-bugey|virieu-le-grand-belley;2,60;4,00;SNCF Connect;2026-09-02;lu directement;identique
+Ambérieu-en-Bugey;Virieu-le-Grand – Belley;Enfant;Carte Famille Militaire;child-family-military;amberieu-en-bugey|virieu-le-grand-belley;3,20;4,80;SNCF Connect;2026-09-02;lu directement;identique
+Ambérieu-en-Bugey;Virieu-le-Grand – Belley;Enfant;Carte Familles Nombreuses (-30 %);child-famille-nombreuse-30;amberieu-en-bugey|virieu-le-grand-belley;3,00;5,10;SNCF Connect;2026-09-02;lu directement;identique
+Ambérieu-en-Bugey;Virieu-le-Grand – Belley;Enfant;Carte Familles Nombreuses (-40 %);child-famille-nombreuse-40;amberieu-en-bugey|virieu-le-grand-belley;2,60;4,70;SNCF Connect;2026-09-02;lu directement;identique
+Ambérieu-en-Bugey;Virieu-le-Grand – Belley;Enfant;Carte Familles Nombreuses (-50 %);child-famille-nombreuse-50;amberieu-en-bugey|virieu-le-grand-belley;2,20;4,30;SNCF Connect;2026-09-02;lu directement;identique
+Ambérieu-en-Bugey;Virieu-le-Grand – Belley;Enfant;Carte Familles Nombreuses (-75 %);child-famille-nombreuse-75;amberieu-en-bugey|virieu-le-grand-belley;1,20;3,20;SNCF Connect;2026-09-02;lu directement;identique
+Ambérieu-en-Bugey;Culoz;Adulte;Aucune — Plein tarif;adult-none;amberieu-en-bugey|culoz;12,80;19,40;SNCF Connect;2026-09-02;lu directement;identique
+Ambérieu-en-Bugey;Culoz;Adulte;illico LIBERTÉ — Semaine (-25 %);adult-illico-liberte-weekday;amberieu-en-bugey|culoz;9,60;14,60;SNCF Connect;2026-09-02;lu directement;identique
+Ambérieu-en-Bugey;Culoz;Adulte;illico LIBERTÉ — Week-end / Jour férié (-50 %);adult-illico-liberte-weekend;amberieu-en-bugey|culoz;6,40;9,70;SNCF Connect;2026-09-02;lu directement;identique
+Ambérieu-en-Bugey;Culoz;Adulte;illico LIBERTÉ — Accompagnant, Week-end / Jour férié (-50 %);adult-illico-liberte-weekend-companion;amberieu-en-bugey|culoz;6,40;9,70;SNCF Connect;2026-09-02;lu directement;identique
+Ambérieu-en-Bugey;Culoz;Adulte;illico LIBERTÉ JEUNES (-50 %);adult-illico-jeunes;amberieu-en-bugey|culoz;6,40;9,70;SNCF Connect;2026-09-02;lu directement;identique
+Ambérieu-en-Bugey;Culoz;Adulte;Carte Liberté SNCF (-25 %);adult-liberte-nationale;amberieu-en-bugey|culoz;9,60;14,60;SNCF Connect;2026-09-02;lu directement;identique
+Ambérieu-en-Bugey;Culoz;Adulte;Carte Familles Nombreuses (-30 %);adult-famille-nombreuse-30;amberieu-en-bugey|culoz;7,30;12,50;SNCF Connect;2026-09-02;lu directement;identique
+Ambérieu-en-Bugey;Culoz;Adulte;Carte Familles Nombreuses (-40 %);adult-famille-nombreuse-40;amberieu-en-bugey|culoz;6,30;11,50;SNCF Connect;2026-09-02;lu directement;identique
+Ambérieu-en-Bugey;Culoz;Adulte;Carte Familles Nombreuses (-50 %);adult-famille-nombreuse-50;amberieu-en-bugey|culoz;5,20;10,40;SNCF Connect;2026-09-02;lu directement;identique
+Ambérieu-en-Bugey;Culoz;Adulte;Carte Familles Nombreuses (-75 %);adult-famille-nombreuse-75;amberieu-en-bugey|culoz;2,60;7,80;SNCF Connect;2026-09-02;lu directement;identique
+Ambérieu-en-Bugey;Culoz;Adulte;Carte Militaire (-75 %);adult-military;amberieu-en-bugey|culoz;3,20;4,90;TER Auvergne-Rhône-Alpes;2026-09-02;lu directement;"écart (ancienne 2de 2,60 ; ancienne 1re 7,80)"
+Ambérieu-en-Bugey;Culoz;Adulte;Carte Famille Militaire (-40 %);adult-family-military;amberieu-en-bugey|culoz;7,70;11,70;SNCF Connect;2026-09-02;lu directement;identique
+Ambérieu-en-Bugey;Culoz;Enfant;Aucune — Tarif Enfant 4–11 ans;child-none;amberieu-en-bugey|culoz;6,40;9,70;SNCF Connect;2026-09-02;lu directement;identique
+Ambérieu-en-Bugey;Culoz;Enfant;illico LIBERTÉ — Accompagnant, Week-end / Jour férié;child-illico-liberte-weekend-companion;amberieu-en-bugey|culoz;3,20;4,90;SNCF Connect;2026-09-02;lu directement;identique
+Ambérieu-en-Bugey;Culoz;Enfant;Carte Famille Militaire;child-family-military;amberieu-en-bugey|culoz;3,90;5,90;SNCF Connect;2026-09-02;lu directement;identique
+Ambérieu-en-Bugey;Culoz;Enfant;Carte Familles Nombreuses (-30 %);child-famille-nombreuse-30;amberieu-en-bugey|culoz;3,70;6,30;SNCF Connect;2026-09-02;lu directement;identique
+Ambérieu-en-Bugey;Culoz;Enfant;Carte Familles Nombreuses (-40 %);child-famille-nombreuse-40;amberieu-en-bugey|culoz;3,20;5,80;SNCF Connect;2026-09-02;lu directement;identique
+Ambérieu-en-Bugey;Culoz;Enfant;Carte Familles Nombreuses (-50 %);child-famille-nombreuse-50;amberieu-en-bugey|culoz;2,60;5,20;SNCF Connect;2026-09-02;lu directement;identique
+Ambérieu-en-Bugey;Culoz;Enfant;Carte Familles Nombreuses (-75 %);child-famille-nombreuse-75;amberieu-en-bugey|culoz;1,30;3,90;SNCF Connect;2026-09-02;lu directement;identique
+Ambérieu-en-Bugey;Seyssel – Corbonod;Adulte;Aucune — Plein tarif;adult-none;amberieu-en-bugey|seyssel-corbonod;16,00;24,20;SNCF Connect;2026-09-02;lu directement;identique
+Ambérieu-en-Bugey;Seyssel – Corbonod;Adulte;illico LIBERTÉ — Semaine (-25 %);adult-illico-liberte-weekday;amberieu-en-bugey|seyssel-corbonod;12,00;18,20;SNCF Connect;2026-09-02;lu directement;identique
+Ambérieu-en-Bugey;Seyssel – Corbonod;Adulte;illico LIBERTÉ — Week-end / Jour férié (-50 %);adult-illico-liberte-weekend;amberieu-en-bugey|seyssel-corbonod;8,00;12,10;SNCF Connect;2026-09-02;lu directement;identique
+Ambérieu-en-Bugey;Seyssel – Corbonod;Adulte;illico LIBERTÉ — Accompagnant, Week-end / Jour férié (-50 %);adult-illico-liberte-weekend-companion;amberieu-en-bugey|seyssel-corbonod;8,00;12,10;SNCF Connect;2026-09-02;lu directement;identique
+Ambérieu-en-Bugey;Seyssel – Corbonod;Adulte;illico LIBERTÉ JEUNES (-50 %);adult-illico-jeunes;amberieu-en-bugey|seyssel-corbonod;8,00;12,10;SNCF Connect;2026-09-02;lu directement;identique
+Ambérieu-en-Bugey;Seyssel – Corbonod;Adulte;Carte Liberté SNCF (-25 %);adult-liberte-nationale;amberieu-en-bugey|seyssel-corbonod;12,00;18,20;SNCF Connect;2026-09-02;lu directement;identique
+Ambérieu-en-Bugey;Seyssel – Corbonod;Adulte;Carte Familles Nombreuses (-30 %);adult-famille-nombreuse-30;amberieu-en-bugey|seyssel-corbonod;9,10;15,50;SNCF Connect;2026-09-02;lu directement;identique
+Ambérieu-en-Bugey;Seyssel – Corbonod;Adulte;Carte Familles Nombreuses (-40 %);adult-famille-nombreuse-40;amberieu-en-bugey|seyssel-corbonod;7,80;14,20;SNCF Connect;2026-09-02;lu directement;identique
+Ambérieu-en-Bugey;Seyssel – Corbonod;Adulte;Carte Familles Nombreuses (-50 %);adult-famille-nombreuse-50;amberieu-en-bugey|seyssel-corbonod;6,50;12,90;SNCF Connect;2026-09-02;lu directement;identique
+Ambérieu-en-Bugey;Seyssel – Corbonod;Adulte;Carte Familles Nombreuses (-75 %);adult-famille-nombreuse-75;amberieu-en-bugey|seyssel-corbonod;3,30;9,70;SNCF Connect;2026-09-02;lu directement;identique
+Ambérieu-en-Bugey;Seyssel – Corbonod;Adulte;Carte Militaire (-75 %);adult-military;amberieu-en-bugey|seyssel-corbonod;4,00;6,10;TER Auvergne-Rhône-Alpes;2026-09-02;lu directement;"écart (ancienne 2de 3,30 ; ancienne 1re 9,70)"
+Ambérieu-en-Bugey;Seyssel – Corbonod;Adulte;Carte Famille Militaire (-40 %);adult-family-military;amberieu-en-bugey|seyssel-corbonod;9,60;14,60;SNCF Connect;2026-09-02;lu directement;identique
+Ambérieu-en-Bugey;Seyssel – Corbonod;Enfant;Aucune — Tarif Enfant 4–11 ans;child-none;amberieu-en-bugey|seyssel-corbonod;8,00;12,10;SNCF Connect;2026-09-02;lu directement;identique
+Ambérieu-en-Bugey;Seyssel – Corbonod;Enfant;illico LIBERTÉ — Accompagnant, Week-end / Jour férié;child-illico-liberte-weekend-companion;amberieu-en-bugey|seyssel-corbonod;4,00;6,10;SNCF Connect;2026-09-02;lu directement;identique
+Ambérieu-en-Bugey;Seyssel – Corbonod;Enfant;Carte Famille Militaire;child-family-military;amberieu-en-bugey|seyssel-corbonod;4,80;7,30;SNCF Connect;2026-09-02;lu directement;identique
+Ambérieu-en-Bugey;Seyssel – Corbonod;Enfant;Carte Familles Nombreuses (-30 %);child-famille-nombreuse-30;amberieu-en-bugey|seyssel-corbonod;4,60;7,80;SNCF Connect;2026-09-02;lu directement;identique
+Ambérieu-en-Bugey;Seyssel – Corbonod;Enfant;Carte Familles Nombreuses (-40 %);child-famille-nombreuse-40;amberieu-en-bugey|seyssel-corbonod;3,90;7,10;SNCF Connect;2026-09-02;lu directement;identique
+Ambérieu-en-Bugey;Seyssel – Corbonod;Enfant;Carte Familles Nombreuses (-50 %);child-famille-nombreuse-50;amberieu-en-bugey|seyssel-corbonod;3,30;6,50;SNCF Connect;2026-09-02;lu directement;identique
+Ambérieu-en-Bugey;Seyssel – Corbonod;Enfant;Carte Familles Nombreuses (-75 %);child-famille-nombreuse-75;amberieu-en-bugey|seyssel-corbonod;1,70;4,90;SNCF Connect;2026-09-02;lu directement;identique
+Ambérieu-en-Bugey;Bellegarde-sur-Valserine;Adulte;Aucune — Plein tarif;adult-none;amberieu-en-bugey|bellegarde-sur-valserine;19,30;29,30;SNCF Connect;2026-09-02;lu directement;identique
+Ambérieu-en-Bugey;Bellegarde-sur-Valserine;Adulte;illico LIBERTÉ — Semaine (-25 %);adult-illico-liberte-weekday;amberieu-en-bugey|bellegarde-sur-valserine;14,50;22,00;SNCF Connect;2026-09-02;lu directement;identique
+Ambérieu-en-Bugey;Bellegarde-sur-Valserine;Adulte;illico LIBERTÉ — Week-end / Jour férié (-50 %);adult-illico-liberte-weekend;amberieu-en-bugey|bellegarde-sur-valserine;9,70;14,70;SNCF Connect;2026-09-02;lu directement;identique
+Ambérieu-en-Bugey;Bellegarde-sur-Valserine;Adulte;illico LIBERTÉ — Accompagnant, Week-end / Jour férié (-50 %);adult-illico-liberte-weekend-companion;amberieu-en-bugey|bellegarde-sur-valserine;9,70;14,70;SNCF Connect;2026-09-02;lu directement;identique
+Ambérieu-en-Bugey;Bellegarde-sur-Valserine;Adulte;illico LIBERTÉ JEUNES (-50 %);adult-illico-jeunes;amberieu-en-bugey|bellegarde-sur-valserine;9,70;14,70;SNCF Connect;2026-09-02;lu directement;identique
+Ambérieu-en-Bugey;Bellegarde-sur-Valserine;Adulte;Carte Liberté SNCF (-25 %);adult-liberte-nationale;amberieu-en-bugey|bellegarde-sur-valserine;14,50;22,00;SNCF Connect;2026-09-02;lu directement;identique
+Ambérieu-en-Bugey;Bellegarde-sur-Valserine;Adulte;Carte Familles Nombreuses (-30 %);adult-famille-nombreuse-30;amberieu-en-bugey|bellegarde-sur-valserine;11,00;18,80;SNCF Connect;2026-09-02;lu directement;identique
+Ambérieu-en-Bugey;Bellegarde-sur-Valserine;Adulte;Carte Familles Nombreuses (-40 %);adult-famille-nombreuse-40;amberieu-en-bugey|bellegarde-sur-valserine;9,40;17,20;SNCF Connect;2026-09-02;lu directement;identique
+Ambérieu-en-Bugey;Bellegarde-sur-Valserine;Adulte;Carte Familles Nombreuses (-50 %);adult-famille-nombreuse-50;amberieu-en-bugey|bellegarde-sur-valserine;7,80;15,60;SNCF Connect;2026-09-02;lu directement;identique
+Ambérieu-en-Bugey;Bellegarde-sur-Valserine;Adulte;Carte Familles Nombreuses (-75 %);adult-famille-nombreuse-75;amberieu-en-bugey|bellegarde-sur-valserine;3,90;11,70;SNCF Connect;2026-09-02;lu directement;identique
+Ambérieu-en-Bugey;Bellegarde-sur-Valserine;Adulte;Carte Militaire (-75 %);adult-military;amberieu-en-bugey|bellegarde-sur-valserine;4,90;7,40;TER Auvergne-Rhône-Alpes;2026-09-02;lu directement;"écart (ancienne 2de 3,90 ; ancienne 1re 11,70)"
+Ambérieu-en-Bugey;Bellegarde-sur-Valserine;Adulte;Carte Famille Militaire (-40 %);adult-family-military;amberieu-en-bugey|bellegarde-sur-valserine;11,60;17,60;SNCF Connect;2026-09-02;lu directement;identique
+Ambérieu-en-Bugey;Bellegarde-sur-Valserine;Enfant;Aucune — Tarif Enfant 4–11 ans;child-none;amberieu-en-bugey|bellegarde-sur-valserine;9,70;14,70;SNCF Connect;2026-09-02;lu directement;identique
+Ambérieu-en-Bugey;Bellegarde-sur-Valserine;Enfant;illico LIBERTÉ — Accompagnant, Week-end / Jour férié;child-illico-liberte-weekend-companion;amberieu-en-bugey|bellegarde-sur-valserine;4,90;7,40;SNCF Connect;2026-09-02;lu directement;identique
+Ambérieu-en-Bugey;Bellegarde-sur-Valserine;Enfant;Carte Famille Militaire;child-family-military;amberieu-en-bugey|bellegarde-sur-valserine;5,80;8,80;SNCF Connect;2026-09-02;lu directement;identique
+Ambérieu-en-Bugey;Bellegarde-sur-Valserine;Enfant;Carte Familles Nombreuses (-30 %);child-famille-nombreuse-30;amberieu-en-bugey|bellegarde-sur-valserine;5,50;9,40;SNCF Connect;2026-09-02;lu directement;identique
+Ambérieu-en-Bugey;Bellegarde-sur-Valserine;Enfant;Carte Familles Nombreuses (-40 %);child-famille-nombreuse-40;amberieu-en-bugey|bellegarde-sur-valserine;4,70;8,60;SNCF Connect;2026-09-02;lu directement;identique
+Ambérieu-en-Bugey;Bellegarde-sur-Valserine;Enfant;Carte Familles Nombreuses (-50 %);child-famille-nombreuse-50;amberieu-en-bugey|bellegarde-sur-valserine;3,90;7,80;SNCF Connect;2026-09-02;lu directement;identique
+Ambérieu-en-Bugey;Bellegarde-sur-Valserine;Enfant;Carte Familles Nombreuses (-75 %);child-famille-nombreuse-75;amberieu-en-bugey|bellegarde-sur-valserine;2,00;5,90;SNCF Connect;2026-09-02;lu directement;identique
+Ambérieu-en-Bugey;Genève;Adulte;Aucune — Plein tarif;adult-none;amberieu-en-bugey|geneve;25,90;39,40;SNCF Connect;2026-09-02;lu directement;identique
+Ambérieu-en-Bugey;Genève;Adulte;illico LIBERTÉ — Semaine (-25 %);adult-illico-liberte-weekday;amberieu-en-bugey|geneve;19,50;29,60;SNCF Connect;2026-09-02;lu directement;identique
+Ambérieu-en-Bugey;Genève;Adulte;illico LIBERTÉ — Week-end / Jour férié (-50 %);adult-illico-liberte-weekend;amberieu-en-bugey|geneve;13,00;19,70;SNCF Connect;2026-09-02;lu directement;identique
+Ambérieu-en-Bugey;Genève;Adulte;illico LIBERTÉ — Accompagnant, Week-end / Jour férié (-50 %);adult-illico-liberte-weekend-companion;amberieu-en-bugey|geneve;13,00;19,70;SNCF Connect;2026-09-02;lu directement;identique
+Ambérieu-en-Bugey;Genève;Adulte;illico LIBERTÉ JEUNES (-50 %);adult-illico-jeunes;amberieu-en-bugey|geneve;13,00;19,70;SNCF Connect;2026-09-02;lu directement;identique
+Ambérieu-en-Bugey;Genève;Adulte;Carte Liberté SNCF (-25 %);adult-liberte-nationale;amberieu-en-bugey|geneve;19,50;29,60;SNCF Connect;2026-09-02;lu directement;identique
+Ambérieu-en-Bugey;Genève;Adulte;Carte Familles Nombreuses (-30 %);adult-famille-nombreuse-30;amberieu-en-bugey|geneve;14,70;25,20;SNCF Connect;2026-09-02;lu directement;identique
+Ambérieu-en-Bugey;Genève;Adulte;Carte Familles Nombreuses (-40 %);adult-famille-nombreuse-40;amberieu-en-bugey|geneve;12,60;23,10;SNCF Connect;2026-09-02;lu directement;identique
+Ambérieu-en-Bugey;Genève;Adulte;Carte Familles Nombreuses (-50 %);adult-famille-nombreuse-50;amberieu-en-bugey|geneve;10,50;21,00;SNCF Connect;2026-09-02;lu directement;identique
+Ambérieu-en-Bugey;Genève;Adulte;Carte Familles Nombreuses (-75 %);adult-famille-nombreuse-75;amberieu-en-bugey|geneve;5,30;15,80;SNCF Connect;2026-09-02;lu directement;identique
+Ambérieu-en-Bugey;Genève;Adulte;Carte Militaire (-75 %);adult-military;amberieu-en-bugey|geneve;6,50;9,90;TER Auvergne-Rhône-Alpes;2026-09-02;lu directement;"écart (ancienne 2de 5,30 ; ancienne 1re 15,80)"
+Ambérieu-en-Bugey;Genève;Adulte;Carte Famille Militaire (-40 %);adult-family-military;amberieu-en-bugey|geneve;15,60;23,70;SNCF Connect;2026-09-02;lu directement;identique
+Ambérieu-en-Bugey;Genève;Enfant;Aucune — Tarif Enfant 4–11 ans;child-none;amberieu-en-bugey|geneve;13,00;19,70;SNCF Connect;2026-09-02;lu directement;identique
+Ambérieu-en-Bugey;Genève;Enfant;illico LIBERTÉ — Accompagnant, Week-end / Jour férié;child-illico-liberte-weekend-companion;amberieu-en-bugey|geneve;6,50;9,90;SNCF Connect;2026-09-02;lu directement;identique
+Ambérieu-en-Bugey;Genève;Enfant;Carte Famille Militaire;child-family-military;amberieu-en-bugey|geneve;7,80;11,90;SNCF Connect;2026-09-02;lu directement;identique
+Ambérieu-en-Bugey;Genève;Enfant;Carte Familles Nombreuses (-30 %);child-famille-nombreuse-30;amberieu-en-bugey|geneve;7,40;12,60;SNCF Connect;2026-09-02;lu directement;identique
+Ambérieu-en-Bugey;Genève;Enfant;Carte Familles Nombreuses (-40 %);child-famille-nombreuse-40;amberieu-en-bugey|geneve;6,30;11,60;SNCF Connect;2026-09-02;lu directement;identique
+Ambérieu-en-Bugey;Genève;Enfant;Carte Familles Nombreuses (-50 %);child-famille-nombreuse-50;amberieu-en-bugey|geneve;5,30;10,50;SNCF Connect;2026-09-02;lu directement;identique
+Ambérieu-en-Bugey;Genève;Enfant;Carte Familles Nombreuses (-75 %);child-famille-nombreuse-75;amberieu-en-bugey|geneve;2,70;7,90;SNCF Connect;2026-09-02;lu directement;identique
+Tenay-Hauteville;Virieu-le-Grand – Belley;Adulte;Aucune — Plein tarif;adult-none;tenay-hauteville|virieu-le-grand-belley;5,90;9,00;SNCF Connect;2026-09-02;lu directement;identique
+Tenay-Hauteville;Virieu-le-Grand – Belley;Adulte;illico LIBERTÉ — Semaine (-25 %);adult-illico-liberte-weekday;tenay-hauteville|virieu-le-grand-belley;4,50;6,80;SNCF Connect;2026-09-02;lu directement;identique
+Tenay-Hauteville;Virieu-le-Grand – Belley;Adulte;illico LIBERTÉ — Week-end / Jour férié (-50 %);adult-illico-liberte-weekend;tenay-hauteville|virieu-le-grand-belley;3,00;4,50;SNCF Connect;2026-09-02;lu directement;identique
+Tenay-Hauteville;Virieu-le-Grand – Belley;Adulte;illico LIBERTÉ — Accompagnant, Week-end / Jour férié (-50 %);adult-illico-liberte-weekend-companion;tenay-hauteville|virieu-le-grand-belley;3,00;4,50;SNCF Connect;2026-09-02;lu directement;identique
+Tenay-Hauteville;Virieu-le-Grand – Belley;Adulte;illico LIBERTÉ JEUNES (-50 %);adult-illico-jeunes;tenay-hauteville|virieu-le-grand-belley;3,00;4,50;SNCF Connect;2026-09-02;lu directement;identique
+Tenay-Hauteville;Virieu-le-Grand – Belley;Adulte;Carte Liberté SNCF (-25 %);adult-liberte-nationale;tenay-hauteville|virieu-le-grand-belley;4,50;6,80;SNCF Connect;2026-09-02;lu directement;identique
+Tenay-Hauteville;Virieu-le-Grand – Belley;Adulte;Carte Familles Nombreuses (-30 %);adult-famille-nombreuse-30;tenay-hauteville|virieu-le-grand-belley;3,40;5,80;SNCF Connect;2026-09-02;lu directement;identique
+Tenay-Hauteville;Virieu-le-Grand – Belley;Adulte;Carte Familles Nombreuses (-40 %);adult-famille-nombreuse-40;tenay-hauteville|virieu-le-grand-belley;2,90;5,30;SNCF Connect;2026-09-02;lu directement;identique
+Tenay-Hauteville;Virieu-le-Grand – Belley;Adulte;Carte Familles Nombreuses (-50 %);adult-famille-nombreuse-50;tenay-hauteville|virieu-le-grand-belley;2,40;4,80;SNCF Connect;2026-09-02;lu directement;identique
+Tenay-Hauteville;Virieu-le-Grand – Belley;Adulte;Carte Familles Nombreuses (-75 %);adult-famille-nombreuse-75;tenay-hauteville|virieu-le-grand-belley;1,20;3,60;SNCF Connect;2026-09-02;lu directement;identique
+Tenay-Hauteville;Virieu-le-Grand – Belley;Adulte;Carte Militaire (-75 %);adult-military;tenay-hauteville|virieu-le-grand-belley;1,50;2,30;TER Auvergne-Rhône-Alpes;2026-09-02;lu directement;"écart (ancienne 2de 1,20 ; ancienne 1re 3,60)"
+Tenay-Hauteville;Virieu-le-Grand – Belley;Adulte;Carte Famille Militaire (-40 %);adult-family-military;tenay-hauteville|virieu-le-grand-belley;3,60;5,40;SNCF Connect;2026-09-02;lu directement;identique
+Tenay-Hauteville;Virieu-le-Grand – Belley;Enfant;Aucune — Tarif Enfant 4–11 ans;child-none;tenay-hauteville|virieu-le-grand-belley;3,00;4,50;SNCF Connect;2026-09-02;lu directement;identique
+Tenay-Hauteville;Virieu-le-Grand – Belley;Enfant;illico LIBERTÉ — Accompagnant, Week-end / Jour férié;child-illico-liberte-weekend-companion;tenay-hauteville|virieu-le-grand-belley;1,50;2,30;SNCF Connect;2026-09-02;lu directement;identique
+Tenay-Hauteville;Virieu-le-Grand – Belley;Enfant;Carte Famille Militaire;child-family-military;tenay-hauteville|virieu-le-grand-belley;1,80;2,70;SNCF Connect;2026-09-02;lu directement;identique
+Tenay-Hauteville;Virieu-le-Grand – Belley;Enfant;Carte Familles Nombreuses (-30 %);child-famille-nombreuse-30;tenay-hauteville|virieu-le-grand-belley;1,70;2,90;SNCF Connect;2026-09-02;lu directement;identique
+Tenay-Hauteville;Virieu-le-Grand – Belley;Enfant;Carte Familles Nombreuses (-40 %);child-famille-nombreuse-40;tenay-hauteville|virieu-le-grand-belley;1,50;2,70;SNCF Connect;2026-09-02;lu directement;identique
+Tenay-Hauteville;Virieu-le-Grand – Belley;Enfant;Carte Familles Nombreuses (-50 %);child-famille-nombreuse-50;tenay-hauteville|virieu-le-grand-belley;1,20;2,40;SNCF Connect;2026-09-02;lu directement;identique
+Tenay-Hauteville;Virieu-le-Grand – Belley;Enfant;Carte Familles Nombreuses (-75 %);child-famille-nombreuse-75;tenay-hauteville|virieu-le-grand-belley;1,20;1,80;SNCF Connect;2026-09-02;lu directement;identique
+Tenay-Hauteville;Culoz;Adulte;Aucune — Plein tarif;adult-none;tenay-hauteville|culoz;9,00;13,70;SNCF Connect;2026-09-02;lu directement;identique
+Tenay-Hauteville;Culoz;Adulte;illico LIBERTÉ — Semaine (-25 %);adult-illico-liberte-weekday;tenay-hauteville|culoz;6,80;10,30;SNCF Connect;2026-09-02;lu directement;identique
+Tenay-Hauteville;Culoz;Adulte;illico LIBERTÉ — Week-end / Jour férié (-50 %);adult-illico-liberte-weekend;tenay-hauteville|culoz;4,50;6,90;SNCF Connect;2026-09-02;lu directement;identique
+Tenay-Hauteville;Culoz;Adulte;illico LIBERTÉ — Accompagnant, Week-end / Jour férié (-50 %);adult-illico-liberte-weekend-companion;tenay-hauteville|culoz;4,50;6,90;SNCF Connect;2026-09-02;lu directement;identique
+Tenay-Hauteville;Culoz;Adulte;illico LIBERTÉ JEUNES (-50 %);adult-illico-jeunes;tenay-hauteville|culoz;4,50;6,90;SNCF Connect;2026-09-02;lu directement;identique
+Tenay-Hauteville;Culoz;Adulte;Carte Liberté SNCF (-25 %);adult-liberte-nationale;tenay-hauteville|culoz;6,80;10,30;SNCF Connect;2026-09-02;lu directement;identique
+Tenay-Hauteville;Culoz;Adulte;Carte Familles Nombreuses (-30 %);adult-famille-nombreuse-30;tenay-hauteville|culoz;5,20;8,90;SNCF Connect;2026-09-02;lu directement;identique
+Tenay-Hauteville;Culoz;Adulte;Carte Familles Nombreuses (-40 %);adult-famille-nombreuse-40;tenay-hauteville|culoz;4,50;8,20;SNCF Connect;2026-09-02;lu directement;identique
+Tenay-Hauteville;Culoz;Adulte;Carte Familles Nombreuses (-50 %);adult-famille-nombreuse-50;tenay-hauteville|culoz;3,70;7,40;SNCF Connect;2026-09-02;lu directement;identique
+Tenay-Hauteville;Culoz;Adulte;Carte Familles Nombreuses (-75 %);adult-famille-nombreuse-75;tenay-hauteville|culoz;1,90;5,60;SNCF Connect;2026-09-02;lu directement;identique
+Tenay-Hauteville;Culoz;Adulte;Carte Militaire (-75 %);adult-military;tenay-hauteville|culoz;2,30;3,50;TER Auvergne-Rhône-Alpes;2026-09-02;lu directement;"écart (ancienne 2de 1,90 ; ancienne 1re 5,60)"
+Tenay-Hauteville;Culoz;Adulte;Carte Famille Militaire (-40 %);adult-family-military;tenay-hauteville|culoz;5,40;8,30;SNCF Connect;2026-09-02;lu directement;identique
+Tenay-Hauteville;Culoz;Enfant;Aucune — Tarif Enfant 4–11 ans;child-none;tenay-hauteville|culoz;4,50;6,90;SNCF Connect;2026-09-02;lu directement;identique
+Tenay-Hauteville;Culoz;Enfant;illico LIBERTÉ — Accompagnant, Week-end / Jour férié;child-illico-liberte-weekend-companion;tenay-hauteville|culoz;2,30;3,50;SNCF Connect;2026-09-02;lu directement;identique
+Tenay-Hauteville;Culoz;Enfant;Carte Famille Militaire;child-family-military;tenay-hauteville|culoz;2,70;4,20;SNCF Connect;2026-09-02;lu directement;identique
+Tenay-Hauteville;Culoz;Enfant;Carte Familles Nombreuses (-30 %);child-famille-nombreuse-30;tenay-hauteville|culoz;2,60;4,50;SNCF Connect;2026-09-02;lu directement;identique
+Tenay-Hauteville;Culoz;Enfant;Carte Familles Nombreuses (-40 %);child-famille-nombreuse-40;tenay-hauteville|culoz;2,30;4,10;SNCF Connect;2026-09-02;lu directement;identique
+Tenay-Hauteville;Culoz;Enfant;Carte Familles Nombreuses (-50 %);child-famille-nombreuse-50;tenay-hauteville|culoz;1,90;3,70;SNCF Connect;2026-09-02;lu directement;identique
+Tenay-Hauteville;Culoz;Enfant;Carte Familles Nombreuses (-75 %);child-famille-nombreuse-75;tenay-hauteville|culoz;1,20;2,80;SNCF Connect;2026-09-02;lu directement;identique
+Tenay-Hauteville;Seyssel – Corbonod;Adulte;Aucune — Plein tarif;adult-none;tenay-hauteville|seyssel-corbonod;12,00;18,20;SNCF Connect;2026-09-02;lu directement;identique
+Tenay-Hauteville;Seyssel – Corbonod;Adulte;illico LIBERTÉ — Semaine (-25 %);adult-illico-liberte-weekday;tenay-hauteville|seyssel-corbonod;9,00;13,70;SNCF Connect;2026-09-02;lu directement;identique
+Tenay-Hauteville;Seyssel – Corbonod;Adulte;illico LIBERTÉ — Week-end / Jour férié (-50 %);adult-illico-liberte-weekend;tenay-hauteville|seyssel-corbonod;6,00;9,10;SNCF Connect;2026-09-02;lu directement;identique
+Tenay-Hauteville;Seyssel – Corbonod;Adulte;illico LIBERTÉ — Accompagnant, Week-end / Jour férié (-50 %);adult-illico-liberte-weekend-companion;tenay-hauteville|seyssel-corbonod;6,00;9,10;SNCF Connect;2026-09-02;lu directement;identique
+Tenay-Hauteville;Seyssel – Corbonod;Adulte;illico LIBERTÉ JEUNES (-50 %);adult-illico-jeunes;tenay-hauteville|seyssel-corbonod;6,00;9,10;SNCF Connect;2026-09-02;lu directement;identique
+Tenay-Hauteville;Seyssel – Corbonod;Adulte;Carte Liberté SNCF (-25 %);adult-liberte-nationale;tenay-hauteville|seyssel-corbonod;9,00;13,70;SNCF Connect;2026-09-02;lu directement;identique
+Tenay-Hauteville;Seyssel – Corbonod;Adulte;Carte Familles Nombreuses (-30 %);adult-famille-nombreuse-30;tenay-hauteville|seyssel-corbonod;6,90;11,70;SNCF Connect;2026-09-02;lu directement;identique
+Tenay-Hauteville;Seyssel – Corbonod;Adulte;Carte Familles Nombreuses (-40 %);adult-famille-nombreuse-40;tenay-hauteville|seyssel-corbonod;5,90;10,70;SNCF Connect;2026-09-02;lu directement;identique
+Tenay-Hauteville;Seyssel – Corbonod;Adulte;Carte Familles Nombreuses (-50 %);adult-famille-nombreuse-50;tenay-hauteville|seyssel-corbonod;4,90;9,70;SNCF Connect;2026-09-02;lu directement;identique
+Tenay-Hauteville;Seyssel – Corbonod;Adulte;Carte Familles Nombreuses (-75 %);adult-famille-nombreuse-75;tenay-hauteville|seyssel-corbonod;2,50;7,30;SNCF Connect;2026-09-02;lu directement;identique
+Tenay-Hauteville;Seyssel – Corbonod;Adulte;Carte Militaire (-75 %);adult-military;tenay-hauteville|seyssel-corbonod;3,00;4,60;TER Auvergne-Rhône-Alpes;2026-09-02;lu directement;"écart (ancienne 2de 2,50 ; ancienne 1re 7,30)"
+Tenay-Hauteville;Seyssel – Corbonod;Adulte;Carte Famille Militaire (-40 %);adult-family-military;tenay-hauteville|seyssel-corbonod;7,20;11,00;SNCF Connect;2026-09-02;lu directement;identique
+Tenay-Hauteville;Seyssel – Corbonod;Enfant;Aucune — Tarif Enfant 4–11 ans;child-none;tenay-hauteville|seyssel-corbonod;6,00;9,10;SNCF Connect;2026-09-02;lu directement;identique
+Tenay-Hauteville;Seyssel – Corbonod;Enfant;illico LIBERTÉ — Accompagnant, Week-end / Jour férié;child-illico-liberte-weekend-companion;tenay-hauteville|seyssel-corbonod;3,00;4,60;SNCF Connect;2026-09-02;lu directement;identique
+Tenay-Hauteville;Seyssel – Corbonod;Enfant;Carte Famille Militaire;child-family-military;tenay-hauteville|seyssel-corbonod;3,60;5,50;SNCF Connect;2026-09-02;lu directement;identique
+Tenay-Hauteville;Seyssel – Corbonod;Enfant;Carte Familles Nombreuses (-30 %);child-famille-nombreuse-30;tenay-hauteville|seyssel-corbonod;3,50;5,90;SNCF Connect;2026-09-02;lu directement;identique
+Tenay-Hauteville;Seyssel – Corbonod;Enfant;Carte Familles Nombreuses (-40 %);child-famille-nombreuse-40;tenay-hauteville|seyssel-corbonod;3,00;5,40;SNCF Connect;2026-09-02;lu directement;identique
+Tenay-Hauteville;Seyssel – Corbonod;Enfant;Carte Familles Nombreuses (-50 %);child-famille-nombreuse-50;tenay-hauteville|seyssel-corbonod;2,50;4,90;SNCF Connect;2026-09-02;lu directement;identique
+Tenay-Hauteville;Seyssel – Corbonod;Enfant;Carte Familles Nombreuses (-75 %);child-famille-nombreuse-75;tenay-hauteville|seyssel-corbonod;1,30;3,70;SNCF Connect;2026-09-02;lu directement;identique
+Tenay-Hauteville;Bellegarde-sur-Valserine;Adulte;Aucune — Plein tarif;adult-none;tenay-hauteville|bellegarde-sur-valserine;15,80;24,00;SNCF Connect;2026-09-02;lu directement;identique
+Tenay-Hauteville;Bellegarde-sur-Valserine;Adulte;illico LIBERTÉ — Semaine (-25 %);adult-illico-liberte-weekday;tenay-hauteville|bellegarde-sur-valserine;11,90;18,00;SNCF Connect;2026-09-02;lu directement;identique
+Tenay-Hauteville;Bellegarde-sur-Valserine;Adulte;illico LIBERTÉ — Week-end / Jour férié (-50 %);adult-illico-liberte-weekend;tenay-hauteville|bellegarde-sur-valserine;7,90;12,00;SNCF Connect;2026-09-02;lu directement;identique
+Tenay-Hauteville;Bellegarde-sur-Valserine;Adulte;illico LIBERTÉ — Accompagnant, Week-end / Jour férié (-50 %);adult-illico-liberte-weekend-companion;tenay-hauteville|bellegarde-sur-valserine;7,90;12,00;SNCF Connect;2026-09-02;lu directement;identique
+Tenay-Hauteville;Bellegarde-sur-Valserine;Adulte;illico LIBERTÉ JEUNES (-50 %);adult-illico-jeunes;tenay-hauteville|bellegarde-sur-valserine;7,90;12,00;SNCF Connect;2026-09-02;lu directement;identique
+Tenay-Hauteville;Bellegarde-sur-Valserine;Adulte;Carte Liberté SNCF (-25 %);adult-liberte-nationale;tenay-hauteville|bellegarde-sur-valserine;11,90;18,00;SNCF Connect;2026-09-02;lu directement;identique
+Tenay-Hauteville;Bellegarde-sur-Valserine;Adulte;Carte Familles Nombreuses (-30 %);adult-famille-nombreuse-30;tenay-hauteville|bellegarde-sur-valserine;9,00;15,30;SNCF Connect;2026-09-02;lu directement;identique
+Tenay-Hauteville;Bellegarde-sur-Valserine;Adulte;Carte Familles Nombreuses (-40 %);adult-famille-nombreuse-40;tenay-hauteville|bellegarde-sur-valserine;7,70;14,00;SNCF Connect;2026-09-02;lu directement;identique
+Tenay-Hauteville;Bellegarde-sur-Valserine;Adulte;Carte Familles Nombreuses (-50 %);adult-famille-nombreuse-50;tenay-hauteville|bellegarde-sur-valserine;6,40;12,70;SNCF Connect;2026-09-02;lu directement;identique
+Tenay-Hauteville;Bellegarde-sur-Valserine;Adulte;Carte Familles Nombreuses (-75 %);adult-famille-nombreuse-75;tenay-hauteville|bellegarde-sur-valserine;3,20;9,50;SNCF Connect;2026-09-02;lu directement;identique
+Tenay-Hauteville;Bellegarde-sur-Valserine;Adulte;Carte Militaire (-75 %);adult-military;tenay-hauteville|bellegarde-sur-valserine;4,00;6,00;TER Auvergne-Rhône-Alpes;2026-09-02;lu directement;"écart (ancienne 2de 3,20 ; ancienne 1re 9,50)"
+Tenay-Hauteville;Bellegarde-sur-Valserine;Adulte;Carte Famille Militaire (-40 %);adult-family-military;tenay-hauteville|bellegarde-sur-valserine;9,50;14,40;SNCF Connect;2026-09-02;lu directement;identique
+Tenay-Hauteville;Bellegarde-sur-Valserine;Enfant;Aucune — Tarif Enfant 4–11 ans;child-none;tenay-hauteville|bellegarde-sur-valserine;7,90;12,00;SNCF Connect;2026-09-02;lu directement;identique
+Tenay-Hauteville;Bellegarde-sur-Valserine;Enfant;illico LIBERTÉ — Accompagnant, Week-end / Jour férié;child-illico-liberte-weekend-companion;tenay-hauteville|bellegarde-sur-valserine;4,00;6,00;SNCF Connect;2026-09-02;lu directement;identique
+Tenay-Hauteville;Bellegarde-sur-Valserine;Enfant;Carte Famille Militaire;child-family-military;tenay-hauteville|bellegarde-sur-valserine;4,80;7,20;SNCF Connect;2026-09-02;lu directement;identique
+Tenay-Hauteville;Bellegarde-sur-Valserine;Enfant;Carte Familles Nombreuses (-30 %);child-famille-nombreuse-30;tenay-hauteville|bellegarde-sur-valserine;4,50;7,70;SNCF Connect;2026-09-02;lu directement;identique
+Tenay-Hauteville;Bellegarde-sur-Valserine;Enfant;Carte Familles Nombreuses (-40 %);child-famille-nombreuse-40;tenay-hauteville|bellegarde-sur-valserine;3,90;7,00;SNCF Connect;2026-09-02;lu directement;identique
+Tenay-Hauteville;Bellegarde-sur-Valserine;Enfant;Carte Familles Nombreuses (-50 %);child-famille-nombreuse-50;tenay-hauteville|bellegarde-sur-valserine;3,20;6,40;SNCF Connect;2026-09-02;lu directement;identique
+Tenay-Hauteville;Bellegarde-sur-Valserine;Enfant;Carte Familles Nombreuses (-75 %);child-famille-nombreuse-75;tenay-hauteville|bellegarde-sur-valserine;1,60;4,80;SNCF Connect;2026-09-02;lu directement;identique
+Tenay-Hauteville;Genève;Adulte;Aucune — Plein tarif;adult-none;tenay-hauteville|geneve;21,90;33,20;SNCF Connect;2026-09-02;lu directement;identique
+Tenay-Hauteville;Genève;Adulte;illico LIBERTÉ — Semaine (-25 %);adult-illico-liberte-weekday;tenay-hauteville|geneve;16,50;24,90;SNCF Connect;2026-09-02;lu directement;identique
+Tenay-Hauteville;Genève;Adulte;illico LIBERTÉ — Week-end / Jour férié (-50 %);adult-illico-liberte-weekend;tenay-hauteville|geneve;11,00;16,60;SNCF Connect;2026-09-02;lu directement;identique
+Tenay-Hauteville;Genève;Adulte;illico LIBERTÉ — Accompagnant, Week-end / Jour férié (-50 %);adult-illico-liberte-weekend-companion;tenay-hauteville|geneve;11,00;16,60;SNCF Connect;2026-09-02;lu directement;identique
+Tenay-Hauteville;Genève;Adulte;illico LIBERTÉ JEUNES (-50 %);adult-illico-jeunes;tenay-hauteville|geneve;11,00;16,60;SNCF Connect;2026-09-02;lu directement;identique
+Tenay-Hauteville;Genève;Adulte;Carte Liberté SNCF (-25 %);adult-liberte-nationale;tenay-hauteville|geneve;16,50;24,90;SNCF Connect;2026-09-02;lu directement;identique
+Tenay-Hauteville;Genève;Adulte;Carte Familles Nombreuses (-30 %);adult-famille-nombreuse-30;tenay-hauteville|geneve;12,40;21,20;SNCF Connect;2026-09-02;lu directement;identique
+Tenay-Hauteville;Genève;Adulte;Carte Familles Nombreuses (-40 %);adult-famille-nombreuse-40;tenay-hauteville|geneve;10,70;19,50;SNCF Connect;2026-09-02;lu directement;identique
+Tenay-Hauteville;Genève;Adulte;Carte Familles Nombreuses (-50 %);adult-famille-nombreuse-50;tenay-hauteville|geneve;8,90;17,70;SNCF Connect;2026-09-02;lu directement;identique
+Tenay-Hauteville;Genève;Adulte;Carte Familles Nombreuses (-75 %);adult-famille-nombreuse-75;tenay-hauteville|geneve;4,50;13,30;SNCF Connect;2026-09-02;lu directement;identique
+Tenay-Hauteville;Genève;Adulte;Carte Militaire (-75 %);adult-military;tenay-hauteville|geneve;5,50;8,30;TER Auvergne-Rhône-Alpes;2026-09-02;lu directement;"écart (ancienne 2de 4,50 ; ancienne 1re 13,30)"
+Tenay-Hauteville;Genève;Adulte;Carte Famille Militaire (-40 %);adult-family-military;tenay-hauteville|geneve;13,20;20,00;SNCF Connect;2026-09-02;lu directement;identique
+Tenay-Hauteville;Genève;Enfant;Aucune — Tarif Enfant 4–11 ans;child-none;tenay-hauteville|geneve;11,00;16,60;SNCF Connect;2026-09-02;lu directement;identique
+Tenay-Hauteville;Genève;Enfant;illico LIBERTÉ — Accompagnant, Week-end / Jour férié;child-illico-liberte-weekend-companion;tenay-hauteville|geneve;5,50;8,30;SNCF Connect;2026-09-02;lu directement;identique
+Tenay-Hauteville;Genève;Enfant;Carte Famille Militaire;child-family-military;tenay-hauteville|geneve;6,60;10,00;SNCF Connect;2026-09-02;lu directement;identique
+Tenay-Hauteville;Genève;Enfant;Carte Familles Nombreuses (-30 %);child-famille-nombreuse-30;tenay-hauteville|geneve;6,20;10,60;SNCF Connect;2026-09-02;lu directement;identique
+Tenay-Hauteville;Genève;Enfant;Carte Familles Nombreuses (-40 %);child-famille-nombreuse-40;tenay-hauteville|geneve;5,40;9,80;SNCF Connect;2026-09-02;lu directement;identique
+Tenay-Hauteville;Genève;Enfant;Carte Familles Nombreuses (-50 %);child-famille-nombreuse-50;tenay-hauteville|geneve;4,50;8,90;SNCF Connect;2026-09-02;lu directement;identique
+Tenay-Hauteville;Genève;Enfant;Carte Familles Nombreuses (-75 %);child-famille-nombreuse-75;tenay-hauteville|geneve;2,30;6,70;SNCF Connect;2026-09-02;lu directement;identique
+Virieu-le-Grand – Belley;Culoz;Adulte;Aucune — Plein tarif;adult-none;virieu-le-grand-belley|culoz;3,80;5,80;SNCF Connect;2026-09-02;lu directement;identique
+Virieu-le-Grand – Belley;Culoz;Adulte;illico LIBERTÉ — Semaine (-25 %);adult-illico-liberte-weekday;virieu-le-grand-belley|culoz;2,90;4,40;SNCF Connect;2026-09-02;lu directement;identique
+Virieu-le-Grand – Belley;Culoz;Adulte;illico LIBERTÉ — Week-end / Jour férié (-50 %);adult-illico-liberte-weekend;virieu-le-grand-belley|culoz;1,90;2,90;SNCF Connect;2026-09-02;lu directement;identique
+Virieu-le-Grand – Belley;Culoz;Adulte;illico LIBERTÉ — Accompagnant, Week-end / Jour férié (-50 %);adult-illico-liberte-weekend-companion;virieu-le-grand-belley|culoz;1,90;2,90;SNCF Connect;2026-09-02;lu directement;identique
+Virieu-le-Grand – Belley;Culoz;Adulte;illico LIBERTÉ JEUNES (-50 %);adult-illico-jeunes;virieu-le-grand-belley|culoz;1,90;2,90;SNCF Connect;2026-09-02;lu directement;identique
+Virieu-le-Grand – Belley;Culoz;Adulte;Carte Liberté SNCF (-25 %);adult-liberte-nationale;virieu-le-grand-belley|culoz;2,90;4,40;SNCF Connect;2026-09-02;lu directement;identique
+Virieu-le-Grand – Belley;Culoz;Adulte;Carte Familles Nombreuses (-30 %);adult-famille-nombreuse-30;virieu-le-grand-belley|culoz;2,30;3,80;SNCF Connect;2026-09-02;lu directement;identique
+Virieu-le-Grand – Belley;Culoz;Adulte;Carte Familles Nombreuses (-40 %);adult-famille-nombreuse-40;virieu-le-grand-belley|culoz;2,00;3,50;SNCF Connect;2026-09-02;lu directement;identique
+Virieu-le-Grand – Belley;Culoz;Adulte;Carte Familles Nombreuses (-50 %);adult-famille-nombreuse-50;virieu-le-grand-belley|culoz;1,60;3,10;SNCF Connect;2026-09-02;lu directement;identique
+Virieu-le-Grand – Belley;Culoz;Adulte;Carte Familles Nombreuses (-75 %);adult-famille-nombreuse-75;virieu-le-grand-belley|culoz;1,20;2,30;SNCF Connect;2026-09-02;lu directement;identique
+Virieu-le-Grand – Belley;Culoz;Adulte;Carte Militaire (-75 %);adult-military;virieu-le-grand-belley|culoz;1,20;1,80;TER Auvergne-Rhône-Alpes;2026-09-02;lu directement;"écart (ancienne 2de 1,20 ; ancienne 1re 2,30)"
+Virieu-le-Grand – Belley;Culoz;Adulte;Carte Famille Militaire (-40 %);adult-family-military;virieu-le-grand-belley|culoz;2,30;3,50;SNCF Connect;2026-09-02;lu directement;identique
+Virieu-le-Grand – Belley;Culoz;Enfant;Aucune — Tarif Enfant 4–11 ans;child-none;virieu-le-grand-belley|culoz;1,90;2,90;SNCF Connect;2026-09-02;lu directement;identique
+Virieu-le-Grand – Belley;Culoz;Enfant;illico LIBERTÉ — Accompagnant, Week-end / Jour férié;child-illico-liberte-weekend-companion;virieu-le-grand-belley|culoz;1,20;1,80;SNCF Connect;2026-09-02;lu directement;identique
+Virieu-le-Grand – Belley;Culoz;Enfant;Carte Famille Militaire;child-family-military;virieu-le-grand-belley|culoz;1,20;1,80;SNCF Connect;2026-09-02;lu directement;identique
+Virieu-le-Grand – Belley;Culoz;Enfant;Carte Familles Nombreuses (-30 %);child-famille-nombreuse-30;virieu-le-grand-belley|culoz;1,20;1,90;SNCF Connect;2026-09-02;lu directement;identique
+Virieu-le-Grand – Belley;Culoz;Enfant;Carte Familles Nombreuses (-40 %);child-famille-nombreuse-40;virieu-le-grand-belley|culoz;1,20;1,80;SNCF Connect;2026-09-02;lu directement;identique
+Virieu-le-Grand – Belley;Culoz;Enfant;Carte Familles Nombreuses (-50 %);child-famille-nombreuse-50;virieu-le-grand-belley|culoz;1,20;1,80;SNCF Connect;2026-09-02;lu directement;"écart (ancienne 2de 1,20 ; ancienne 1re 1,60)"
+Virieu-le-Grand – Belley;Culoz;Enfant;Carte Familles Nombreuses (-75 %);child-famille-nombreuse-75;virieu-le-grand-belley|culoz;1,20;1,80;SNCF Connect;2026-09-02;lu directement;"écart (ancienne 2de 1,20 ; ancienne 1re 1,20)"
+Virieu-le-Grand – Belley;Seyssel – Corbonod;Adulte;Aucune — Plein tarif;adult-none;virieu-le-grand-belley|seyssel-corbonod;7,50;11,40;SNCF Connect;2026-09-02;lu directement;identique
+Virieu-le-Grand – Belley;Seyssel – Corbonod;Adulte;illico LIBERTÉ — Semaine (-25 %);adult-illico-liberte-weekday;virieu-le-grand-belley|seyssel-corbonod;5,70;8,60;SNCF Connect;2026-09-02;lu directement;identique
+Virieu-le-Grand – Belley;Seyssel – Corbonod;Adulte;illico LIBERTÉ — Week-end / Jour férié (-50 %);adult-illico-liberte-weekend;virieu-le-grand-belley|seyssel-corbonod;3,80;5,70;SNCF Connect;2026-09-02;lu directement;identique
+Virieu-le-Grand – Belley;Seyssel – Corbonod;Adulte;illico LIBERTÉ — Accompagnant, Week-end / Jour férié (-50 %);adult-illico-liberte-weekend-companion;virieu-le-grand-belley|seyssel-corbonod;3,80;5,70;SNCF Connect;2026-09-02;lu directement;identique
+Virieu-le-Grand – Belley;Seyssel – Corbonod;Adulte;illico LIBERTÉ JEUNES (-50 %);adult-illico-jeunes;virieu-le-grand-belley|seyssel-corbonod;3,80;5,70;SNCF Connect;2026-09-02;lu directement;identique
+Virieu-le-Grand – Belley;Seyssel – Corbonod;Adulte;Carte Liberté SNCF (-25 %);adult-liberte-nationale;virieu-le-grand-belley|seyssel-corbonod;5,70;8,60;SNCF Connect;2026-09-02;lu directement;identique
+Virieu-le-Grand – Belley;Seyssel – Corbonod;Adulte;Carte Familles Nombreuses (-30 %);adult-famille-nombreuse-30;virieu-le-grand-belley|seyssel-corbonod;4,30;7,40;SNCF Connect;2026-09-02;lu directement;identique
+Virieu-le-Grand – Belley;Seyssel – Corbonod;Adulte;Carte Familles Nombreuses (-40 %);adult-famille-nombreuse-40;virieu-le-grand-belley|seyssel-corbonod;3,70;6,80;SNCF Connect;2026-09-02;lu directement;identique
+Virieu-le-Grand – Belley;Seyssel – Corbonod;Adulte;Carte Familles Nombreuses (-50 %);adult-famille-nombreuse-50;virieu-le-grand-belley|seyssel-corbonod;3,10;6,20;SNCF Connect;2026-09-02;lu directement;identique
+Virieu-le-Grand – Belley;Seyssel – Corbonod;Adulte;Carte Familles Nombreuses (-75 %);adult-famille-nombreuse-75;virieu-le-grand-belley|seyssel-corbonod;1,60;4,70;SNCF Connect;2026-09-02;lu directement;identique
+Virieu-le-Grand – Belley;Seyssel – Corbonod;Adulte;Carte Militaire (-75 %);adult-military;virieu-le-grand-belley|seyssel-corbonod;1,90;2,90;TER Auvergne-Rhône-Alpes;2026-09-02;lu directement;"écart (ancienne 2de 1,60 ; ancienne 1re 4,70)"
+Virieu-le-Grand – Belley;Seyssel – Corbonod;Adulte;Carte Famille Militaire (-40 %);adult-family-military;virieu-le-grand-belley|seyssel-corbonod;4,50;6,90;SNCF Connect;2026-09-02;lu directement;identique
+Virieu-le-Grand – Belley;Seyssel – Corbonod;Enfant;Aucune — Tarif Enfant 4–11 ans;child-none;virieu-le-grand-belley|seyssel-corbonod;3,80;5,70;SNCF Connect;2026-09-02;lu directement;identique
+Virieu-le-Grand – Belley;Seyssel – Corbonod;Enfant;illico LIBERTÉ — Accompagnant, Week-end / Jour férié;child-illico-liberte-weekend-companion;virieu-le-grand-belley|seyssel-corbonod;1,90;2,90;SNCF Connect;2026-09-02;lu directement;identique
+Virieu-le-Grand – Belley;Seyssel – Corbonod;Enfant;Carte Famille Militaire;child-family-military;virieu-le-grand-belley|seyssel-corbonod;2,30;3,50;SNCF Connect;2026-09-02;lu directement;identique
+Virieu-le-Grand – Belley;Seyssel – Corbonod;Enfant;Carte Familles Nombreuses (-30 %);child-famille-nombreuse-30;virieu-le-grand-belley|seyssel-corbonod;2,20;3,70;SNCF Connect;2026-09-02;lu directement;identique
+Virieu-le-Grand – Belley;Seyssel – Corbonod;Enfant;Carte Familles Nombreuses (-40 %);child-famille-nombreuse-40;virieu-le-grand-belley|seyssel-corbonod;1,90;3,40;SNCF Connect;2026-09-02;lu directement;identique
+Virieu-le-Grand – Belley;Seyssel – Corbonod;Enfant;Carte Familles Nombreuses (-50 %);child-famille-nombreuse-50;virieu-le-grand-belley|seyssel-corbonod;1,60;3,10;SNCF Connect;2026-09-02;lu directement;identique
+Virieu-le-Grand – Belley;Seyssel – Corbonod;Enfant;Carte Familles Nombreuses (-75 %);child-famille-nombreuse-75;virieu-le-grand-belley|seyssel-corbonod;1,20;2,40;SNCF Connect;2026-09-02;lu directement;identique
+Virieu-le-Grand – Belley;Bellegarde-sur-Valserine;Adulte;Aucune — Plein tarif;adult-none;virieu-le-grand-belley|bellegarde-sur-valserine;11,40;17,30;SNCF Connect;2026-09-02;lu directement;identique
+Virieu-le-Grand – Belley;Bellegarde-sur-Valserine;Adulte;illico LIBERTÉ — Semaine (-25 %);adult-illico-liberte-weekday;virieu-le-grand-belley|bellegarde-sur-valserine;8,60;13,00;SNCF Connect;2026-09-02;lu directement;identique
+Virieu-le-Grand – Belley;Bellegarde-sur-Valserine;Adulte;illico LIBERTÉ — Week-end / Jour férié (-50 %);adult-illico-liberte-weekend;virieu-le-grand-belley|bellegarde-sur-valserine;5,70;8,70;SNCF Connect;2026-09-02;lu directement;identique
+Virieu-le-Grand – Belley;Bellegarde-sur-Valserine;Adulte;illico LIBERTÉ — Accompagnant, Week-end / Jour férié (-50 %);adult-illico-liberte-weekend-companion;virieu-le-grand-belley|bellegarde-sur-valserine;5,70;8,70;SNCF Connect;2026-09-02;lu directement;identique
+Virieu-le-Grand – Belley;Bellegarde-sur-Valserine;Adulte;illico LIBERTÉ JEUNES (-50 %);adult-illico-jeunes;virieu-le-grand-belley|bellegarde-sur-valserine;5,70;8,70;SNCF Connect;2026-09-02;lu directement;identique
+Virieu-le-Grand – Belley;Bellegarde-sur-Valserine;Adulte;Carte Liberté SNCF (-25 %);adult-liberte-nationale;virieu-le-grand-belley|bellegarde-sur-valserine;8,60;13,00;SNCF Connect;2026-09-02;lu directement;identique
+Virieu-le-Grand – Belley;Bellegarde-sur-Valserine;Adulte;Carte Familles Nombreuses (-30 %);adult-famille-nombreuse-30;virieu-le-grand-belley|bellegarde-sur-valserine;6,60;11,20;SNCF Connect;2026-09-02;lu directement;identique
+Virieu-le-Grand – Belley;Bellegarde-sur-Valserine;Adulte;Carte Familles Nombreuses (-40 %);adult-famille-nombreuse-40;virieu-le-grand-belley|bellegarde-sur-valserine;5,60;10,20;SNCF Connect;2026-09-02;lu directement;identique
+Virieu-le-Grand – Belley;Bellegarde-sur-Valserine;Adulte;Carte Familles Nombreuses (-50 %);adult-famille-nombreuse-50;virieu-le-grand-belley|bellegarde-sur-valserine;4,70;9,30;SNCF Connect;2026-09-02;lu directement;identique
+Virieu-le-Grand – Belley;Bellegarde-sur-Valserine;Adulte;Carte Familles Nombreuses (-75 %);adult-famille-nombreuse-75;virieu-le-grand-belley|bellegarde-sur-valserine;2,40;7,00;SNCF Connect;2026-09-02;lu directement;identique
+Virieu-le-Grand – Belley;Bellegarde-sur-Valserine;Adulte;Carte Militaire (-75 %);adult-military;virieu-le-grand-belley|bellegarde-sur-valserine;2,90;4,40;TER Auvergne-Rhône-Alpes;2026-09-02;lu directement;"écart (ancienne 2de 2,40 ; ancienne 1re 7,00)"
+Virieu-le-Grand – Belley;Bellegarde-sur-Valserine;Adulte;Carte Famille Militaire (-40 %);adult-family-military;virieu-le-grand-belley|bellegarde-sur-valserine;6,90;10,40;SNCF Connect;2026-09-02;lu directement;identique
+Virieu-le-Grand – Belley;Bellegarde-sur-Valserine;Enfant;Aucune — Tarif Enfant 4–11 ans;child-none;virieu-le-grand-belley|bellegarde-sur-valserine;5,70;8,70;SNCF Connect;2026-09-02;lu directement;identique
+Virieu-le-Grand – Belley;Bellegarde-sur-Valserine;Enfant;illico LIBERTÉ — Accompagnant, Week-end / Jour férié;child-illico-liberte-weekend-companion;virieu-le-grand-belley|bellegarde-sur-valserine;2,90;4,40;SNCF Connect;2026-09-02;lu directement;identique
+Virieu-le-Grand – Belley;Bellegarde-sur-Valserine;Enfant;Carte Famille Militaire;child-family-military;virieu-le-grand-belley|bellegarde-sur-valserine;3,50;5,20;SNCF Connect;2026-09-02;lu directement;identique
+Virieu-le-Grand – Belley;Bellegarde-sur-Valserine;Enfant;Carte Familles Nombreuses (-30 %);child-famille-nombreuse-30;virieu-le-grand-belley|bellegarde-sur-valserine;3,30;5,60;SNCF Connect;2026-09-02;lu directement;identique
+Virieu-le-Grand – Belley;Bellegarde-sur-Valserine;Enfant;Carte Familles Nombreuses (-40 %);child-famille-nombreuse-40;virieu-le-grand-belley|bellegarde-sur-valserine;2,80;5,10;SNCF Connect;2026-09-02;lu directement;identique
+Virieu-le-Grand – Belley;Bellegarde-sur-Valserine;Enfant;Carte Familles Nombreuses (-50 %);child-famille-nombreuse-50;virieu-le-grand-belley|bellegarde-sur-valserine;2,40;4,70;SNCF Connect;2026-09-02;lu directement;identique
+Virieu-le-Grand – Belley;Bellegarde-sur-Valserine;Enfant;Carte Familles Nombreuses (-75 %);child-famille-nombreuse-75;virieu-le-grand-belley|bellegarde-sur-valserine;1,20;3,50;SNCF Connect;2026-09-02;lu directement;identique
+Virieu-le-Grand – Belley;Genève;Adulte;Aucune — Plein tarif;adult-none;virieu-le-grand-belley|geneve;18,00;27,30;SNCF Connect;2026-09-02;lu directement;identique
+Virieu-le-Grand – Belley;Genève;Adulte;illico LIBERTÉ — Semaine (-25 %);adult-illico-liberte-weekday;virieu-le-grand-belley|geneve;13,50;20,50;SNCF Connect;2026-09-02;lu directement;identique
+Virieu-le-Grand – Belley;Genève;Adulte;illico LIBERTÉ — Week-end / Jour férié (-50 %);adult-illico-liberte-weekend;virieu-le-grand-belley|geneve;9,00;13,70;SNCF Connect;2026-09-02;lu directement;identique
+Virieu-le-Grand – Belley;Genève;Adulte;illico LIBERTÉ — Accompagnant, Week-end / Jour férié (-50 %);adult-illico-liberte-weekend-companion;virieu-le-grand-belley|geneve;9,00;13,70;SNCF Connect;2026-09-02;lu directement;identique
+Virieu-le-Grand – Belley;Genève;Adulte;illico LIBERTÉ JEUNES (-50 %);adult-illico-jeunes;virieu-le-grand-belley|geneve;9,00;13,70;SNCF Connect;2026-09-02;lu directement;identique
+Virieu-le-Grand – Belley;Genève;Adulte;Carte Liberté SNCF (-25 %);adult-liberte-nationale;virieu-le-grand-belley|geneve;13,50;20,50;SNCF Connect;2026-09-02;lu directement;identique
+Virieu-le-Grand – Belley;Genève;Adulte;Carte Familles Nombreuses (-30 %);adult-famille-nombreuse-30;virieu-le-grand-belley|geneve;10,20;17,50;SNCF Connect;2026-09-02;lu directement;identique
+Virieu-le-Grand – Belley;Genève;Adulte;Carte Familles Nombreuses (-40 %);adult-famille-nombreuse-40;virieu-le-grand-belley|geneve;8,70;16,00;SNCF Connect;2026-09-02;lu directement;identique
+Virieu-le-Grand – Belley;Genève;Adulte;Carte Familles Nombreuses (-50 %);adult-famille-nombreuse-50;virieu-le-grand-belley|geneve;7,30;14,60;SNCF Connect;2026-09-02;lu directement;identique
+Virieu-le-Grand – Belley;Genève;Adulte;Carte Familles Nombreuses (-75 %);adult-famille-nombreuse-75;virieu-le-grand-belley|geneve;3,70;11,00;SNCF Connect;2026-09-02;lu directement;identique
+Virieu-le-Grand – Belley;Genève;Adulte;Carte Militaire (-75 %);adult-military;virieu-le-grand-belley|geneve;4,50;6,90;TER Auvergne-Rhône-Alpes;2026-09-02;lu directement;"écart (ancienne 2de 3,70 ; ancienne 1re 11,00)"
+Virieu-le-Grand – Belley;Genève;Adulte;Carte Famille Militaire (-40 %);adult-family-military;virieu-le-grand-belley|geneve;10,80;16,40;SNCF Connect;2026-09-02;lu directement;identique
+Virieu-le-Grand – Belley;Genève;Enfant;Aucune — Tarif Enfant 4–11 ans;child-none;virieu-le-grand-belley|geneve;9,00;13,70;SNCF Connect;2026-09-02;lu directement;identique
+Virieu-le-Grand – Belley;Genève;Enfant;illico LIBERTÉ — Accompagnant, Week-end / Jour férié;child-illico-liberte-weekend-companion;virieu-le-grand-belley|geneve;4,50;6,90;SNCF Connect;2026-09-02;lu directement;identique
+Virieu-le-Grand – Belley;Genève;Enfant;Carte Famille Militaire;child-family-military;virieu-le-grand-belley|geneve;5,40;8,20;SNCF Connect;2026-09-02;lu directement;identique
+Virieu-le-Grand – Belley;Genève;Enfant;Carte Familles Nombreuses (-30 %);child-famille-nombreuse-30;virieu-le-grand-belley|geneve;5,10;8,80;SNCF Connect;2026-09-02;lu directement;identique
+Virieu-le-Grand – Belley;Genève;Enfant;Carte Familles Nombreuses (-40 %);child-famille-nombreuse-40;virieu-le-grand-belley|geneve;4,40;8,00;SNCF Connect;2026-09-02;lu directement;identique
+Virieu-le-Grand – Belley;Genève;Enfant;Carte Familles Nombreuses (-50 %);child-famille-nombreuse-50;virieu-le-grand-belley|geneve;3,70;7,30;SNCF Connect;2026-09-02;lu directement;identique
+Virieu-le-Grand – Belley;Genève;Enfant;Carte Familles Nombreuses (-75 %);child-famille-nombreuse-75;virieu-le-grand-belley|geneve;1,90;5,50;SNCF Connect;2026-09-02;lu directement;identique
+Culoz;Seyssel – Corbonod;Adulte;Aucune — Plein tarif;adult-none;culoz|seyssel-corbonod;4,60;6,90;SNCF Connect;2026-09-02;lu directement;identique
+Culoz;Seyssel – Corbonod;Adulte;illico LIBERTÉ — Semaine (-25 %);adult-illico-liberte-weekday;culoz|seyssel-corbonod;3,50;5,20;SNCF Connect;2026-09-02;lu directement;identique
+Culoz;Seyssel – Corbonod;Adulte;illico LIBERTÉ — Week-end / Jour férié (-50 %);adult-illico-liberte-weekend;culoz|seyssel-corbonod;2,30;3,50;SNCF Connect;2026-09-02;lu directement;identique
+Culoz;Seyssel – Corbonod;Adulte;illico LIBERTÉ — Accompagnant, Week-end / Jour férié (-50 %);adult-illico-liberte-weekend-companion;culoz|seyssel-corbonod;2,30;3,50;SNCF Connect;2026-09-02;lu directement;identique
+Culoz;Seyssel – Corbonod;Adulte;illico LIBERTÉ JEUNES (-50 %);adult-illico-jeunes;culoz|seyssel-corbonod;2,30;3,50;SNCF Connect;2026-09-02;lu directement;identique
+Culoz;Seyssel – Corbonod;Adulte;Carte Liberté SNCF (-25 %);adult-liberte-nationale;culoz|seyssel-corbonod;3,50;5,20;SNCF Connect;2026-09-02;lu directement;identique
+Culoz;Seyssel – Corbonod;Adulte;Carte Familles Nombreuses (-30 %);adult-famille-nombreuse-30;culoz|seyssel-corbonod;2,60;4,50;SNCF Connect;2026-09-02;lu directement;identique
+Culoz;Seyssel – Corbonod;Adulte;Carte Familles Nombreuses (-40 %);adult-famille-nombreuse-40;culoz|seyssel-corbonod;2,30;4,20;SNCF Connect;2026-09-02;lu directement;identique
+Culoz;Seyssel – Corbonod;Adulte;Carte Familles Nombreuses (-50 %);adult-famille-nombreuse-50;culoz|seyssel-corbonod;1,90;3,80;SNCF Connect;2026-09-02;lu directement;identique
+Culoz;Seyssel – Corbonod;Adulte;Carte Familles Nombreuses (-75 %);adult-famille-nombreuse-75;culoz|seyssel-corbonod;1,20;2,90;SNCF Connect;2026-09-02;lu directement;identique
+Culoz;Seyssel – Corbonod;Adulte;Carte Militaire (-75 %);adult-military;culoz|seyssel-corbonod;1,20;1,80;TER Auvergne-Rhône-Alpes;2026-09-02;lu directement;"écart (ancienne 2de 1,20 ; ancienne 1re 2,90)"
+Culoz;Seyssel – Corbonod;Adulte;Carte Famille Militaire (-40 %);adult-family-military;culoz|seyssel-corbonod;2,80;4,20;SNCF Connect;2026-09-02;lu directement;identique
+Culoz;Seyssel – Corbonod;Enfant;Aucune — Tarif Enfant 4–11 ans;child-none;culoz|seyssel-corbonod;2,30;3,50;SNCF Connect;2026-09-02;lu directement;identique
+Culoz;Seyssel – Corbonod;Enfant;illico LIBERTÉ — Accompagnant, Week-end / Jour férié;child-illico-liberte-weekend-companion;culoz|seyssel-corbonod;1,20;1,80;SNCF Connect;2026-09-02;lu directement;identique
+Culoz;Seyssel – Corbonod;Enfant;Carte Famille Militaire;child-family-military;culoz|seyssel-corbonod;1,40;2,10;SNCF Connect;2026-09-02;lu directement;identique
+Culoz;Seyssel – Corbonod;Enfant;Carte Familles Nombreuses (-30 %);child-famille-nombreuse-30;culoz|seyssel-corbonod;1,30;2,30;SNCF Connect;2026-09-02;lu directement;identique
+Culoz;Seyssel – Corbonod;Enfant;Carte Familles Nombreuses (-40 %);child-famille-nombreuse-40;culoz|seyssel-corbonod;1,20;2,10;SNCF Connect;2026-09-02;lu directement;identique
+Culoz;Seyssel – Corbonod;Enfant;Carte Familles Nombreuses (-50 %);child-famille-nombreuse-50;culoz|seyssel-corbonod;1,20;1,90;SNCF Connect;2026-09-02;lu directement;identique
+Culoz;Seyssel – Corbonod;Enfant;Carte Familles Nombreuses (-75 %);child-famille-nombreuse-75;culoz|seyssel-corbonod;1,20;1,80;SNCF Connect;2026-09-02;lu directement;"écart (ancienne 2de 1,20 ; ancienne 1re 1,50)"
+Culoz;Bellegarde-sur-Valserine;Adulte;Aucune — Plein tarif;adult-none;culoz|bellegarde-sur-valserine;9,00;13,70;SNCF Connect;2026-09-02;lu directement;identique
+Culoz;Bellegarde-sur-Valserine;Adulte;illico LIBERTÉ — Semaine (-25 %);adult-illico-liberte-weekday;culoz|bellegarde-sur-valserine;6,80;10,30;SNCF Connect;2026-09-02;lu directement;identique
+Culoz;Bellegarde-sur-Valserine;Adulte;illico LIBERTÉ — Week-end / Jour férié (-50 %);adult-illico-liberte-weekend;culoz|bellegarde-sur-valserine;4,50;6,90;SNCF Connect;2026-09-02;lu directement;identique
+Culoz;Bellegarde-sur-Valserine;Adulte;illico LIBERTÉ — Accompagnant, Week-end / Jour férié (-50 %);adult-illico-liberte-weekend-companion;culoz|bellegarde-sur-valserine;4,50;6,90;SNCF Connect;2026-09-02;lu directement;identique
+Culoz;Bellegarde-sur-Valserine;Adulte;illico LIBERTÉ JEUNES (-50 %);adult-illico-jeunes;culoz|bellegarde-sur-valserine;4,50;6,90;SNCF Connect;2026-09-02;lu directement;identique
+Culoz;Bellegarde-sur-Valserine;Adulte;Carte Liberté SNCF (-25 %);adult-liberte-nationale;culoz|bellegarde-sur-valserine;6,80;10,30;SNCF Connect;2026-09-02;lu directement;identique
+Culoz;Bellegarde-sur-Valserine;Adulte;Carte Familles Nombreuses (-30 %);adult-famille-nombreuse-30;culoz|bellegarde-sur-valserine;5,20;8,90;SNCF Connect;2026-09-02;lu directement;identique
+Culoz;Bellegarde-sur-Valserine;Adulte;Carte Familles Nombreuses (-40 %);adult-famille-nombreuse-40;culoz|bellegarde-sur-valserine;4,50;8,20;SNCF Connect;2026-09-02;lu directement;identique
+Culoz;Bellegarde-sur-Valserine;Adulte;Carte Familles Nombreuses (-50 %);adult-famille-nombreuse-50;culoz|bellegarde-sur-valserine;3,70;7,40;SNCF Connect;2026-09-02;lu directement;identique
+Culoz;Bellegarde-sur-Valserine;Adulte;Carte Familles Nombreuses (-75 %);adult-famille-nombreuse-75;culoz|bellegarde-sur-valserine;1,90;5,60;SNCF Connect;2026-09-02;lu directement;identique
+Culoz;Bellegarde-sur-Valserine;Adulte;Carte Militaire (-75 %);adult-military;culoz|bellegarde-sur-valserine;2,30;3,50;TER Auvergne-Rhône-Alpes;2026-09-02;lu directement;"écart (ancienne 2de 1,90 ; ancienne 1re 5,60)"
+Culoz;Bellegarde-sur-Valserine;Adulte;Carte Famille Militaire (-40 %);adult-family-military;culoz|bellegarde-sur-valserine;5,40;8,30;SNCF Connect;2026-09-02;lu directement;identique
+Culoz;Bellegarde-sur-Valserine;Enfant;Aucune — Tarif Enfant 4–11 ans;child-none;culoz|bellegarde-sur-valserine;4,50;6,90;SNCF Connect;2026-09-02;lu directement;identique
+Culoz;Bellegarde-sur-Valserine;Enfant;illico LIBERTÉ — Accompagnant, Week-end / Jour férié;child-illico-liberte-weekend-companion;culoz|bellegarde-sur-valserine;2,30;3,50;SNCF Connect;2026-09-02;lu directement;identique
+Culoz;Bellegarde-sur-Valserine;Enfant;Carte Famille Militaire;child-family-military;culoz|bellegarde-sur-valserine;2,70;4,20;SNCF Connect;2026-09-02;lu directement;identique
+Culoz;Bellegarde-sur-Valserine;Enfant;Carte Familles Nombreuses (-30 %);child-famille-nombreuse-30;culoz|bellegarde-sur-valserine;2,60;4,50;SNCF Connect;2026-09-02;lu directement;identique
+Culoz;Bellegarde-sur-Valserine;Enfant;Carte Familles Nombreuses (-40 %);child-famille-nombreuse-40;culoz|bellegarde-sur-valserine;2,30;4,10;SNCF Connect;2026-09-02;lu directement;identique
+Culoz;Bellegarde-sur-Valserine;Enfant;Carte Familles Nombreuses (-50 %);child-famille-nombreuse-50;culoz|bellegarde-sur-valserine;1,90;3,70;SNCF Connect;2026-09-02;lu directement;identique
+Culoz;Bellegarde-sur-Valserine;Enfant;Carte Familles Nombreuses (-75 %);child-famille-nombreuse-75;culoz|bellegarde-sur-valserine;1,20;2,80;SNCF Connect;2026-09-02;lu directement;identique
+Culoz;Genève;Adulte;Aucune — Plein tarif;adult-none;culoz|geneve;15,80;24,00;SNCF Connect;2026-09-02;lu directement;identique
+Culoz;Genève;Adulte;illico LIBERTÉ — Semaine (-25 %);adult-illico-liberte-weekday;culoz|geneve;11,90;18,00;SNCF Connect;2026-09-02;lu directement;identique
+Culoz;Genève;Adulte;illico LIBERTÉ — Week-end / Jour férié (-50 %);adult-illico-liberte-weekend;culoz|geneve;7,90;12,00;SNCF Connect;2026-09-02;lu directement;identique
+Culoz;Genève;Adulte;illico LIBERTÉ — Accompagnant, Week-end / Jour férié (-50 %);adult-illico-liberte-weekend-companion;culoz|geneve;7,90;12,00;SNCF Connect;2026-09-02;lu directement;identique
+Culoz;Genève;Adulte;illico LIBERTÉ JEUNES (-50 %);adult-illico-jeunes;culoz|geneve;7,90;12,00;SNCF Connect;2026-09-02;lu directement;identique
+Culoz;Genève;Adulte;Carte Liberté SNCF (-25 %);adult-liberte-nationale;culoz|geneve;11,90;18,00;SNCF Connect;2026-09-02;lu directement;identique
+Culoz;Genève;Adulte;Carte Familles Nombreuses (-30 %);adult-famille-nombreuse-30;culoz|geneve;9,00;15,30;SNCF Connect;2026-09-02;lu directement;identique
+Culoz;Genève;Adulte;Carte Familles Nombreuses (-40 %);adult-famille-nombreuse-40;culoz|geneve;7,70;14,00;SNCF Connect;2026-09-02;lu directement;identique
+Culoz;Genève;Adulte;Carte Familles Nombreuses (-50 %);adult-famille-nombreuse-50;culoz|geneve;6,40;12,70;SNCF Connect;2026-09-02;lu directement;identique
+Culoz;Genève;Adulte;Carte Familles Nombreuses (-75 %);adult-famille-nombreuse-75;culoz|geneve;3,20;9,50;SNCF Connect;2026-09-02;lu directement;identique
+Culoz;Genève;Adulte;Carte Militaire (-75 %);adult-military;culoz|geneve;4,00;6,00;TER Auvergne-Rhône-Alpes;2026-09-02;lu directement;"écart (ancienne 2de 3,20 ; ancienne 1re 9,50)"
+Culoz;Genève;Adulte;Carte Famille Militaire (-40 %);adult-family-military;culoz|geneve;9,50;14,40;SNCF Connect;2026-09-02;lu directement;identique
+Culoz;Genève;Enfant;Aucune — Tarif Enfant 4–11 ans;child-none;culoz|geneve;7,90;12,00;SNCF Connect;2026-09-02;lu directement;identique
+Culoz;Genève;Enfant;illico LIBERTÉ — Accompagnant, Week-end / Jour férié;child-illico-liberte-weekend-companion;culoz|geneve;4,00;6,00;SNCF Connect;2026-09-02;lu directement;identique
+Culoz;Genève;Enfant;Carte Famille Militaire;child-family-military;culoz|geneve;4,80;7,20;SNCF Connect;2026-09-02;lu directement;identique
+Culoz;Genève;Enfant;Carte Familles Nombreuses (-30 %);child-famille-nombreuse-30;culoz|geneve;4,50;7,70;SNCF Connect;2026-09-02;lu directement;identique
+Culoz;Genève;Enfant;Carte Familles Nombreuses (-40 %);child-famille-nombreuse-40;culoz|geneve;3,90;7,00;SNCF Connect;2026-09-02;lu directement;identique
+Culoz;Genève;Enfant;Carte Familles Nombreuses (-50 %);child-famille-nombreuse-50;culoz|geneve;3,20;6,40;SNCF Connect;2026-09-02;lu directement;identique
+Culoz;Genève;Enfant;Carte Familles Nombreuses (-75 %);child-famille-nombreuse-75;culoz|geneve;1,60;4,80;SNCF Connect;2026-09-02;lu directement;identique
+Seyssel – Corbonod;Bellegarde-sur-Valserine;Adulte;Aucune — Plein tarif;adult-none;seyssel-corbonod|bellegarde-sur-valserine;5,10;7,80;SNCF Connect;2026-09-02;lu directement;identique
+Seyssel – Corbonod;Bellegarde-sur-Valserine;Adulte;illico LIBERTÉ — Semaine (-25 %);adult-illico-liberte-weekday;seyssel-corbonod|bellegarde-sur-valserine;3,90;5,90;SNCF Connect;2026-09-02;lu directement;identique
+Seyssel – Corbonod;Bellegarde-sur-Valserine;Adulte;illico LIBERTÉ — Week-end / Jour férié (-50 %);adult-illico-liberte-weekend;seyssel-corbonod|bellegarde-sur-valserine;2,60;3,90;SNCF Connect;2026-09-02;lu directement;identique
+Seyssel – Corbonod;Bellegarde-sur-Valserine;Adulte;illico LIBERTÉ — Accompagnant, Week-end / Jour férié (-50 %);adult-illico-liberte-weekend-companion;seyssel-corbonod|bellegarde-sur-valserine;2,60;3,90;SNCF Connect;2026-09-02;lu directement;identique
+Seyssel – Corbonod;Bellegarde-sur-Valserine;Adulte;illico LIBERTÉ JEUNES (-50 %);adult-illico-jeunes;seyssel-corbonod|bellegarde-sur-valserine;2,60;3,90;SNCF Connect;2026-09-02;lu directement;identique
+Seyssel – Corbonod;Bellegarde-sur-Valserine;Adulte;Carte Liberté SNCF (-25 %);adult-liberte-nationale;seyssel-corbonod|bellegarde-sur-valserine;3,90;5,90;SNCF Connect;2026-09-02;lu directement;identique
+Seyssel – Corbonod;Bellegarde-sur-Valserine;Adulte;Carte Familles Nombreuses (-30 %);adult-famille-nombreuse-30;seyssel-corbonod|bellegarde-sur-valserine;3,00;5,10;SNCF Connect;2026-09-02;lu directement;identique
+Seyssel – Corbonod;Bellegarde-sur-Valserine;Adulte;Carte Familles Nombreuses (-40 %);adult-famille-nombreuse-40;seyssel-corbonod|bellegarde-sur-valserine;2,60;4,70;SNCF Connect;2026-09-02;lu directement;identique
+Seyssel – Corbonod;Bellegarde-sur-Valserine;Adulte;Carte Familles Nombreuses (-50 %);adult-famille-nombreuse-50;seyssel-corbonod|bellegarde-sur-valserine;2,10;4,20;SNCF Connect;2026-09-02;lu directement;identique
+Seyssel – Corbonod;Bellegarde-sur-Valserine;Adulte;Carte Familles Nombreuses (-75 %);adult-famille-nombreuse-75;seyssel-corbonod|bellegarde-sur-valserine;1,20;3,20;SNCF Connect;2026-09-02;lu directement;identique
+Seyssel – Corbonod;Bellegarde-sur-Valserine;Adulte;Carte Militaire (-75 %);adult-military;seyssel-corbonod|bellegarde-sur-valserine;1,30;2,00;TER Auvergne-Rhône-Alpes;2026-09-02;lu directement;"écart (ancienne 2de 1,20 ; ancienne 1re 3,20)"
+Seyssel – Corbonod;Bellegarde-sur-Valserine;Adulte;Carte Famille Militaire (-40 %);adult-family-military;seyssel-corbonod|bellegarde-sur-valserine;3,10;4,70;SNCF Connect;2026-09-02;lu directement;identique
+Seyssel – Corbonod;Bellegarde-sur-Valserine;Enfant;Aucune — Tarif Enfant 4–11 ans;child-none;seyssel-corbonod|bellegarde-sur-valserine;2,60;3,90;SNCF Connect;2026-09-02;lu directement;identique
+Seyssel – Corbonod;Bellegarde-sur-Valserine;Enfant;illico LIBERTÉ — Accompagnant, Week-end / Jour férié;child-illico-liberte-weekend-companion;seyssel-corbonod|bellegarde-sur-valserine;1,30;2,00;SNCF Connect;2026-09-02;lu directement;identique
+Seyssel – Corbonod;Bellegarde-sur-Valserine;Enfant;Carte Famille Militaire;child-family-military;seyssel-corbonod|bellegarde-sur-valserine;1,60;2,40;SNCF Connect;2026-09-02;lu directement;identique
+Seyssel – Corbonod;Bellegarde-sur-Valserine;Enfant;Carte Familles Nombreuses (-30 %);child-famille-nombreuse-30;seyssel-corbonod|bellegarde-sur-valserine;1,50;2,60;SNCF Connect;2026-09-02;lu directement;identique
+Seyssel – Corbonod;Bellegarde-sur-Valserine;Enfant;Carte Familles Nombreuses (-40 %);child-famille-nombreuse-40;seyssel-corbonod|bellegarde-sur-valserine;1,30;2,40;SNCF Connect;2026-09-02;lu directement;identique
+Seyssel – Corbonod;Bellegarde-sur-Valserine;Enfant;Carte Familles Nombreuses (-50 %);child-famille-nombreuse-50;seyssel-corbonod|bellegarde-sur-valserine;1,20;2,10;SNCF Connect;2026-09-02;lu directement;identique
+Seyssel – Corbonod;Bellegarde-sur-Valserine;Enfant;Carte Familles Nombreuses (-75 %);child-famille-nombreuse-75;seyssel-corbonod|bellegarde-sur-valserine;1,20;1,80;SNCF Connect;2026-09-02;lu directement;"écart (ancienne 2de 1,20 ; ancienne 1re 1,60)"
+Seyssel – Corbonod;Genève;Adulte;Aucune — Plein tarif;adult-none;seyssel-corbonod|geneve;12,60;19,10;SNCF Connect;2026-09-02;lu directement;identique
+Seyssel – Corbonod;Genève;Adulte;illico LIBERTÉ — Semaine (-25 %);adult-illico-liberte-weekday;seyssel-corbonod|geneve;9,50;14,40;SNCF Connect;2026-09-02;lu directement;identique
+Seyssel – Corbonod;Genève;Adulte;illico LIBERTÉ — Week-end / Jour férié (-50 %);adult-illico-liberte-weekend;seyssel-corbonod|geneve;6,30;9,60;SNCF Connect;2026-09-02;lu directement;identique
+Seyssel – Corbonod;Genève;Adulte;illico LIBERTÉ — Accompagnant, Week-end / Jour férié (-50 %);adult-illico-liberte-weekend-companion;seyssel-corbonod|geneve;6,30;9,60;SNCF Connect;2026-09-02;lu directement;identique
+Seyssel – Corbonod;Genève;Adulte;illico LIBERTÉ JEUNES (-50 %);adult-illico-jeunes;seyssel-corbonod|geneve;6,30;9,60;SNCF Connect;2026-09-02;lu directement;identique
+Seyssel – Corbonod;Genève;Adulte;Carte Liberté SNCF (-25 %);adult-liberte-nationale;seyssel-corbonod|geneve;9,50;14,40;SNCF Connect;2026-09-02;lu directement;identique
+Seyssel – Corbonod;Genève;Adulte;Carte Familles Nombreuses (-30 %);adult-famille-nombreuse-30;seyssel-corbonod|geneve;7,30;12,40;SNCF Connect;2026-09-02;lu directement;identique
+Seyssel – Corbonod;Genève;Adulte;Carte Familles Nombreuses (-40 %);adult-famille-nombreuse-40;seyssel-corbonod|geneve;6,20;11,30;SNCF Connect;2026-09-02;lu directement;identique
+Seyssel – Corbonod;Genève;Adulte;Carte Familles Nombreuses (-50 %);adult-famille-nombreuse-50;seyssel-corbonod|geneve;5,20;10,30;SNCF Connect;2026-09-02;lu directement;identique
+Seyssel – Corbonod;Genève;Adulte;Carte Familles Nombreuses (-75 %);adult-famille-nombreuse-75;seyssel-corbonod|geneve;2,60;7,70;SNCF Connect;2026-09-02;lu directement;identique
+Seyssel – Corbonod;Genève;Adulte;Carte Militaire (-75 %);adult-military;seyssel-corbonod|geneve;3,20;4,80;TER Auvergne-Rhône-Alpes;2026-09-02;lu directement;"écart (ancienne 2de 2,60 ; ancienne 1re 7,70)"
+Seyssel – Corbonod;Genève;Adulte;Carte Famille Militaire (-40 %);adult-family-military;seyssel-corbonod|geneve;7,60;11,50;SNCF Connect;2026-09-02;lu directement;identique
+Seyssel – Corbonod;Genève;Enfant;Aucune — Tarif Enfant 4–11 ans;child-none;seyssel-corbonod|geneve;6,30;9,60;SNCF Connect;2026-09-02;lu directement;identique
+Seyssel – Corbonod;Genève;Enfant;illico LIBERTÉ — Accompagnant, Week-end / Jour férié;child-illico-liberte-weekend-companion;seyssel-corbonod|geneve;3,20;4,80;SNCF Connect;2026-09-02;lu directement;identique
+Seyssel – Corbonod;Genève;Enfant;Carte Famille Militaire;child-family-military;seyssel-corbonod|geneve;3,80;5,80;SNCF Connect;2026-09-02;lu directement;identique
+Seyssel – Corbonod;Genève;Enfant;Carte Familles Nombreuses (-30 %);child-famille-nombreuse-30;seyssel-corbonod|geneve;3,70;6,20;SNCF Connect;2026-09-02;lu directement;identique
+Seyssel – Corbonod;Genève;Enfant;Carte Familles Nombreuses (-40 %);child-famille-nombreuse-40;seyssel-corbonod|geneve;3,10;5,70;SNCF Connect;2026-09-02;lu directement;identique
+Seyssel – Corbonod;Genève;Enfant;Carte Familles Nombreuses (-50 %);child-famille-nombreuse-50;seyssel-corbonod|geneve;2,60;5,20;SNCF Connect;2026-09-02;lu directement;identique
+Seyssel – Corbonod;Genève;Enfant;Carte Familles Nombreuses (-75 %);child-famille-nombreuse-75;seyssel-corbonod|geneve;1,30;3,90;SNCF Connect;2026-09-02;lu directement;identique
+Bellegarde-sur-Valserine;Genève;Adulte;Aucune — Plein tarif;adult-none;bellegarde-sur-valserine|geneve;9,00;13,70;SNCF Connect;2026-09-02;lu directement;identique
+Bellegarde-sur-Valserine;Genève;Adulte;illico LIBERTÉ — Semaine (-25 %);adult-illico-liberte-weekday;bellegarde-sur-valserine|geneve;6,80;10,30;SNCF Connect;2026-09-02;lu directement;identique
+Bellegarde-sur-Valserine;Genève;Adulte;illico LIBERTÉ — Week-end / Jour férié (-50 %);adult-illico-liberte-weekend;bellegarde-sur-valserine|geneve;4,50;6,90;SNCF Connect;2026-09-02;lu directement;identique
+Bellegarde-sur-Valserine;Genève;Adulte;illico LIBERTÉ — Accompagnant, Week-end / Jour férié (-50 %);adult-illico-liberte-weekend-companion;bellegarde-sur-valserine|geneve;4,50;6,90;SNCF Connect;2026-09-02;lu directement;identique
+Bellegarde-sur-Valserine;Genève;Adulte;illico LIBERTÉ JEUNES (-50 %);adult-illico-jeunes;bellegarde-sur-valserine|geneve;4,50;6,90;SNCF Connect;2026-09-02;lu directement;identique
+Bellegarde-sur-Valserine;Genève;Adulte;Carte Liberté SNCF (-25 %);adult-liberte-nationale;bellegarde-sur-valserine|geneve;6,80;10,30;SNCF Connect;2026-09-02;lu directement;identique
+Bellegarde-sur-Valserine;Genève;Adulte;Carte Familles Nombreuses (-30 %);adult-famille-nombreuse-30;bellegarde-sur-valserine|geneve;5,20;8,90;SNCF Connect;2026-09-02;lu directement;identique
+Bellegarde-sur-Valserine;Genève;Adulte;Carte Familles Nombreuses (-40 %);adult-famille-nombreuse-40;bellegarde-sur-valserine|geneve;4,50;8,20;SNCF Connect;2026-09-02;lu directement;identique
+Bellegarde-sur-Valserine;Genève;Adulte;Carte Familles Nombreuses (-50 %);adult-famille-nombreuse-50;bellegarde-sur-valserine|geneve;3,70;7,40;SNCF Connect;2026-09-02;lu directement;identique
+Bellegarde-sur-Valserine;Genève;Adulte;Carte Familles Nombreuses (-75 %);adult-famille-nombreuse-75;bellegarde-sur-valserine|geneve;1,90;5,60;SNCF Connect;2026-09-02;lu directement;identique
+Bellegarde-sur-Valserine;Genève;Adulte;Carte Militaire (-75 %);adult-military;bellegarde-sur-valserine|geneve;2,30;3,50;TER Auvergne-Rhône-Alpes;2026-09-02;lu directement;"écart (ancienne 2de 1,90 ; ancienne 1re 5,60)"
+Bellegarde-sur-Valserine;Genève;Adulte;Carte Famille Militaire (-40 %);adult-family-military;bellegarde-sur-valserine|geneve;5,40;8,30;SNCF Connect;2026-09-02;lu directement;identique
+Bellegarde-sur-Valserine;Genève;Enfant;Aucune — Tarif Enfant 4–11 ans;child-none;bellegarde-sur-valserine|geneve;4,50;6,90;SNCF Connect;2026-09-02;lu directement;identique
+Bellegarde-sur-Valserine;Genève;Enfant;illico LIBERTÉ — Accompagnant, Week-end / Jour férié;child-illico-liberte-weekend-companion;bellegarde-sur-valserine|geneve;2,30;3,50;SNCF Connect;2026-09-02;lu directement;identique
+Bellegarde-sur-Valserine;Genève;Enfant;Carte Famille Militaire;child-family-military;bellegarde-sur-valserine|geneve;2,70;4,20;SNCF Connect;2026-09-02;lu directement;identique
+Bellegarde-sur-Valserine;Genève;Enfant;Carte Familles Nombreuses (-30 %);child-famille-nombreuse-30;bellegarde-sur-valserine|geneve;2,60;4,50;SNCF Connect;2026-09-02;lu directement;identique
+Bellegarde-sur-Valserine;Genève;Enfant;Carte Familles Nombreuses (-40 %);child-famille-nombreuse-40;bellegarde-sur-valserine|geneve;2,30;4,10;SNCF Connect;2026-09-02;lu directement;identique
+Bellegarde-sur-Valserine;Genève;Enfant;Carte Familles Nombreuses (-50 %);child-famille-nombreuse-50;bellegarde-sur-valserine|geneve;1,90;3,70;SNCF Connect;2026-09-02;lu directement;identique
+Bellegarde-sur-Valserine;Genève;Enfant;Carte Familles Nombreuses (-75 %);child-famille-nombreuse-75;bellegarde-sur-valserine|geneve;1,20;2,80;SNCF Connect;2026-09-02;lu directement;identique

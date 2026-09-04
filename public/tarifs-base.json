@@ -1,32 +1,22 @@
 {
   "meta": {
     "year": 2026,
-    "label": "Tarifs TER 2026 — profils adulte et enfant",
-    "version": "2026-08-24",
+    "label": "Tarifs TER 2026 — 19 profils relevés directement",
+    "version": "2026-09-02",
     "currency": "EUR",
     "unit": "centimes",
     "directionMode": "symmetric",
     "directionLabel": "Les mêmes montants s’appliquent dans les deux sens.",
     "sources": [
       {
-        "label": "SNCF Connect — simulations tarifaires TER",
+        "label": "SNCF Connect — relevé direct de 648 combinaisons tarifaires",
         "url": "https://www.sncf-connect.com/home/search",
-        "checkedAt": "2026-08-24"
+        "checkedAt": "2026-09-02"
       },
       {
-        "label": "SNCF Connect — tarifs spéciaux SNCF",
-        "url": "https://www.sncf-connect.com/fr-fr/aide/les-tarifs-speciaux-sncf",
-        "checkedAt": "2026-08-24"
-      },
-      {
-        "label": "TER Auvergne-Rhône-Alpes — carte illico LIBERTÉ et accompagnants",
-        "url": "https://www.ter.sncf.com/auvergne-rhone-alpes/tarifs-cartes/cartes-reduction/illico-liberte",
-        "checkedAt": "2026-08-24"
-      },
-      {
-        "label": "TER Auvergne-Rhône-Alpes — illico LIBERTÉ JEUNES",
-        "url": "https://www.ter.sncf.com/auvergne-rhone-alpes/tarifs-cartes/cartes-reduction/illico-liberte-jeunes",
-        "checkedAt": "2026-08-24"
+        "label": "TER Auvergne-Rhône-Alpes — relevé direct Carte Militaire (36 relations)",
+        "url": "https://www.ter.sncf.com/auvergne-rhone-alpes",
+        "checkedAt": "2026-09-02"
       }
     ],
     "profileCount": 19,
@@ -37,26 +27,25 @@
     "childDefinition": "Enfant de 4 à 11 ans inclus",
     "audit": {
       "relations": 36,
+      "profiles": 19,
+      "tariffLines": 684,
+      "amounts": 1368,
       "directionMode": "symmetric",
       "directChecks": [
-        "Lyon Part-Dieu ↔ Genève — Carte Famille Militaire adulte et enfant",
-        "Lyon Part-Dieu ↔ Ambérieu-en-Bugey — Carte Famille Militaire adulte",
-        "Lyon Part-Dieu ↔ Genève — enfant FN 30 %, 40 %, 50 % et 75 %",
-        "Ambérieu-en-Bugey ↔ Tenay-Hauteville — enfant FN 50 % et 75 %",
-        "Lyon Part-Dieu ↔ Meximieux – Pérouges — plancher enfant FN 75 %",
-        "36 relations — enfant accompagnant illico LIBERTÉ, TER directs du samedi 29 août 2026"
+        "648 combinaisons relevées directement dans SNCF Connect",
+        "36 combinaisons Carte Militaire relevées directement sur TER Auvergne-Rhône-Alpes",
+        "Trois lignes de calibrage relues et conformes"
       ],
       "controls": [
-        "Deux montants positifs par profil et par relation",
+        "684 combinaisons uniques : 36 relations × 19 profils",
+        "Deux montants entiers en centimes par combinaison",
+        "Aucun montant inférieur à 1,20 €",
         "Tarif 1re supérieur ou égal au tarif 2de",
-        "Plancher de perception enfant réduit fixé à 1,20 €",
-        "Carte Militaire 1re et 2de fusionnées dans un profil unique",
-        "Tarif adulte accompagnant illico LIBERTÉ identique au tarif du porteur le week-end",
-        "Aucun profil illico LIBERTÉ JEUNES proposé aux enfants de 4 à 11 ans",
+        "Aucun tarif calculé, arrondi, déduit ou complété",
         "Résultats identiques dans les deux sens de circulation"
       ]
     },
-    "revision": 6
+    "revision": 7
   },
   "stations": [
     {
@@ -141,8 +130,8 @@
           760
         ],
         "adult-military": [
-          260,
-          760
+          310,
+          470
         ],
         "adult-family-military": [
           750,
@@ -222,8 +211,8 @@
           990
         ],
         "adult-military": [
-          330,
-          990
+          410,
+          620
         ],
         "adult-family-military": [
           980,
@@ -303,8 +292,8 @@
           1230
         ],
         "adult-military": [
-          410,
-          1230
+          510,
+          770
         ],
         "adult-family-military": [
           1220,
@@ -384,8 +373,8 @@
           1370
         ],
         "adult-military": [
-          460,
-          1370
+          560,
+          860
         ],
         "adult-family-military": [
           1350,
@@ -465,8 +454,8 @@
           1560
         ],
         "adult-military": [
-          520,
-          1560
+          650,
+          980
         ],
         "adult-family-military": [
           1550,
@@ -546,8 +535,8 @@
           1750
         ],
         "adult-military": [
-          590,
-          1750
+          730,
+          1100
         ],
         "adult-family-military": [
           1740,
@@ -627,8 +616,8 @@
           2110
         ],
         "adult-military": [
-          710,
-          2110
+          880,
+          1340
         ],
         "adult-family-military": [
           2110,
@@ -666,17 +655,6 @@
     },
     "amberieu-en-bugey|tenay-hauteville": {
       "km": 18,
-      "overrides": {
-        "child-famille-nombreuse-75": {
-          "reason": "Relevé direct SNCF Connect prévalant sur la formule (50% + plancher 1,20€)",
-          "expectedByFormula": [
-            120,
-            170
-          ],
-          "proof": "TER direct 29/08/2026 — enfant 10 ans",
-          "checkedAt": "2026-08-24"
-        }
-      },
       "fares": {
         "adult-none": [
           540,
@@ -719,8 +697,8 @@
           330
         ],
         "adult-military": [
-          120,
-          330
+          140,
+          210
         ],
         "adult-family-military": [
           330,
@@ -800,8 +778,8 @@
           640
         ],
         "adult-military": [
-          220,
-          640
+          260,
+          400
         ],
         "adult-family-military": [
           630,
@@ -881,8 +859,8 @@
           780
         ],
         "adult-military": [
-          260,
-          780
+          320,
+          490
         ],
         "adult-family-military": [
           770,
@@ -962,8 +940,8 @@
           970
         ],
         "adult-military": [
-          330,
-          970
+          400,
+          610
         ],
         "adult-family-military": [
           960,
@@ -1043,8 +1021,8 @@
           1170
         ],
         "adult-military": [
-          390,
-          1170
+          490,
+          740
         ],
         "adult-family-military": [
           1160,
@@ -1124,8 +1102,8 @@
           1580
         ],
         "adult-military": [
-          530,
-          1580
+          650,
+          990
         ],
         "adult-family-military": [
           1560,
@@ -1205,8 +1183,8 @@
           360
         ],
         "adult-military": [
-          120,
-          360
+          150,
+          230
         ],
         "adult-family-military": [
           360,
@@ -1286,8 +1264,8 @@
           560
         ],
         "adult-military": [
-          190,
-          560
+          230,
+          350
         ],
         "adult-family-military": [
           540,
@@ -1367,8 +1345,8 @@
           730
         ],
         "adult-military": [
-          250,
-          730
+          300,
+          460
         ],
         "adult-family-military": [
           720,
@@ -1448,8 +1426,8 @@
           950
         ],
         "adult-military": [
-          320,
-          950
+          400,
+          600
         ],
         "adult-family-military": [
           950,
@@ -1529,8 +1507,8 @@
           1330
         ],
         "adult-military": [
-          450,
-          1330
+          550,
+          830
         ],
         "adult-family-military": [
           1320,
@@ -1611,7 +1589,7 @@
         ],
         "adult-military": [
           120,
-          230
+          180
         ],
         "adult-family-military": [
           230,
@@ -1639,11 +1617,11 @@
         ],
         "child-famille-nombreuse-50": [
           120,
-          160
+          180
         ],
         "child-famille-nombreuse-75": [
           120,
-          120
+          180
         ]
       }
     },
@@ -1691,8 +1669,8 @@
           470
         ],
         "adult-military": [
-          160,
-          470
+          190,
+          290
         ],
         "adult-family-military": [
           450,
@@ -1772,8 +1750,8 @@
           700
         ],
         "adult-military": [
-          240,
-          700
+          290,
+          440
         ],
         "adult-family-military": [
           690,
@@ -1853,8 +1831,8 @@
           1100
         ],
         "adult-military": [
-          370,
-          1100
+          450,
+          690
         ],
         "adult-family-military": [
           1080,
@@ -1935,7 +1913,7 @@
         ],
         "adult-military": [
           120,
-          290
+          180
         ],
         "adult-family-military": [
           280,
@@ -1967,7 +1945,7 @@
         ],
         "child-famille-nombreuse-75": [
           120,
-          150
+          180
         ]
       }
     },
@@ -2015,8 +1993,8 @@
           560
         ],
         "adult-military": [
-          190,
-          560
+          230,
+          350
         ],
         "adult-family-military": [
           540,
@@ -2096,8 +2074,8 @@
           950
         ],
         "adult-military": [
-          320,
-          950
+          400,
+          600
         ],
         "adult-family-military": [
           950,
@@ -2177,8 +2155,8 @@
           320
         ],
         "adult-military": [
-          120,
-          320
+          130,
+          200
         ],
         "adult-family-military": [
           310,
@@ -2210,7 +2188,7 @@
         ],
         "child-famille-nombreuse-75": [
           120,
-          160
+          180
         ]
       }
     },
@@ -2258,8 +2236,8 @@
           770
         ],
         "adult-military": [
-          260,
-          770
+          320,
+          480
         ],
         "adult-family-military": [
           760,
@@ -2339,8 +2317,8 @@
           560
         ],
         "adult-military": [
-          190,
-          560
+          230,
+          350
         ],
         "adult-family-military": [
           540,
@@ -2420,8 +2398,8 @@
           590
         ],
         "adult-military": [
-          200,
-          590
+          240,
+          370
         ],
         "adult-family-military": [
           580,
@@ -2502,7 +2480,7 @@
         ],
         "adult-military": [
           120,
-          270
+          180
         ],
         "adult-family-military": [
           260,
@@ -2534,7 +2512,7 @@
         ],
         "child-famille-nombreuse-75": [
           120,
-          140
+          180
         ]
       }
     },
@@ -2582,8 +2560,8 @@
           560
         ],
         "adult-military": [
-          190,
-          560
+          230,
+          350
         ],
         "adult-family-military": [
           540,
@@ -2663,8 +2641,8 @@
           810
         ],
         "adult-military": [
-          270,
-          810
+          330,
+          500
         ],
         "adult-family-military": [
           800,
@@ -2744,8 +2722,8 @@
           950
         ],
         "adult-military": [
-          320,
-          950
+          400,
+          600
         ],
         "adult-family-military": [
           950,
@@ -2825,8 +2803,8 @@
           1130
         ],
         "adult-military": [
-          380,
-          1130
+          470,
+          710
         ],
         "adult-family-military": [
           1110,
@@ -2906,8 +2884,8 @@
           1330
         ],
         "adult-military": [
-          450,
-          1330
+          550,
+          830
         ],
         "adult-family-military": [
           1320,
@@ -2987,8 +2965,8 @@
           1730
         ],
         "adult-military": [
-          580,
-          1730
+          710,
+          1080
         ],
         "adult-family-military": [
           1710,
@@ -3031,133 +3009,133 @@
       "travelerType": "adult",
       "label": "Aucune — Plein tarif",
       "status": "Plein tarif adulte appliqué.",
-      "sourceRule": "Base adulte 2026 contrôlée"
+      "sourceRule": "Relevé direct SNCF Connect du 2 septembre 2026"
     },
     {
       "id": "adult-illico-liberte-weekday",
       "travelerType": "adult",
       "label": "illico LIBERTÉ — Semaine (-25 %)",
       "status": "Réduction illico LIBERTÉ Semaine appliquée.",
-      "sourceRule": "Tarif adulte existant"
+      "sourceRule": "Relevé direct SNCF Connect du 2 septembre 2026"
     },
     {
       "id": "adult-illico-liberte-weekend",
       "travelerType": "adult",
       "label": "illico LIBERTÉ — Week-end / Jour férié (-50 %)",
       "status": "Tarif illico LIBERTÉ Week-end / Jour férié appliqué.",
-      "sourceRule": "50 % du tarif normal le week-end et les jours fériés"
+      "sourceRule": "Relevé direct SNCF Connect du 2 septembre 2026"
     },
     {
       "id": "adult-illico-liberte-weekend-companion",
       "travelerType": "adult",
       "label": "illico LIBERTÉ — Accompagnant, Week-end / Jour férié (-50 %)",
       "status": "Tarif accompagnant illico LIBERTÉ Week-end / Jour férié appliqué.",
-      "sourceRule": "Même réduction et mêmes montants que le porteur ; jusqu’à 3 accompagnants"
+      "sourceRule": "Relevé direct SNCF Connect du 2 septembre 2026"
     },
     {
       "id": "adult-illico-jeunes",
       "travelerType": "adult",
       "label": "illico LIBERTÉ JEUNES (-50 %)",
       "status": "Réduction illico LIBERTÉ JEUNES appliquée.",
-      "sourceRule": "Tarif adulte existant"
+      "sourceRule": "Relevé direct SNCF Connect du 2 septembre 2026"
     },
     {
       "id": "adult-liberte-nationale",
       "travelerType": "adult",
       "label": "Carte Liberté SNCF (-25 %)",
       "status": "Réduction Carte Liberté SNCF appliquée.",
-      "sourceRule": "Tarif adulte existant"
+      "sourceRule": "Relevé direct SNCF Connect du 2 septembre 2026"
     },
     {
       "id": "adult-famille-nombreuse-30",
       "travelerType": "adult",
       "label": "Carte Familles Nombreuses (-30 %)",
       "status": "Réduction Familles Nombreuses 30 % appliquée.",
-      "sourceRule": "Tarif adulte directement contrôlé"
+      "sourceRule": "Relevé direct SNCF Connect du 2 septembre 2026"
     },
     {
       "id": "adult-famille-nombreuse-40",
       "travelerType": "adult",
       "label": "Carte Familles Nombreuses (-40 %)",
       "status": "Réduction Familles Nombreuses 40 % appliquée.",
-      "sourceRule": "Tarif adulte directement contrôlé"
+      "sourceRule": "Relevé direct SNCF Connect du 2 septembre 2026"
     },
     {
       "id": "adult-famille-nombreuse-50",
       "travelerType": "adult",
       "label": "Carte Familles Nombreuses (-50 %)",
       "status": "Réduction Familles Nombreuses 50 % appliquée.",
-      "sourceRule": "Tarif adulte directement contrôlé"
+      "sourceRule": "Relevé direct SNCF Connect du 2 septembre 2026"
     },
     {
       "id": "adult-famille-nombreuse-75",
       "travelerType": "adult",
       "label": "Carte Familles Nombreuses (-75 %)",
       "status": "Réduction Familles Nombreuses 75 % appliquée.",
-      "sourceRule": "Tarif adulte directement contrôlé"
+      "sourceRule": "Relevé direct SNCF Connect du 2 septembre 2026"
     },
     {
       "id": "adult-military",
       "travelerType": "adult",
       "label": "Carte Militaire (-75 %)",
       "status": "Tarif Carte Militaire appliqué.",
-      "sourceRule": "Même assiette et même taux que FN 75 % sur TER ; cartes Militaire 1re et 2de fusionnées"
+      "sourceRule": "Relevé direct TER Auvergne-Rhône-Alpes du 2 septembre 2026"
     },
     {
       "id": "adult-family-military",
       "travelerType": "adult",
       "label": "Carte Famille Militaire (-40 %)",
       "status": "Tarif Carte Famille Militaire appliqué.",
-      "sourceRule": "60 % du plein tarif, arrondi SNCF au décime supérieur"
+      "sourceRule": "Relevé direct SNCF Connect du 2 septembre 2026"
     },
     {
       "id": "child-none",
       "travelerType": "child",
       "label": "Aucune — Tarif Enfant 4–11 ans",
       "status": "Tarif Enfant 4–11 ans appliqué.",
-      "sourceRule": "50 % du plein tarif adulte, arrondi SNCF au décime supérieur"
+      "sourceRule": "Relevé direct SNCF Connect du 2 septembre 2026"
     },
     {
       "id": "child-illico-liberte-weekend-companion",
       "travelerType": "child",
       "label": "illico LIBERTÉ — Accompagnant, Week-end / Jour férié",
       "status": "Tarif enfant accompagnant illico LIBERTÉ appliqué.",
-      "sourceRule": "36 relations contrôlées dans SNCF Connect avec le profil régional Accompagnant"
+      "sourceRule": "Relevé direct SNCF Connect du 2 septembre 2026"
     },
     {
       "id": "child-family-military",
       "travelerType": "child",
       "label": "Carte Famille Militaire",
       "status": "Tarif enfant avec Carte Famille Militaire appliqué.",
-      "sourceRule": "50 % du tarif adulte Famille Militaire, plancher 1,20 €"
+      "sourceRule": "Relevé direct SNCF Connect du 2 septembre 2026"
     },
     {
       "id": "child-famille-nombreuse-30",
       "travelerType": "child",
       "label": "Carte Familles Nombreuses (-30 %)",
       "status": "Tarif enfant Familles Nombreuses 30 % appliqué.",
-      "sourceRule": "50 % du tarif adulte correspondant, arrondi SNCF et plancher 1,20 €"
+      "sourceRule": "Relevé direct SNCF Connect du 2 septembre 2026"
     },
     {
       "id": "child-famille-nombreuse-40",
       "travelerType": "child",
       "label": "Carte Familles Nombreuses (-40 %)",
       "status": "Tarif enfant Familles Nombreuses 40 % appliqué.",
-      "sourceRule": "50 % du tarif adulte correspondant, arrondi SNCF et plancher 1,20 €"
+      "sourceRule": "Relevé direct SNCF Connect du 2 septembre 2026"
     },
     {
       "id": "child-famille-nombreuse-50",
       "travelerType": "child",
       "label": "Carte Familles Nombreuses (-50 %)",
       "status": "Tarif enfant Familles Nombreuses 50 % appliqué.",
-      "sourceRule": "50 % du tarif adulte correspondant, arrondi SNCF et plancher 1,20 €"
+      "sourceRule": "Relevé direct SNCF Connect du 2 septembre 2026"
     },
     {
       "id": "child-famille-nombreuse-75",
       "travelerType": "child",
       "label": "Carte Familles Nombreuses (-75 %)",
       "status": "Tarif enfant Familles Nombreuses 75 % appliqué.",
-      "sourceRule": "50 % du tarif adulte correspondant, arrondi SNCF et plancher 1,20 €"
+      "sourceRule": "Relevé direct SNCF Connect du 2 septembre 2026"
     }
   ]
 }

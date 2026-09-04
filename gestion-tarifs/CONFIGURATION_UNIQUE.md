@@ -15,5 +15,5 @@ Pour une mise à jour courante, remplacer uniquement
 se lancent automatiquement.
 
 Un voyant vert dans l'onglet **Actions** confirme le contrôle technique des
-684 lignes et des 1 368 montants. Il ne constitue pas une preuve de provenance
-commerciale pour les lignes encore signalées « à confirmer ».
+684 lignes et des 1 368 montants. Le relevé direct consolidé est conservé dans
+ce dossier pour retracer la provenance des valeurs publiées.

@@ -2,18 +2,16 @@ import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 
 const read = (path) => readFile(new URL(`../${path}`, import.meta.url), "utf8");
-const [appHtml, tariffTableHtml, tariffBase, fallbackCss, serviceWorker, manifestText, companionChecksText] = await Promise.all([
+const [appHtml, tariffTableHtml, tariffBase, fallbackCss, serviceWorker, manifestText] = await Promise.all([
   read("public/app.html"),
   read("public/tarifs.html"),
   read("public/tarifs-base.json"),
   read("public/tarifs-secours.css"),
   read("public/sw.js"),
   read("public/manifest.webmanifest"),
-  read("scripts/illico-companion-checks-2026-08-29.json"),
 ]);
 const data = JSON.parse(tariffBase);
 const manifest = JSON.parse(manifestText);
-const companionChecks = JSON.parse(companionChecksText);
 
 const stationIds = [
   "lyon-part-dieu",
@@ -50,12 +48,6 @@ const childProfileIds = [
   "child-famille-nombreuse-75",
 ];
 const profileIds = [...adultProfileIds, ...childProfileIds];
-const ceilToTen = (value) => Math.ceil(value / 10) * 10;
-const childFare = (value) => Math.max(120, ceilToTen(value / 2));
-const companionFormulaExceptions = new Set([
-  "meximieux-perouges|amberieu-en-bugey",
-  "virieu-le-grand-belley|culoz",
-]);
 
 assert.deepEqual(data.stations.map(({ id }) => id), stationIds, "Ordre ou liste des gares incorrecte");
 assert.equal(data.meta.year, 2026);
@@ -63,11 +55,14 @@ assert.match(data.meta.version, /^\d{4}-\d{2}-\d{2}$/);
 assert.equal(data.meta.directionMode, "symmetric");
 assert.equal(data.meta.childDefinition, "Enfant de 4 à 11 ans inclus");
 assert.equal(data.meta.profileCount, 19);
-assert.equal(data.meta.revision, 6);
+assert.equal(data.meta.revision, 7);
 assert.deepEqual(data.profiles.map(({ id }) => id), profileIds, "Liste des profils tarifaires incorrecte");
 assert.deepEqual(data.profiles.filter(({ travelerType }) => travelerType === "adult").map(({ id }) => id), adultProfileIds);
 assert.deepEqual(data.profiles.filter(({ travelerType }) => travelerType === "child").map(({ id }) => id), childProfileIds);
 assert.ok(data.meta.sources.every(({ url }) => /^https:\/\//.test(url)), "Chaque source doit être traçable par URL");
+assert.equal(data.meta.audit.tariffLines, 684, "Le relevé direct doit contenir exactement 684 lignes");
+assert.equal(data.meta.audit.amounts, 1368, "Le relevé direct doit contenir exactement 1 368 montants");
+assert.ok(data.profiles.every(({ sourceRule }) => /Relevé direct/.test(sourceRule)), "Chaque profil doit indiquer une provenance directe");
 
 const expectedRelations = stationIds.length * (stationIds.length - 1) / 2;
 assert.equal(Object.keys(data.pairs).length, expectedRelations);
@@ -80,40 +75,15 @@ for (let from = 0; from < stationIds.length; from += 1) {
 
 for (const [key, route] of Object.entries(data.pairs)) {
   assert.ok(Number.isInteger(route.km) && route.km > 0, `Distance invalide : ${key}`);
+  assert.equal(route.overrides, undefined, `Ancienne exception calculée encore présente : ${key}`);
   assert.deepEqual(Object.keys(route.fares), profileIds, `Profils incomplets : ${key}`);
   for (const [profileId, fares] of Object.entries(route.fares)) {
     assert.equal(fares.length, 2, `Deux classes attendues : ${key} / ${profileId}`);
     assert.ok(fares.every((fare) => Number.isInteger(fare) && fare >= 120), `Tarif inférieur au plancher de 1,20 € : ${key} / ${profileId}`);
     assert.ok(fares[1] >= fares[0], `La 1re doit être supérieure ou égale à la 2de : ${key} / ${profileId}`);
   }
-  assert.deepEqual(route.fares["adult-military"], route.fares["adult-famille-nombreuse-75"], `Équivalence militaire incorrecte : ${key}`);
-  assert.deepEqual(route.fares["adult-illico-liberte-weekend-companion"], route.fares["adult-illico-liberte-weekend"], `Accompagnant illico adulte incorrect : ${key}`);
-  assert.deepEqual(route.fares["adult-family-military"], route.fares["adult-none"].map((fare) => ceilToTen(fare * 0.6)), `Famille Militaire adulte incorrecte : ${key}`);
-  assert.deepEqual(route.fares["child-none"], route.fares["adult-none"].map(childFare), `Tarif enfant incorrect : ${key}`);
-  assert.deepEqual(route.fares["child-illico-liberte-weekend-companion"], companionChecks.relations[key]?.fares, `Contrôle SNCF Connect accompagnant enfant incorrect : ${key}`);
-  if (!companionFormulaExceptions.has(key)) {
-    assert.deepEqual(route.fares["child-illico-liberte-weekend-companion"], route.fares["child-none"].map(childFare), `Cohérence accompagnant illico enfant incorrecte : ${key}`);
-  }
-  assert.deepEqual(route.fares["child-family-military"], route.fares["adult-family-military"].map(childFare), `Famille Militaire enfant incorrecte : ${key}`);
-  for (const rate of [30, 40, 50, 75]) {
-    const profileId = `child-famille-nombreuse-${rate}`;
-    const expected = route.fares[`adult-famille-nombreuse-${rate}`].map(childFare);
-    const override = route.overrides?.[profileId];
-    if (override) {
-      assert.ok(override.reason && override.proof && override.checkedAt,
-        `Exception non justifiée (reason/proof/checkedAt requis) : ${key} / ${profileId}`);
-      assert.deepEqual(override.expectedByFormula, expected,
-        `L'exception ${key}/${profileId} ne documente plus l'écart réel avec la formule — mettre à jour expectedByFormula ou retirer l'exception`);
-      // L'exception est tracée avec preuve : le tarif retenu peut s'écarter de la formule.
-    } else {
-      assert.deepEqual(route.fares[profileId], expected, `FN ${rate} enfant incorrecte : ${key}`);
-    }
-  }
 }
 
-assert.equal(Object.keys(companionChecks.relations).length, expectedRelations, "Les 36 contrôles directs illico accompagnant sont obligatoires");
-assert.equal(companionChecks.meta.travelDate, "2026-08-29");
-assert.equal(companionChecks.meta.traveler, "Enfant de 10 ans, représentatif de la tranche 4–11 ans");
 assert.ok(!profileIds.includes("child-illico-jeunes"), "Un enfant de 4–11 ans ne doit jamais recevoir illico LIBERTÉ JEUNES");
 const illicoWeekend = data.profiles.find((profile) => profile.id === "adult-illico-liberte-weekend");
 assert.equal(illicoWeekend.label, "illico LIBERTÉ — Week-end / Jour férié (-50 %)", "Le libellé illico LIBERTÉ principal est incorrect");
@@ -122,6 +92,9 @@ assert.deepEqual(data.pairs["meximieux-perouges|amberieu-en-bugey"].fares["child
 assert.deepEqual(data.pairs["virieu-le-grand-belley|culoz"].fares["child-illico-liberte-weekend-companion"], [120, 180], "Contrôle direct accompagnant Virieu–Culoz altéré");
 
 assert.deepEqual(data.pairs["amberieu-en-bugey|tenay-hauteville"].fares["child-famille-nombreuse-75"], [120, 180], "Contrôle direct FN 75 enfant altéré");
+assert.deepEqual(data.pairs["virieu-le-grand-belley|culoz"].fares["child-illico-liberte-weekend-companion"], [120, 180], "Contrôle direct accompagnant Virieu–Culoz altéré");
+assert.deepEqual(data.pairs["meximieux-perouges|amberieu-en-bugey"].fares["child-illico-liberte-weekend-companion"], [120, 180], "Contrôle direct accompagnant Meximieux–Ambérieu altéré");
+assert.deepEqual(data.pairs["lyon-part-dieu|geneve"].fares["adult-military"], [880, 1340], "Contrôle direct Carte Militaire Lyon–Genève altéré");
 assert.deepEqual(data.pairs["lyon-part-dieu|geneve"].fares["adult-family-military"], [2110, 3200], "Contrôle direct Famille Militaire adulte altéré");
 assert.deepEqual(data.pairs["lyon-part-dieu|geneve"].fares["child-family-military"], [1060, 1600], "Contrôle direct Famille Militaire enfant altéré");
 assert.deepEqual(data.pairs["lyon-part-dieu|geneve"].fares["child-famille-nombreuse-30"], [990, 1690]);

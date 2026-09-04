@@ -1,79 +1,74 @@
-# Guide utilisateur - Surclassement KRONO +
+# Surclassement KRONO + - guide utilisateur
 
-## Adresse de l'application
+## Accès direct
 
-L'application est accessible à l'adresse stable suivante :
+Adresse officielle : <https://krono-plus-aura.github.io/>
 
-**https://krono-plus-aura.github.io/**
+![QR code de l'application](images/qr-application-github-pages.png)
 
-Vous pouvez ouvrir ce lien sur iPhone, iPad, Android, Crosscall ou ordinateur. Le calcul, les écrans, les couleurs et le fonctionnement restent identiques à la version validée.
+L'application fonctionne sur iPhone, iPad, Android, Crosscall et ordinateur.
 
-## Ce qui change avec GitHub Pages
+## Calculer un surclassement
 
-- L'adresse d'accès devient `https://krono-plus-aura.github.io/`.
-- L'ancien lien ChatGPT Sites ne doit plus être utilisé comme lien principal.
-- L'installation sur l'écran d'accueil reste possible.
-- Le fonctionnement hors connexion reste disponible après une première ouverture avec Internet.
-- Les mises à jour sont reçues automatiquement lors d'une prochaine ouverture avec Internet.
+![Écran principal de Surclassement KRONO +](images/application-publiee.jpg)
 
-## Faire un calcul
-
-1. Choisissez la gare de départ et la gare d'arrivée.
-2. Choisissez le profil et la carte de chaque voyageur.
-3. Utilisez **Ajouter un voyageur** si nécessaire.
+1. Sélectionnez la gare de départ et la gare d'arrivée.
+2. Choisissez **Adulte** ou **Enfant**, puis la carte du voyageur.
+3. Touchez **Ajouter un voyageur** si vous calculez pour un groupe.
 4. Touchez **Valider et calculer**.
-5. Lisez le montant total du surclassement et le détail par voyageur.
+5. Lisez le total du groupe et le détail par voyageur.
 
-Le montant du surclassement est toujours calculé à partir des deux prix enregistrés : prix 1re classe moins prix 2de classe.
+Sur ordinateur, ouvrez simplement le lien dans votre navigateur. L'installation
+n'est pas obligatoire.
 
-## Ajouter l'application sur iPhone ou iPad
+## Ajouter sur l'écran d'accueil - iPhone ou iPad
 
-1. Ouvrez Safari.
-2. Ouvrez `https://krono-plus-aura.github.io/`.
-3. Attendez que l'application soit complètement affichée.
-4. Touchez le bouton **Partager**. Selon la présentation de Safari, touchez d'abord le bouton **Plus**.
-5. Faites défiler les actions et choisissez **Sur l'écran d'accueil**.
-6. Activez **Ouvrir comme app web** si cette option apparaît.
-7. Touchez **Ajouter**.
+Utilisez **Safari**.
 
-## Ajouter l'application sur Android ou Crosscall
+1. Ouvrez l'adresse de l'application dans Safari.
+2. Touchez le bouton **Partager** : carré avec une flèche vers le haut.
+3. Touchez **Sur l'écran d'accueil**.
+4. Activez **Ouvrir comme app web** si l'option apparaît.
+5. Touchez **Ajouter**.
 
-1. Ouvrez Google Chrome.
-2. Ouvrez `https://krono-plus-aura.github.io/`.
-3. Attendez que l'application soit complètement affichée.
-4. Ouvrez le menu de Chrome avec les trois points.
-5. Choisissez **Installer l'application**. Selon la version de Chrome, le menu peut afficher **Installer** ou **Ajouter à l'écran d'accueil**.
-6. Confirmez l'installation.
+![Installation sur iPhone ou iPad](images/installation-iphone.svg)
 
-## Préparer le fonctionnement hors connexion
+## Ajouter sur l'écran d'accueil - Android ou Crosscall
 
-Cette préparation est à faire une première fois avec Internet :
+Utilisez **Google Chrome**.
 
-1. Connectez le téléphone au Wi-Fi ou aux données mobiles.
-2. Ouvrez l'application et attendez son affichage complet.
-3. Fermez complètement l'application.
-4. Ouvrez-la une deuxième fois.
-5. Coupez ensuite le réseau et vérifiez qu'elle s'ouvre encore.
+1. Ouvrez l'adresse de l'application dans Chrome.
+2. Touchez les **trois points** en haut à droite.
+3. Touchez **Installer l'application**. Selon le téléphone, le choix peut
+   s'appeler **Installer** ou **Ajouter à l'écran d'accueil**.
+4. Confirmez avec **Installer**.
 
-Avant une prise de service, ouvrez l'application une fois avec Internet pour recevoir une éventuelle mise à jour tarifaire.
+![Installation sur Android ou Crosscall](images/installation-android.svg)
+
+## Préparer le mode hors connexion
+
+Cette préparation se fait une première fois avec Internet :
+
+1. Ouvrez l'application et attendez son affichage complet.
+2. Fermez-la complètement.
+3. Rouvrez-la.
+4. Coupez le Wi-Fi et les données mobiles pour vérifier qu'elle s'ouvre encore.
+
+Avant une prise de service, ouvrez l'application une fois avec Internet afin de
+recevoir une éventuelle mise à jour tarifaire.
 
 ## Dépannage rapide
 
-### L'ancien écran apparaît encore
+- **Ancienne version affichée** : ouvrez l'application avec Internet, attendez
+  quelques secondes, fermez-la complètement puis relancez-la.
+- **Installation absente sur iPhone** : recommencez avec Safari, sans navigation
+  privée.
+- **Installation absente sur Android ou Crosscall** : recommencez avec Chrome,
+  sans mode Incognito.
+- **Plus d'accès hors connexion** : reconnectez le téléphone, ouvrez
+  l'application jusqu'à l'affichage complet, fermez-la puis relancez-la.
+- **Résultat inhabituel** : notez le trajet, le profil, la carte et les montants,
+  puis transmettez ces informations à Hamza.
 
-Fermez complètement l'application, ouvrez-la une fois avec Internet, attendez quelques secondes, puis relancez-la.
-
-### L'application ne s'ouvre plus hors connexion
-
-Reconnectez le téléphone, ouvrez l'adresse dans Safari ou Chrome, attendez l'affichage complet, puis fermez et relancez l'application. Ne faites pas l'installation en navigation privée.
-
-### Le bouton d'installation n'apparaît pas
-
-- Sur iPhone ou iPad, utilisez Safari.
-- Sur Android ou Crosscall, utilisez Google Chrome.
-- Vérifiez que l'adresse commence exactement par `https://krono-plus-aura.github.io/`.
-
-### Le résultat semble inhabituel
-
-Ne modifiez pas le calcul. Relevez le trajet, le profil, la carte choisie et les montants affichés, puis transmettez ces informations à Hamza ou au responsable de la base tarifaire.
-
+Le PDF illustré complet est disponible dans ce même dossier :
+`Guide_utilisateur_Surclassement_KRONO_plus_GitHub_Pages.pdf`.

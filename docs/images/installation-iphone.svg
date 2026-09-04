@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="560" viewBox="0 0 1200 560" role="img" aria-labelledby="title desc">
+  <title id="title">Installer Surclassement KRONO + sur iPhone</title>
+  <desc id="desc">Trois écrans montrent Safari, le bouton Partager, puis Sur l’écran d’accueil et Ajouter.</desc>
+  <rect width="1200" height="560" rx="32" fill="#f6f1f6"/>
+  <text x="60" y="70" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#7f2171">iPhone / iPad - avec Safari</text>
+  <g font-family="Arial, sans-serif">
+    <g transform="translate(70 105)">
+      <rect width="300" height="395" rx="28" fill="white" stroke="#d8c9d7" stroke-width="3"/>
+      <circle cx="38" cy="42" r="20" fill="#7f2171"/><text x="38" y="50" text-anchor="middle" font-size="22" font-weight="700" fill="white">1</text>
+      <text x="72" y="49" font-size="22" font-weight="700" fill="#192733">Ouvrir dans Safari</text>
+      <rect x="26" y="88" width="248" height="184" rx="20" fill="url(#g)"/>
+      <text x="150" y="160" text-anchor="middle" font-size="18" font-weight="700" fill="white">Surclassement</text><text x="150" y="186" text-anchor="middle" font-size="22" font-weight="700" fill="white">KRONO +</text>
+      <rect x="26" y="296" width="248" height="56" rx="14" fill="#eef2f4"/>
+      <text x="150" y="330" text-anchor="middle" font-size="15" fill="#192733">krono-plus-aura.github.io</text>
+    </g>
+    <g transform="translate(450 105)">
+      <rect width="300" height="395" rx="28" fill="white" stroke="#d8c9d7" stroke-width="3"/>
+      <circle cx="38" cy="42" r="20" fill="#b21571"/><text x="38" y="50" text-anchor="middle" font-size="22" font-weight="700" fill="white">2</text>
+      <text x="72" y="49" font-size="22" font-weight="700" fill="#192733">Toucher Partager</text>
+      <rect x="105" y="118" width="90" height="90" rx="20" fill="#e9f5fb" stroke="#009fe3" stroke-width="3"/>
+      <path d="M150 177V126m0 0-18 18m18-18 18 18" fill="none" stroke="#0079b8" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M123 162v32h54v-32" fill="none" stroke="#0079b8" stroke-width="6" stroke-linecap="round"/>
+      <text x="150" y="255" text-anchor="middle" font-size="18" fill="#687a88">bouton carré</text><text x="150" y="280" text-anchor="middle" font-size="18" fill="#687a88">avec flèche</text>
+    </g>
+    <g transform="translate(830 105)">
+      <rect width="300" height="395" rx="28" fill="white" stroke="#d8c9d7" stroke-width="3"/>
+      <circle cx="38" cy="42" r="20" fill="#e41d25"/><text x="38" y="50" text-anchor="middle" font-size="22" font-weight="700" fill="white">3</text>
+      <text x="72" y="49" font-size="22" font-weight="700" fill="#192733">Ajouter</text>
+      <rect x="24" y="92" width="252" height="65" rx="14" fill="#f2f4f5"/>
+      <text x="48" y="132" font-size="18" font-weight="700" fill="#192733">Sur l’écran d’accueil</text>
+      <path d="M240 116l10 10-10 10" fill="none" stroke="#687a88" stroke-width="4"/>
+      <rect x="76" y="220" width="148" height="55" rx="15" fill="#e41d25"/>
+      <text x="150" y="255" text-anchor="middle" font-size="21" font-weight="700" fill="white">Ajouter</text>
+      <text x="150" y="323" text-anchor="middle" font-size="17" fill="#687a88">L’icône apparaît</text><text x="150" y="347" text-anchor="middle" font-size="17" fill="#687a88">sur l’accueil.</text>
+    </g>
+  </g>
+  <defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#7f2171"/><stop offset=".5" stop-color="#b21571"/><stop offset="1" stop-color="#e41d25"/></linearGradient></defs>
+</svg>

@@ -1,4 +1,4 @@
-const CACHE_NAME = "krono-2026-08-24-r6";
+const CACHE_NAME = "krono-2026-09-02-r7";
 const OFFLINE_DOCUMENT = "/app.html";
 const NAVIGATION_FALLBACKS = [OFFLINE_DOCUMENT];
 const REQUIRED_SHELL = [

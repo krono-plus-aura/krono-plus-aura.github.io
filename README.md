@@ -20,7 +20,7 @@ Cette version reprend à l’identique l’application finale validée :
 - 1 368 montants de classe, enregistrés en centimes ;
 - calcul automatique du surclassement : prix 1re − prix 2de.
 
-La base active porte la version tarifaire `2026-08-24`, révision `6`.
+La base active porte la version tarifaire `2026-09-02`, révision `7`.
 
 ## Règles absolues
 
@@ -53,8 +53,11 @@ La base active porte la version tarifaire `2026-08-24`, révision `6`.
 | `.github/workflows/publication.yml` | Lance les contrôles puis publie `public/` sur GitHub Pages. |
 | `.github/workflows/mise-a-jour-tarifs.yml` | Contrôle l'Excel, génère la base et publie les tarifs automatiquement. |
 | `gestion-tarifs/Base_tarifaire_KRONO_plus.xlsx` | Seul fichier à remplacer lors d'une mise à jour tarifaire courante. |
+| `gestion-tarifs/RELEVE_SNCF_CONNECT_ET_TER_AURA_2026-09-02.csv` | Relevé direct consolidé des 684 lignes, conservé pour traçabilité. |
 | `docs/Guide_utilisateur_GitHub_Pages.md` | Guide simple d'accès, d'installation et de dépannage pour les contrôleurs. |
-| `docs/Guide_mise_a_jour_tarifs.md` | Procédure sans ligne de commande pour l'Excel, la conversion JSON et la publication. |
+| `docs/Guide_mise_a_jour_tarifs.md` | Procédure illustrée, pas à pas, pour modifier l'Excel et le déposer sur GitHub. |
+| `docs/Guide_utilisateur_Surclassement_KRONO_plus_GitHub_Pages.pdf` | Guide illustré à diffuser aux agents : accès, installation et mode hors connexion. |
+| `docs/Guide_simple_mise_a_jour_tarifs_KRONO_plus.pdf` | Guide illustré de maintenance : Excel, dépôt GitHub, voyant vert et contrôle final. |
 
 ## Séparation entre utilisation et maintenance
 
@@ -76,8 +79,8 @@ ne faut jamais partager un mot de passe.
 5. Attendre le voyant vert dans **Actions**.
 
 GitHub contrôle les 684 lignes et les 1 368 montants, génère le JSON et le cache
-hors connexion, puis publie le site. Il n'y a aucun JSON à modifier, aucune IA
-à utiliser et aucune commande à saisir.
+hors connexion, puis publie le site. Il n'y a aucun JSON à modifier, aucune IA à
+utiliser et aucune commande à saisir.
 
 Le guide détaillé `docs/Guide_mise_a_jour_tarifs.md`, également fourni en PDF
 dans le pack de sauvegarde, illustre cette procédure.

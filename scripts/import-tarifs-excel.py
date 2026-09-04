@@ -41,6 +41,17 @@ def column_number(reference: str) -> int:
     return value
 
 
+def column_letters(number: int) -> str:
+    """Convertit un numéro de colonne Excel (1, 2, …) en lettres (A, B, …)."""
+    if number < 1:
+        raise ImportErrorWithDetails(f"Numéro de colonne Excel invalide : {number}")
+    letters = ""
+    while number:
+        number, remainder = divmod(number - 1, 26)
+        letters = chr(65 + remainder) + letters
+    return letters
+
+
 def text_nodes(element: ET.Element | None) -> str:
     if element is None:
         return ""
@@ -179,8 +190,14 @@ def import_tariffs(excel_path: Path, base_path: Path) -> tuple[dict, list[dict],
             raise ImportErrorWithDetails(
                 f"Doublon ligne {row_number} : {pair_key} / {profile_id}"
             )
-        second = to_cents(row.get(headers["Prix 2de (€)"]), f"F{row_number}")
-        first = to_cents(row.get(headers["Prix 1re (€)"]), f"G{row_number}")
+        second = to_cents(
+            row.get(headers["Prix 2de (€)"]),
+            f"{column_letters(headers['Prix 2de (€)'])}{row_number}",
+        )
+        first = to_cents(
+            row.get(headers["Prix 1re (€)"]),
+            f"{column_letters(headers['Prix 1re (€)'])}{row_number}",
+        )
         if first < second:
             raise ImportErrorWithDetails(
                 f"Ligne {row_number} : le prix 1re est inférieur au prix 2de"

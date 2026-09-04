@@ -1,81 +1,113 @@
-# Mettre à jour les tarifs — guide simple
+# Mettre à jour les tarifs - guide pas à pas
 
-Vous n'avez besoin que du nouveau document tarifaire, du fichier Excel et de
-votre compte GitHub. Le JSON, le cache hors connexion et la publication sont
-gérés automatiquement.
+Cette procédure se fait sur **ordinateur**. Vous modifiez un seul fichier Excel,
+puis GitHub contrôle et publie automatiquement.
 
-## Les 5 étapes
+## Avant de commencer
 
-### 1. Ouvrir le fichier Excel
+Préparez :
 
-Ouvrir `Base_tarifaire_KRONO_plus.xlsx`, puis la feuille **Tarifs**.
+- la source officielle contenant les nouveaux prix ;
+- un ordinateur avec Excel et un navigateur ;
+- votre compte GitHub autorisé à modifier le dépôt.
 
-### 2. Recopier les prix
+Règle absolue : ne calculez, n'arrondissez, ne déduisez et n'inventez aucun
+tarif. Si une information manque ou paraît douteuse, arrêtez la mise à jour.
 
-Modifier uniquement les colonnes :
+## Étape 1 - ouvrir le dépôt
+
+1. Ouvrez le dépôt officiel :
+   <https://github.com/krono-plus-aura/krono-plus-aura.github.io>.
+2. Connectez-vous à GitHub si nécessaire.
+3. Vérifiez que la branche affichée en haut à gauche est **main**.
+4. Cliquez sur le dossier **gestion-tarifs**.
+
+![Dossier gestion-tarifs dans le dépôt GitHub](images/github-depot.jpg)
+
+## Étape 2 - télécharger le bon fichier Excel
+
+1. Dans **gestion-tarifs**, cliquez sur
+   **Base_tarifaire_KRONO_plus.xlsx**.
+2. Cliquez sur l'icône de téléchargement : flèche vers le bas.
+3. Si l'icône n'apparaît pas, cliquez sur **View raw**.
+4. Ouvrez le fichier téléchargé dans Excel.
+
+Lien direct :
+<https://github.com/krono-plus-aura/krono-plus-aura.github.io/blob/main/gestion-tarifs/Base_tarifaire_KRONO_plus.xlsx>
+
+![Bouton de téléchargement du fichier Excel](images/github-fichier-excel.jpg)
+
+Ne partez pas d'un ancien fichier reçu par e-mail. Le fichier présent dans
+GitHub contient la structure attendue.
+
+## Étape 3 - repérer la bonne ligne dans Excel
+
+1. En bas d'Excel, cliquez sur la feuille **Tarifs**.
+2. Repérez la ligne avec les colonnes **Départ**, **Arrivée**, **Voyageur** et
+   **Profil / carte**.
+
+![Colonnes permettant de repérer la ligne](images/excel-reperer-ligne.png)
+
+## Étape 4 - modifier uniquement les deux prix
+
+Modifiez seulement les cellules jaunes des colonnes :
 
 - **Prix 2de (€)** ;
 - **Prix 1re (€)**.
 
-Recopier chaque prix exactement comme dans le document tarifaire.
+![Les deux colonnes modifiables](images/excel-prix-modifiables.png)
 
-Ne jamais calculer, arrondir, compléter ou deviner un prix. Si une valeur
-manque ou paraît douteuse, arrêter la mise à jour.
+Recopiez exactement les deux montants lus sur la source officielle. Ne touchez
+pas aux gares, profils, identifiants, clés, sources ou autres colonnes. N'ajoutez
+et ne supprimez aucune ligne.
 
-Ne pas modifier les autres colonnes, ajouter ou supprimer de ligne. Ne pas
-saisir le surclassement : Excel l'affiche automatiquement.
+Enregistrez en conservant exactement ce nom :
+`Base_tarifaire_KRONO_plus.xlsx`.
 
-### 3. Enregistrer
+Fermez ensuite Excel.
 
-Conserver exactement ce nom :
+## Étape 5 - déposer le fichier sur GitHub
 
-`Base_tarifaire_KRONO_plus.xlsx`
+1. Revenez dans le dossier **gestion-tarifs** du dépôt.
+2. Cliquez sur **Add file**, puis **Upload files**.
+3. Sélectionnez l'Excel que vous venez d'enregistrer.
+4. Vérifiez que GitHub affiche exactement
+   `Base_tarifaire_KRONO_plus.xlsx` comme fichier remplacé.
+5. Dans **Commit message**, écrivez :
+   `Mettre à jour les tarifs du JJ/MM/AAAA`.
+6. Choisissez le commit direct sur **main** si GitHub vous le demande.
+7. Cliquez sur le bouton vert **Commit changes**.
 
-### 4. Remplacer le fichier sur GitHub
+![Repères pour déposer l'Excel sur GitHub](images/mise-a-jour-github.svg)
 
-1. Ouvrir le dépôt `krono-plus-aura/krono-plus-aura.github.io`.
-2. Ouvrir le dossier **gestion-tarifs**.
-3. Choisir **Add file**, puis **Upload files**.
-4. Déposer le nouvel Excel.
-5. Cliquer sur **Commit changes**.
+Si **Add file** n'apparaît pas, vérifiez que vous êtes connecté avec le compte
+invité comme collaborateur. Ne partagez jamais un mot de passe.
 
-Il n'y a aucun JSON à ouvrir, aucun code à copier et aucune commande à saisir.
+## Étape 6 - attendre le voyant vert
 
-### 5. Attendre le voyant vert
+1. Cliquez sur l'onglet **Actions** en haut du dépôt.
+2. Ouvrez **Mettre à jour les tarifs depuis Excel**.
+3. Attendez la fin de l'exécution.
 
-Ouvrir l'onglet **Actions**, puis la ligne **Mettre à jour les tarifs depuis
-Excel**.
+![Contrôle de la mise à jour dans GitHub Actions](images/github-actions.jpg)
 
-- **Vert** : tous les contrôles ont réussi et le site est publié.
-- **Rouge** : rien n'est publié. Faire une capture du message et demander une
-  vérification. L'ancienne version reste en ligne.
+- **Vert** : la publication est terminée.
+- **Jaune** : le travail est en cours. Attendez sans redéposer le fichier.
+- **Rouge** : rien de nouveau n'est publié et l'ancienne version reste en
+  ligne. Ouvrez l'exécution, faites une capture du message d'erreur et
+  transmettez-la à Hamza.
 
-Après le voyant vert, ouvrir une fois l'application avec Internet sur chaque
-téléphone afin d'actualiser le mode hors connexion :
+GitHub contrôle les 684 lignes, les 1 368 montants, les doublons, les cases
+vides, le minimum de 1,20 €, l'ordre 2de/1re et le mode hors connexion. Il ne
+crée aucun tarif.
 
-<https://krono-plus-aura.github.io/>
+## Après le voyant vert
 
-## Ce que GitHub vérifie automatiquement
+1. Ouvrez <https://krono-plus-aura.github.io/> avec Internet.
+2. Vérifiez au moins le trajet et le profil réellement modifiés.
+3. Sur chaque téléphone, attendez quelques secondes, fermez complètement
+   l'application puis relancez-la.
+4. Coupez le réseau et vérifiez que l'application s'ouvre et calcule toujours.
 
-- 9 gares ;
-- 36 relations ;
-- 19 profils ;
-- 684 lignes tarifaires ;
-- 1 368 montants ;
-- aucune cellule vide ou ambiguë ;
-- aucun doublon ni ligne manquante ;
-- aucun prix inférieur à 1,20 € ;
-- aucun prix 1re inférieur au prix 2de ;
-- aucune valeur calculée, arrondie ou inventée ;
-- fonctionnement du calcul et du mode hors connexion.
-
-Un voyant vert signifie que tous les tarifs ont été **contrôlés
-techniquement** par rapport à l'Excel déposé. Il ne transforme pas une
-provenance commerciale « à confirmer » en provenance confirmée : seul un
-document commercial vérifiable permet de modifier cette information.
-
-## Les trois règles à retenir
-
-1. Recopier uniquement les prix 2de et 1re.
-2. Ne jamais inventer un prix manquant.
-3. Attendre le voyant vert avant d'utiliser les nouveaux tarifs.
+Le PDF illustré complet est disponible dans ce même dossier :
+`Guide_simple_mise_a_jour_tarifs_KRONO_plus.pdf`.
