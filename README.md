@@ -148,3 +148,16 @@ d'une relance identique, onze saisies invalides, la correspondance intégrale
 Excel/JSON et une simulation de panne réseau du cache hors connexion.
 Ces vérifications portent sur le fonctionnement technique : elles ne constituent
 pas un nouveau relevé commercial SNCF Connect. Aucun montant n'a été modifié.
+# Correction du renouvellement des tarifs en application installée
+
+Une application déjà ajoutée à l'écran d'accueil pouvait continuer à afficher
+un ancien `tarifs-base.json` malgré une connexion Internet. La directive
+`cache: "no-cache"` de la page ne traversait pas l'ancien service worker, qui
+répondait directement avec sa copie locale.
+
+Chaque révision utilise maintenant un fichier distinct, par exemple
+`tarifs-base-2026-09-02-r7.json`. Ce changement de chemin contourne aussi les
+anciens caches déjà présents sur les téléphones. Le service worker actuel
+cherche toujours ce fichier en ligne en premier et utilise sa copie uniquement
+si le réseau ne répond pas. Une prochaine mise à jour tarifaire générera et
+publiera automatiquement le nouveau nom de fichier.

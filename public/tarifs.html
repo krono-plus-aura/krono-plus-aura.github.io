@@ -56,7 +56,7 @@
 const select=document.getElementById("discount"),rows=document.getElementById("fare-rows"),profile=document.getElementById("active-profile");
 const money=cents=>new Intl.NumberFormat("fr-FR",{style:"currency",currency:"EUR",minimumFractionDigits:2}).format(cents/100);
 let data;
-try{const response=await fetch("/tarifs-base.json",{cache:"no-cache"});if(!response.ok)throw new Error("Base indisponible");data=await response.json()}catch(error){rows.innerHTML='<tr><td class="error" colspan="5">La base tarifaire n’a pas pu être chargée.</td></tr>';console.error(error);return}
+try{const response=await fetch("/tarifs-base-2026-09-02-r7.json",{cache:"no-cache"});if(!response.ok)throw new Error("Base indisponible");data=await response.json()}catch(error){rows.innerHTML='<tr><td class="error" colspan="5">La base tarifaire n’a pas pu être chargée.</td></tr>';console.error(error);return}
 document.title="Base tarifaire "+data.meta.year+" — Surclassement KRONO +";
 document.getElementById("year-badge").textContent="Référence "+data.meta.year;
 document.getElementById("relation-count").textContent=Object.keys(data.pairs).length;

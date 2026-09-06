@@ -1,4 +1,4 @@
-import { readFile, writeFile } from "node:fs/promises";
+import { readFile, readdir, rm, writeFile } from "node:fs/promises";
 
 // Ce script propage la base tarifaire vers les fichiers publiés.
 // Règle absolue : AUCUN remplacement ne doit échouer en silence. Si un motif
@@ -11,8 +11,10 @@ const tableUrl = new URL("../public/tarifs.html", import.meta.url);
 const baseUrl = new URL("../public/tarifs-base.json", import.meta.url);
 const fallbackUrl = new URL("../public/tarifs-secours.css", import.meta.url);
 const swUrl = new URL("../public/sw.js", import.meta.url);
+const publicUrl = new URL("../public/", import.meta.url);
 
-const data = JSON.parse(await readFile(baseUrl, "utf8"));
+const baseText = await readFile(baseUrl, "utf8");
+const data = JSON.parse(baseText);
 let appHtml = await readFile(appUrl, "utf8");
 let tableHtml = await readFile(tableUrl, "utf8");
 let serviceWorker = await readFile(swUrl, "utf8");
@@ -47,12 +49,34 @@ if (!Number.isInteger(data.meta.year)) {
   throw new Error("meta.year doit être une année entière.");
 }
 const buildId = `${data.meta.version}-r${data.meta.revision}`;
+const tariffDocument = `/tarifs-base-${buildId}.json`;
 serviceWorker = remplacer(
   serviceWorker,
   /const CACHE_NAME = "krono-[^"]*";/,
   `const CACHE_NAME = "krono-${buildId}";`,
   "public/sw.js",
   "le nom du cache hors ligne",
+);
+serviceWorker = remplacer(
+  serviceWorker,
+  /const TARIFF_DOCUMENT = "\/tarifs-base-[^"]+\.json";/,
+  `const TARIFF_DOCUMENT = "${tariffDocument}";`,
+  "public/sw.js",
+  "le fichier tarifaire versionné",
+);
+appHtml = remplacer(
+  appHtml,
+  /fetch\("\/tarifs-base(?:-[^"]+)?\.json"/,
+  `fetch("${tariffDocument}"`,
+  "public/app.html",
+  "l'adresse de la base tarifaire versionnée",
+);
+tableHtml = remplacer(
+  tableHtml,
+  /fetch\("\/tarifs-base(?:-[^"]+)?\.json"/,
+  `fetch("${tariffDocument}"`,
+  "public/tarifs.html",
+  "l'adresse de la base tarifaire versionnée",
 );
 
 // Le pied de page affiche l'année tarifaire. Le motif accepte les retours à la
@@ -101,11 +125,19 @@ const fallbackCss = [
   "",
 ].join("\n");
 
+// Un nom différent à chaque révision contourne aussi l'ancien Service Worker,
+// qui ignorait les paramètres d'URL et pouvait donc servir un JSON périmé.
+const versionedFileName = tariffDocument.slice(1);
+const obsoleteVersionedFiles = (await readdir(publicUrl))
+  .filter((name) => /^tarifs-base-.+\.json$/.test(name) && name !== versionedFileName);
+await Promise.all(obsoleteVersionedFiles.map((name) => rm(new URL(name, publicUrl))));
+
 await Promise.all([
   writeFile(appUrl, appHtml),
   writeFile(tableUrl, tableHtml),
   writeFile(fallbackUrl, fallbackCss),
   writeFile(swUrl, serviceWorker),
+  writeFile(new URL(versionedFileName, publicUrl), baseText),
 ]);
 
 console.log(`Application synchronisée : ${relationCount} relations, ${data.profiles.length} profils, année ${data.meta.year}, cache hors ligne krono-${buildId}.`);

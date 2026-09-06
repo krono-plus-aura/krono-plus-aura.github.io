@@ -12,6 +12,11 @@ const [appHtml, tariffTableHtml, tariffBase, fallbackCss, serviceWorker, manifes
 ]);
 const data = JSON.parse(tariffBase);
 const manifest = JSON.parse(manifestText);
+const buildId = `${data.meta.version}-r${data.meta.revision}`;
+const tariffDocument = `/tarifs-base-${buildId}.json`;
+const versionedTariffBase = await read(`public${tariffDocument}`);
+assert.deepEqual(JSON.parse(versionedTariffBase), data,
+  "Le fichier tarifaire versionné doit reproduire exactement la base stable");
 
 const stationIds = [
   "lyon-part-dieu",
@@ -108,7 +113,7 @@ assert.ok(
   "Aucun tarif au plancher de 1,20 € : le relevé est probablement incomplet ou décalé",
 );
 
-assert.match(appHtml, /fetch\("\/tarifs-base\.json"/);
+assert.match(appHtml, new RegExp(`fetch\\("${tariffDocument.replaceAll("/", "\\/")}"`));
 assert.match(appHtml, /id="result-card"[^>]*hidden/, "Les résultats doivent être masqués avant validation");
 assert.match(appHtml, /id="validate-button"/, "Le bouton Valider est obligatoire");
 assert.match(appHtml, /id="add-traveler"/, "Le sélecteur multi-voyageurs est obligatoire");
@@ -163,6 +168,7 @@ assert.match(appHtml, /\.app-footer\{[^}]*padding:18px 12px calc\(24px \+ env\(s
   "Le pied de page doit être blanc et couvrir la zone sûre basse");
 assert.match(fallbackCss, new RegExp(`source unique : \/tarifs-base\.json — ${data.meta.version}`));
 assert.match(tariffTableHtml, /data\.profiles/, "Le tableau tarifaire doit utiliser les 19 profils");
+assert.match(tariffTableHtml, new RegExp(`fetch\\("${tariffDocument.replaceAll("/", "\\/")}"`));
 assert.match(tariffTableHtml, /\.hero\{position:relative;background:var\(--page-gradient\)/,
   "La base tarifaire doit reprendre la même identité SNCF");
 assert.doesNotMatch(tariffTableHtml, /\.hero::before|\.hero::after/,
@@ -189,7 +195,8 @@ assert.equal(manifest.theme_color, "#7F2171");
 assert.match(serviceWorker, new RegExp(`const CACHE_NAME = "krono-${data.meta.version}-r${data.meta.revision}";`),
   "Le nom du cache doit dériver de meta.version et meta.revision — lancer scripts/sync-app-from-tariff-base.mjs avant de vérifier");
 assert.doesNotMatch(serviceWorker, /krono-plus-v\d+"/, "Aucun nom de cache ne doit rester écrit en dur (ex. krono-plus-v17)");
-assert.match(serviceWorker, /"\/tarifs-base\.json"/);
+assert.match(serviceWorker, new RegExp(`const TARIFF_DOCUMENT = "${tariffDocument.replaceAll("/", "\\/")}";`));
+assert.match(serviceWorker, /const STABLE_TARIFF_DOCUMENT = "\/tarifs-base\.json";/);
 assert.ok(data.meta.revision >= 6, "La couleur système Crosscall doit invalider l'ancien cache hors connexion");
 assert.match(serviceWorker, /OFFLINE_DOCUMENT = "\/app\.html"/);
 assert.match(serviceWorker, /NAVIGATION_FALLBACKS = \[OFFLINE_DOCUMENT\]/);
@@ -198,11 +205,11 @@ assert.match(tariffTableHtml, /href="\/app\.html"/, "La base tarifaire doit reve
 assert.match(serviceWorker, /"\/sncf-ter-aura\.webp"/);
 assert.match(serviceWorker, /Promise\.all\(REQUIRED_SHELL\.map/);
 assert.match(serviceWorker, /Promise\.allSettled\(OPTIONAL_SHELL\.map/);
-assert.match(serviceWorker, /event\.request\.mode === "navigate"[\s\S]*cachedNavigation\(event\.request\)[\s\S]*cacheFirst\(event\.request\)/);
+assert.match(serviceWorker, /isTariff \? freshTariff\(event\.request\) : cacheFirst\(event\.request\)/);
 assert.match(appHtml, /updateViaCache:"none"/);
 assert.match(appHtml, /async function registerOfflineWorker\(\)/);
 assert.match(appHtml, /if\("serviceWorker" in navigator\)registerOfflineWorker\(\)/);
-assert.ok(appHtml.indexOf("registerOfflineWorker();") < appHtml.indexOf('fetch("/tarifs-base.json"'),
+assert.ok(appHtml.indexOf("registerOfflineWorker();") < appHtml.indexOf(`fetch("${tariffDocument}"`),
   "Le service worker doit être lancé avant le chargement asynchrone des tarifs");
 assert.match(appHtml, /await registration\.update\(\)/);
 assert.match(appHtml, /registration\.waiting\.postMessage\(\{type:"SKIP_WAITING"\}\)/);

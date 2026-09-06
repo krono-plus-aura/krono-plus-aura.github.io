@@ -17,6 +17,9 @@ const [app, fallback, manifestText, serviceWorker, baseText, workflow, tariffWor
 ]);
 const manifest = JSON.parse(manifestText);
 const data = JSON.parse(baseText);
+const buildId = `${data.meta.version}-r${data.meta.revision}`;
+const tariffDocument = `/tarifs-base-${buildId}.json`;
+const versionedBaseText = await read(`public${tariffDocument}`);
 
 test("un nouveau service worker recharge les tarifs une seule fois, sans boucle à l'installation", () => {
   const hook = app.split("\n").find((line) => line.includes('addEventListener("controllerchange"'));
@@ -37,7 +40,8 @@ test("un nouveau service worker recharge les tarifs une seule fois, sans boucle 
 });
 
 test("la base tarifaire reste la source unique", () => {
-  assert.match(app, /fetch\("\/tarifs-base\.json"/);
+  assert.ok(app.includes(`fetch("${tariffDocument}"`));
+  assert.deepEqual(JSON.parse(versionedBaseText), data);
   assert.match(app, /href="\/tarifs-secours\.css"/);
   assert.doesNotMatch(app, /const DATA=\{/);
   assert.match(fallback, /FICHIER GÉNÉRÉ — source unique : \/tarifs-base\.json/);
@@ -161,16 +165,17 @@ test("la PWA reste installable et utilisable hors connexion", () => {
   assert.match(serviceWorker, /OFFLINE_DOCUMENT = "\/app\.html"/);
   assert.match(serviceWorker, new RegExp(`const CACHE_NAME = "krono-${data.meta.version}-r${data.meta.revision}";`),
     "Le cache doit être nommé d'après la version tarifaire courante, pas une valeur figée en dur");
-  assert.match(serviceWorker, /"\/tarifs-base\.json"/);
+  assert.ok(serviceWorker.includes(`const TARIFF_DOCUMENT = "${tariffDocument}";`));
+  assert.match(serviceWorker, /const STABLE_TARIFF_DOCUMENT = "\/tarifs-base\.json";/);
   assert.match(serviceWorker, /NAVIGATION_FALLBACKS = \[OFFLINE_DOCUMENT\]/);
   assert.match(serviceWorker, /OPTIONAL_SHELL = \["\/", "\/tarifs\.html"\]/);
   assert.match(serviceWorker, /"\/sncf-ter-aura\.webp"/);
   assert.match(serviceWorker, /Promise\.all\(REQUIRED_SHELL\.map/);
   assert.match(serviceWorker, /Promise\.allSettled\(OPTIONAL_SHELL\.map/);
-  assert.match(serviceWorker, /event\.request\.mode === "navigate"[\s\S]*cachedNavigation\(event\.request\)[\s\S]*cacheFirst\(event\.request\)/);
+  assert.match(serviceWorker, /isTariff \? freshTariff\(event\.request\) : cacheFirst\(event\.request\)/);
   assert.match(app, /async function registerOfflineWorker\(\)/);
   assert.match(app, /if\("serviceWorker" in navigator\)registerOfflineWorker\(\)/);
-  assert.ok(app.indexOf("registerOfflineWorker();") < app.indexOf('fetch("/tarifs-base.json"'),
+  assert.ok(app.indexOf("registerOfflineWorker();") < app.indexOf(`fetch("${tariffDocument}"`),
     "Le service worker doit être lancé avant le chargement asynchrone des tarifs");
   assert.match(app, /await registration\.update\(\)/);
   assert.match(app, /registration\.waiting\.postMessage\(\{type:"SKIP_WAITING"\}\)/);
@@ -245,18 +250,36 @@ test("le cache PWA sert réellement l’application et les tarifs quand le rése
   assert.ok(cache, "Le cache versionné doit être créé");
   assert.ok(await cache.match("/app.html"));
   assert.ok(await cache.match("/tarifs-base.json"));
+  assert.ok(await cache.match(tariffDocument));
   assert.ok(await cache.match("/sncf-ter-aura.webp"));
 
-  const fetchOffline = async (request) => {
+  const fetchThroughWorker = async (request) => {
     let responseTask;
     handlers.fetch({ request, respondWith(task) { responseTask = task; } });
     return responseTask;
   };
+  // Même si le cache contient une ancienne valeur, Internet doit gagner.
+  await cache.put(tariffDocument, new Response("ancien tarif militaire"));
+  const refreshed = await fetchThroughWorker(new WorkerRequest(tariffDocument));
+  assert.equal(await refreshed.text(), tariffDocument);
+  assert.equal(await (await cache.match(tariffDocument)).text(), tariffDocument);
+
   online = false;
-  const navigation = await fetchOffline(new WorkerRequest("/trajet-inconnu", { mode: "navigate" }));
+  const navigation = await fetchThroughWorker(new WorkerRequest("/trajet-inconnu", { mode: "navigate" }));
   assert.match(await navigation.text(), /<!DOCTYPE html>/);
-  const tariffs = await fetchOffline(new WorkerRequest("/tarifs-base.json"));
-  assert.equal(await tariffs.text(), "/tarifs-base.json");
+  const tariffs = await fetchThroughWorker(new WorkerRequest(tariffDocument));
+  assert.equal(await tariffs.text(), tariffDocument);
+});
+
+test("une application déjà installée contourne l'ancien JSON mis en cache", async () => {
+  // L'ancien worker ignorait les paramètres d'URL : ?v=... n'aurait rien réglé.
+  // Le nouveau document change réellement de chemin à chaque révision.
+  const oldCachedPath = "/tarifs-base.json";
+  assert.notEqual(tariffDocument, oldCachedPath);
+  const oldCache = new Map([[oldCachedPath, "ancien tarif militaire"]]);
+  const requestedPath = new URL(tariffDocument, "https://krono.test").pathname;
+  const response = oldCache.get(requestedPath) ?? "nouveau tarif militaire reçu du réseau";
+  assert.equal(response, "nouveau tarif militaire reçu du réseau");
 });
 
 test("GitHub Pages conserve le lien public stable et la publication contrôlée", () => {
@@ -277,6 +300,7 @@ test("GitHub Pages conserve le lien public stable et la publication contrôlée"
   assert.match(tariffWorkflow, /verify-app-data\.mjs/);
   assert.match(tariffWorkflow, /node --test tests\/\*\.test\.mjs/);
   assert.match(tariffWorkflow, /git push origin HEAD:main/);
+  assert.match(tariffWorkflow, /git add -A[\s\S]*'public\/tarifs-base\*\.json'/);
   assert.match(tariffWorkflow, /upload-pages-artifact/);
   assert.match(tariffWorkflow, /deploy-pages/);
   assert.match(tariffWorkflow, /path: public/);

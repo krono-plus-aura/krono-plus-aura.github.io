@@ -1,9 +1,12 @@
 const CACHE_NAME = "krono-2026-09-02-r7";
 const OFFLINE_DOCUMENT = "/app.html";
+const TARIFF_DOCUMENT = "/tarifs-base-2026-09-02-r7.json";
+const STABLE_TARIFF_DOCUMENT = "/tarifs-base.json";
 const NAVIGATION_FALLBACKS = [OFFLINE_DOCUMENT];
 const REQUIRED_SHELL = [
   OFFLINE_DOCUMENT,
-  "/tarifs-base.json",
+  TARIFF_DOCUMENT,
+  STABLE_TARIFF_DOCUMENT,
   "/tarifs-secours.css",
   "/manifest.webmanifest",
   "/icon-192.png",
@@ -75,11 +78,31 @@ async function cacheFirst(request) {
   return response;
 }
 
+// Les tarifs sont recherchés sur le réseau à chaque ouverture. Le cache ne sert
+// qu'en cas de panne ou d'absence de connexion. Cela évite qu'une application
+// déjà installée conserve une ancienne Carte Militaire alors qu'Internet marche.
+async function freshTariff(request) {
+  try {
+    const response = await fetch(request);
+    if (!response.ok) throw new Error(`Tarifs indisponibles : ${response.status}`);
+    const cache = await caches.open(CACHE_NAME);
+    await cache.put(request, response.clone());
+    return response;
+  } catch (_) {
+    const cached = await caches.match(request);
+    if (cached) return cached;
+    const fallback = await caches.match(TARIFF_DOCUMENT);
+    return fallback || Response.error();
+  }
+}
+
 self.addEventListener("fetch", (event) => {
   if (event.request.method !== "GET") return;
   const url = new URL(event.request.url);
   if (url.origin !== self.location.origin) return;
+  const isTariff = url.pathname === STABLE_TARIFF_DOCUMENT
+    || /^\/tarifs-base-[^/]+\.json$/.test(url.pathname);
   event.respondWith(event.request.mode === "navigate"
     ? cachedNavigation(event.request)
-    : cacheFirst(event.request));
+    : isTariff ? freshTariff(event.request) : cacheFirst(event.request));
 });
