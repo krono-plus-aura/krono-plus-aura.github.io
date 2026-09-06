@@ -22,6 +22,10 @@ Cette version reprend à l’identique l’application finale validée :
 
 La base active porte la version tarifaire `2026-09-02`, révision `7`.
 
+Ces nombres décrivent l'état actuel : ils ne sont plus figés dans les contrôles.
+Une hausse de prix, une nouvelle campagne tarifaire ou l'ajout d'un profil
+passent la chaîne de publication sans intervention technique.
+
 ## Règles absolues
 
 - `public/tarifs-base.json` est l’unique source des tarifs de l’application.
@@ -49,6 +53,7 @@ La base active porte la version tarifaire `2026-09-02`, révision `7`.
 | `scripts/sync-app-from-tariff-base.mjs` | Synchronise le cache et les fichiers générés avec la base tarifaire. |
 | `scripts/verify-app-data.mjs` | Vérifie l’intégralité de la matrice tarifaire et les règles de sécurité. |
 | `scripts/import-tarifs-excel.py` | Recopie et contrôle les prix de l'Excel sans calcul ni arrondi. |
+| `tests/import-tarifs-excel.test.mjs` | Vérifie que le classeur Excel reproduit exactement la base publiée. |
 | `tests/audit-recommendations.test.mjs` | Contrôle le rendu attendu, les profils, GitHub Pages et le mode hors connexion. |
 | `.github/workflows/publication.yml` | Lance les contrôles puis publie `public/` sur GitHub Pages. |
 | `.github/workflows/mise-a-jour-tarifs.yml` | Contrôle l'Excel, génère la base et publie les tarifs automatiquement. |
@@ -58,6 +63,7 @@ La base active porte la version tarifaire `2026-09-02`, révision `7`.
 | `docs/Guide_mise_a_jour_tarifs.md` | Procédure illustrée, pas à pas, pour modifier l'Excel et le déposer sur GitHub. |
 | `docs/Guide_utilisateur_Surclassement_KRONO_plus_GitHub_Pages.pdf` | Guide illustré à diffuser aux agents : accès, installation et mode hors connexion. |
 | `docs/Guide_simple_mise_a_jour_tarifs_KRONO_plus.pdf` | Guide illustré de maintenance : Excel, dépôt GitHub, voyant vert et contrôle final. |
+| `docs/Complement_guide_mise_a_jour_KRONO_plus.pdf` | Feuillet de 2 pages à joindre au guide de maintenance : feuille Résumé, changement d'année tarifaire, messages de blocage. |
 
 ## Séparation entre utilisation et maintenance
 
@@ -78,9 +84,13 @@ ne faut jamais partager un mot de passe.
    sur **Commit changes**.
 5. Attendre le voyant vert dans **Actions**.
 
-GitHub contrôle les 684 lignes et les 1 368 montants, génère le JSON et le cache
-hors connexion, puis publie le site. Il n'y a aucun JSON à modifier, aucune IA à
-utiliser et aucune commande à saisir.
+GitHub contrôle toutes les lignes et tous les montants du classeur, génère le
+JSON et le cache hors connexion, puis publie le site. Il n'y a aucun JSON à
+modifier, aucune IA à utiliser et aucune commande à saisir.
+
+Pour une nouvelle campagne tarifaire, modifier en plus la cellule **Année
+tarifaire** de la feuille **Résumé** du classeur. La cellule **Version des
+données** doit rester saisie en texte, au format `AAAA-MM-JJ`.
 
 Le guide détaillé `docs/Guide_mise_a_jour_tarifs.md`, également fourni en PDF
 dans le pack de sauvegarde, illustre cette procédure.
@@ -93,9 +103,27 @@ Pour un développeur disposant de Node.js 22 ou supérieur :
 npm test
 ```
 
-Cette commande régénère les fichiers dérivés, contrôle les 36 relations et les
-19 profils, puis simule une coupure réseau pour vérifier le cache hors
+Cette commande régénère les fichiers dérivés, contrôle toutes les relations et
+tous les profils, puis simule une coupure réseau pour vérifier le cache hors
 connexion.
+
+## Ce qui protège les tarifs
+
+Aucun prix n'est recopié en dur dans les contrôles : ils changeraient à chaque
+campagne et bloqueraient la publication. La protection repose sur trois
+mécanismes qui, eux, ne périment pas :
+
+1. `tests/import-tarifs-excel.test.mjs` vérifie que le classeur Excel reproduit
+   **exactement** `public/tarifs-base.json`. Une valeur modifiée directement
+   dans le JSON, sans relevé correspondant dans le classeur, fait échouer la
+   publication — et cela couvre la totalité des lignes, pas un échantillon.
+2. `scripts/verify-app-data.mjs` applique à chaque ligne les invariants
+   tarifaires : montants entiers en centimes, plancher de 1,20 €, prix 1re
+   supérieur ou égal au prix 2de, tous les profils présents sur toutes les
+   relations, symétrie des deux sens.
+3. `scripts/import-tarifs-excel.py` refuse tout prix vide, en double, négatif,
+   inversé ou comportant plus de deux décimales — donc tout prix issu d'un
+   calcul, d'un pourcentage ou d'un arrondi.
 
 ## Retour à la version précédente
 
@@ -107,3 +135,16 @@ l’onglet **Actions**. Ne jamais effacer l’historique du dépôt.
 
 GitHub Pages publie uniquement le dossier `public/`. Aucun serveur, abonnement,
 offre payante ou carte bancaire n’est nécessaire.
+# Contrôles complémentaires avant publication du 6 septembre 2026
+
+Les formules Excel sont refusées dans les prix, y compris lorsqu'Excel a
+enregistré leur résultat numérique. Les années décimales et les dates
+inexistantes sont également bloquées. Lorsqu'un nouveau service worker prend
+le relais dans une application déjà ouverte, la page se recharge une fois
+pour utiliser les nouveaux tarifs ; la sélection en cours est alors réinitialisée.
+
+Les 17 tests automatiques comprennent cinq scénarios de maintenance suivis
+d'une relance identique, onze saisies invalides, la correspondance intégrale
+Excel/JSON et une simulation de panne réseau du cache hors connexion.
+Ces vérifications portent sur le fonctionnement technique : elles ne constituent
+pas un nouveau relevé commercial SNCF Connect. Aucun montant n'a été modifié.

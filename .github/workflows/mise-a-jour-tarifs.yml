@@ -74,6 +74,8 @@ jobs:
             public/tarifs-base.json \
             public/tarifs-secours.css \
             public/sw.js \
+            public/app.html \
+            public/tarifs.html \
             gestion-tarifs/dernier-rapport.md
           if git diff --cached --quiet; then
             echo "Les fichiers publiés sont déjà à jour."

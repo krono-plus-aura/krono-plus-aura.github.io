@@ -5,6 +5,11 @@ import { join } from "node:path";
 import { spawnSync } from "node:child_process";
 import test from "node:test";
 
+test("les campagnes tarifaires passent et les saisies invalides sont bloquées", () => {
+  const result = spawnSync("python3", ["tests/update-scenarios.py"], { encoding: "utf8" });
+  assert.equal(result.status, 0, result.stdout + result.stderr);
+});
+
 test("le classeur de référence reproduit exactement la base JSON", async () => {
   const directory = await mkdtemp(join(tmpdir(), "krono-excel-"));
   const output = join(directory, "tarifs-base.json");
@@ -32,8 +37,12 @@ test("le classeur de référence reproduit exactement la base JSON", async () =>
       JSON.parse(await readFile("public/tarifs-base.json", "utf8")),
     );
     const reportText = await readFile(report, "utf8");
-    assert.match(reportText, /Lignes contrôlées : 684/);
-    assert.match(reportText, /Montants contrôlés : 1368/);
+    // Comptes dérivés de la base : ajouter une gare ou un profil ne doit pas
+    // faire échouer une simple mise à jour de prix.
+    const base = JSON.parse(await readFile("public/tarifs-base.json", "utf8"));
+    const lignes = Object.keys(base.pairs).length * base.profiles.length;
+    assert.match(reportText, new RegExp(`Lignes contrôlées : ${lignes}`));
+    assert.match(reportText, new RegExp(`Montants contrôlés : ${lignes * 2}`));
     assert.match(reportText, /Vérification technique complète : réussie/);
     assert.match(reportText, /Aucun tarif n'a changé/);
     assert.match(reportText, /informations de provenance sont conservées sans modification/);

@@ -16,6 +16,7 @@ import re
 import sys
 import zipfile
 from decimal import Decimal, InvalidOperation
+from datetime import date, timedelta
 from pathlib import Path, PurePosixPath
 from xml.etree import ElementTree as ET
 
@@ -105,7 +106,12 @@ def read_sheet(path: Path, sheet_name: str) -> dict[int, dict[int, str | None]]:
                 reference = cell.get("r", "")
                 cell_type = cell.get("t")
                 raw = cell.findtext("x:v", default="", namespaces=NS)
-                if cell_type == "s":
+                formula = cell.find("x:f", NS)
+                if formula is not None:
+                    # Ne jamais prendre le résultat mis en cache d'une formule
+                    # pour un prix relevé, même s'il a exactement deux décimales.
+                    value = "=" + (formula.text or "")
+                elif cell_type == "s":
                     try:
                         value = strings[int(raw)]
                     except (ValueError, IndexError) as error:
@@ -124,6 +130,10 @@ def read_sheet(path: Path, sheet_name: str) -> dict[int, dict[int, str | None]]:
 def to_cents(raw_value: str | None, cell_name: str) -> int:
     if raw_value is None or str(raw_value).strip() == "":
         raise ImportErrorWithDetails(f"Tarif manquant dans la cellule {cell_name}")
+    if str(raw_value).lstrip().startswith("="):
+        raise ImportErrorWithDetails(
+            f"Formule interdite dans la cellule {cell_name} : saisir le prix relevé directement."
+        )
     try:
         euros = Decimal(str(raw_value).strip().replace(",", "."))
     except InvalidOperation as error:
@@ -131,7 +141,9 @@ def to_cents(raw_value: str | None, cell_name: str) -> int:
     cents = euros * 100
     if not cents.is_finite() or cents != cents.to_integral_value():
         raise ImportErrorWithDetails(
-            f"Tarif avec plus de deux décimales dans la cellule {cell_name} : {raw_value}"
+            f"Tarif avec plus de deux décimales dans la cellule {cell_name} : {raw_value}. "
+            "Un prix doit être saisi tel qu'il est relevé (exemple : 12,40), jamais issu d'un "
+            "calcul, d'un pourcentage ou d'un arrondi."
         )
     value = int(cents)
     if value <= 0:
@@ -145,6 +157,35 @@ def to_cents(raw_value: str | None, cell_name: str) -> int:
 
 def euro(cents: int) -> str:
     return f"{cents / 100:.2f}".replace(".", ",") + " €"
+
+
+def serial_to_iso(serial: str) -> str | None:
+    """Convertit un numéro de série de date Excel en date ISO AAAA-MM-JJ.
+
+    Si le responsable ressaisit la date de version dans Excel, la cellule peut
+    basculer du format texte au format date : Excel n'y stocke alors plus
+    « 2026-09-02 » mais « 46265 ». Sans cette conversion, la mise à jour serait
+    bloquée pour une raison incompréhensible côté utilisateur.
+    """
+    try:
+        number = Decimal(serial)
+    except InvalidOperation:
+        return None
+    if number != number.to_integral_value() or not (1 <= number <= 2958465):
+        return None
+    days = int(number)
+    if days == 60:
+        # Numéro réservé au 29/02/1900, date qui n'a jamais existé.
+        return None
+    # Excel considère à tort 1900 comme bissextile : à partir du 01/03/1900 les
+    # numéros sont décalés d'un jour, d'où le changement d'origine.
+    origin = date(1899, 12, 30) if days >= 61 else date(1899, 12, 31)
+    return (origin + timedelta(days=days)).isoformat()
+
+
+def summary_value(rows: dict[int, dict[int, str | None]], row: int) -> str:
+    """Lit la colonne B de la feuille Résumé, en texte nettoyé."""
+    return str(rows.get(row, {}).get(2, "") or "").strip()
 
 
 def import_tariffs(excel_path: Path, base_path: Path) -> tuple[dict, list[dict], str]:
@@ -242,17 +283,78 @@ def import_tariffs(excel_path: Path, base_path: Path) -> tuple[dict, list[dict],
                 }
             )
 
-    excel_year = summary_rows.get(5, {}).get(2)
-    if excel_year and int(Decimal(excel_year)) != int(base["meta"]["year"]):
-        raise ImportErrorWithDetails(
-            "L'année du classeur ne correspond pas à la base JSON. "
-            "Un changement d'année nécessite une validation technique complète."
-        )
-    excel_version = str(summary_rows.get(6, {}).get(2, "") or "").strip()
+    # --- Année tarifaire ---------------------------------------------------
+    # Une nouvelle campagne (2026 -> 2027) doit pouvoir se faire depuis Excel,
+    # sans intervention technique. Deux garde-fous seulement : l'année reste un
+    # entier plausible et ne recule jamais.
+    base_year = int(base["meta"]["year"])
+    year_changed = False
+    excel_year_raw = summary_value(summary_rows, 5)
+    if excel_year_raw:
+        try:
+            year_number = Decimal(excel_year_raw)
+            if not year_number.is_finite() or year_number != year_number.to_integral_value():
+                raise ValueError("L'année doit être un entier fini")
+            excel_year = int(year_number)
+        except (InvalidOperation, ValueError, OverflowError) as error:
+            raise ImportErrorWithDetails(
+                "La cellule « Année tarifaire » de la feuille Résumé doit contenir une année "
+                f"à quatre chiffres (lu : {excel_year_raw!r})."
+            ) from error
+        if excel_year < base_year:
+            raise ImportErrorWithDetails(
+                f"L'année du classeur ({excel_year}) est antérieure à celle de la base publiée "
+                f"({base_year}). Une année tarifaire ne recule jamais."
+            )
+        if not 2026 <= excel_year <= 2100:
+            raise ImportErrorWithDetails(
+                f"Année tarifaire invraisemblable dans le classeur : {excel_year}."
+            )
+        if excel_year != base_year:
+            updated["meta"]["year"] = excel_year
+            year_changed = True
+            ancienne = str(base_year)
+            if ancienne in str(updated["meta"].get("label", "")):
+                updated["meta"]["label"] = updated["meta"]["label"].replace(ancienne, str(excel_year))
+
+    # --- Version des données ------------------------------------------------
+    # Si la cellule a basculé en format date, Excel n'y stocke plus « 2026-09-02 »
+    # mais un numéro de série : il est reconverti au lieu de bloquer la mise à jour.
+    excel_version = summary_value(summary_rows, 6)
     if excel_version:
+        converted = serial_to_iso(excel_version)
+        if converted:
+            excel_version = converted
+        if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", excel_version):
+            raise ImportErrorWithDetails(
+                "La cellule « Version des données » doit contenir une date au format "
+                f"AAAA-MM-JJ (lu : {excel_version!r}). Saisir la date en texte, par exemple 2027-01-15."
+            )
+        try:
+            date.fromisoformat(excel_version)
+        except ValueError as error:
+            raise ImportErrorWithDetails(
+                f"Date inexistante dans la cellule « Version des données » : {excel_version}."
+            ) from error
         updated["meta"]["version"] = excel_version
-    if changes:
+
+    # --- Révision technique -------------------------------------------------
+    # Elle sert à nommer le cache hors connexion : elle DOIT augmenter dès que
+    # quelque chose change, sinon les agents déjà équipés garderaient les anciens
+    # tarifs. Elle est calculée ici, jamais recopiée depuis Excel.
+    if changes or year_changed or updated["meta"]["version"] != base["meta"]["version"]:
         updated["meta"]["revision"] = int(base["meta"].get("revision", 0)) + 1
+
+    # La date de vérification des sources suit la version : elle décrit le jour du
+    # relevé, elle ne doit jamais rester en arrière et laisser croire à une
+    # provenance plus ancienne qu'elle ne l'est.
+    if updated["meta"]["version"] != base["meta"]["version"]:
+        for source in updated["meta"].get("sources", []):
+            source["checkedAt"] = updated["meta"]["version"]
+
+    # La cellule « Révision technique » du classeur n'est qu'un affichage : elle
+    # est signalée au responsable si elle ne correspond plus, sans rien bloquer.
+    excel_revision = summary_value(summary_rows, 7)
 
     report_lines = [
         "# Résumé de la mise à jour tarifaire",
@@ -267,10 +369,29 @@ def import_tariffs(excel_path: Path, base_path: Path) -> tuple[dict, list[dict],
         f"- Montants contrôlés : {len(seen) * 2}",
         "- Vérification technique complète : réussie",
         f"- Lignes tarifaires modifiées : {len(changes)}",
+        f"- Année tarifaire : {base['meta']['year']} → {updated['meta']['year']}",
         f"- Version des données : {base['meta']['version']} → {updated['meta']['version']}",
         f"- Révision technique : {base['meta']['revision']} → {updated['meta']['revision']}",
         "",
     ]
+    if year_changed:
+        report_lines.extend(
+            [
+                "> **Changement d'année tarifaire.** La nouvelle année est reprise du classeur et "
+                "s'affichera dans l'application. Vérifier que le relevé porte bien sur les tarifs "
+                "de cette nouvelle année avant de diffuser.",
+                "",
+            ]
+        )
+    if excel_revision and excel_revision != str(updated["meta"]["revision"]):
+        report_lines.extend(
+            [
+                f"> Rappel : la cellule « Révision technique » du classeur indique {excel_revision}, "
+                f"alors que la révision réelle est {updated['meta']['revision']}. Cette cellule est "
+                "purement informative : elle est recalculée automatiquement et n'a pas à être modifiée.",
+                "",
+            ]
+        )
     if changes:
         report_lines.extend(
             [

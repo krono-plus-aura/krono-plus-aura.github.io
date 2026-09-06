@@ -18,20 +18,42 @@ const [app, fallback, manifestText, serviceWorker, baseText, workflow, tariffWor
 const manifest = JSON.parse(manifestText);
 const data = JSON.parse(baseText);
 
+test("un nouveau service worker recharge les tarifs une seule fois, sans boucle à l'installation", () => {
+  const hook = app.split("\n").find((line) => line.includes('addEventListener("controllerchange"'));
+  assert.ok(hook);
+  for (const alreadyInstalled of [false, true]) {
+    let handler, reloads = 0;
+    const navigator = { serviceWorker: {
+      controller: alreadyInstalled ? {} : null,
+      addEventListener(event, callback) { handler = callback; },
+    } };
+    runInNewContext(hook, { navigator, location: { reload() { reloads++; } } });
+    handler();
+    assert.equal(reloads, alreadyInstalled ? 1 : 0);
+    handler();
+    handler();
+    assert.equal(reloads, 1);
+  }
+});
+
 test("la base tarifaire reste la source unique", () => {
   assert.match(app, /fetch\("\/tarifs-base\.json"/);
   assert.match(app, /href="\/tarifs-secours\.css"/);
   assert.doesNotMatch(app, /const DATA=\{/);
   assert.match(fallback, /FICHIER GÉNÉRÉ — source unique : \/tarifs-base\.json/);
-  assert.equal(data.profiles.length, 19);
-  assert.equal(Object.keys(data.pairs).length, 36);
+  // Cohérence interne plutôt que des nombres gravés : ajouter une gare ou un
+  // profil un jour ne doit pas faire échouer la publication d'une hausse de tarifs.
+  assert.equal(data.profiles.length, data.meta.profileCount);
+  const gares = data.stations.length;
+  assert.equal(Object.keys(data.pairs).length, (gares * (gares - 1)) / 2,
+    "Toutes les relations symétriques entre gares doivent être présentes");
 });
 
 test("les profils adulte et enfant n’exposent que leurs cartes applicables", () => {
   const adults = data.profiles.filter((profile) => profile.travelerType === "adult");
   const children = data.profiles.filter((profile) => profile.travelerType === "child");
-  assert.equal(adults.length, 12);
-  assert.equal(children.length, 7);
+  assert.equal(adults.length + children.length, data.profiles.length,
+    "Tout profil doit être rattaché à un adulte ou à un enfant");
   assert.ok(adults.some((profile) => profile.id === "adult-military"));
   assert.ok(adults.some((profile) => profile.id === "adult-family-military"));
   assert.ok(adults.some((profile) => profile.id === "adult-illico-liberte-weekend-companion"));
@@ -45,6 +67,23 @@ test("les profils adulte et enfant n’exposent que leurs cartes applicables", (
   assert.doesNotMatch(illicoWeekend.label, /Porteur/);
 });
 
+test("un profil d'un type inattendu ne peut pas empêcher l'application de démarrer", () => {
+  // On extrait la boucle réelle de public/app.html et on l'exécute telle quelle :
+  // avant correction, un profil dont le travelerType n'était ni "adult" ni "child"
+  // levait une TypeError et l'agent ne voyait plus que « La base tarifaire n'a pas
+  // pu être chargée », sur la totalité de l'application.
+  const extrait = app.match(/DATA\.profiles\.forEach\(profile=>\{.*?\}\);/);
+  assert.ok(extrait, "La boucle de chargement des profils est introuvable dans app.html");
+  const contexte = {
+    DATA: { profiles: [...data.profiles, { id: "senior-test", travelerType: "senior", label: "Profil futur" }] },
+    profilesByType: { adult: [], child: [] },
+    profileById: new Map(),
+  };
+  assert.doesNotThrow(() => runInNewContext(extrait[0], contexte));
+  assert.equal(contexte.profilesByType.adult.length, data.profiles.filter((p) => p.travelerType === "adult").length);
+  assert.ok(contexte.profilesByType.senior, "Le profil inconnu doit être rangé à part, pas provoquer une erreur");
+});
+
 test("le parcours multi-voyageurs attend une validation explicite", () => {
   assert.match(app, /id="add-traveler"/);
   assert.match(app, /id="validate-button"/);
@@ -55,7 +94,7 @@ test("le parcours multi-voyageurs attend une validation explicite", () => {
   assert.doesNotMatch(app, /Résultat masqué|pending-card|Prêt —|Calcul effectué avec/);
   assert.doesNotMatch(app, /détail individuel ci-dessous|Montants indicatifs issus/);
   assert.match(app, /caption\.textContent=travelers\.length>1\?travelers\.length\+" voyageurs":""/);
-  assert.match(app, /<footer class="app-footer">Tarifs TER 2026<\/footer>/);
+  assert.match(app, new RegExp(`<footer class="app-footer">Tarifs TER ${data.meta.year}</footer>`));
 });
 
 test("les contrôles et la mise en page restent adaptés aux téléphones et aux ordinateurs", () => {

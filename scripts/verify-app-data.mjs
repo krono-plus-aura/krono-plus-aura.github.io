@@ -50,18 +50,23 @@ const childProfileIds = [
 const profileIds = [...adultProfileIds, ...childProfileIds];
 
 assert.deepEqual(data.stations.map(({ id }) => id), stationIds, "Ordre ou liste des gares incorrecte");
-assert.equal(data.meta.year, 2026);
+assert.ok(Number.isInteger(data.meta.year) && data.meta.year >= 2026 && data.meta.year <= 2100,
+  "meta.year doit être une année tarifaire plausible (entier >= 2026)");
 assert.match(data.meta.version, /^\d{4}-\d{2}-\d{2}$/);
 assert.equal(data.meta.directionMode, "symmetric");
 assert.equal(data.meta.childDefinition, "Enfant de 4 à 11 ans inclus");
-assert.equal(data.meta.profileCount, 19);
-assert.equal(data.meta.revision, 7);
+assert.equal(data.meta.profileCount, data.profiles.length,
+  "meta.profileCount doit refléter le nombre réel de profils");
+assert.ok(Number.isInteger(data.meta.revision) && data.meta.revision >= 7,
+  "meta.revision doit être un entier qui ne recule jamais (il augmente à chaque mise à jour tarifaire)");
 assert.deepEqual(data.profiles.map(({ id }) => id), profileIds, "Liste des profils tarifaires incorrecte");
 assert.deepEqual(data.profiles.filter(({ travelerType }) => travelerType === "adult").map(({ id }) => id), adultProfileIds);
 assert.deepEqual(data.profiles.filter(({ travelerType }) => travelerType === "child").map(({ id }) => id), childProfileIds);
 assert.ok(data.meta.sources.every(({ url }) => /^https:\/\//.test(url)), "Chaque source doit être traçable par URL");
-assert.equal(data.meta.audit.tariffLines, 684, "Le relevé direct doit contenir exactement 684 lignes");
-assert.equal(data.meta.audit.amounts, 1368, "Le relevé direct doit contenir exactement 1 368 montants");
+assert.equal(data.meta.audit.tariffLines, Object.keys(data.pairs).length * data.profiles.length,
+  "meta.audit.tariffLines doit valoir relations × profils");
+assert.equal(data.meta.audit.amounts, data.meta.audit.tariffLines * 2,
+  "meta.audit.amounts doit valoir deux montants par ligne tarifaire");
 assert.ok(data.profiles.every(({ sourceRule }) => /Relevé direct/.test(sourceRule)), "Chaque profil doit indiquer une provenance directe");
 
 const expectedRelations = stationIds.length * (stationIds.length - 1) / 2;
@@ -76,7 +81,7 @@ for (let from = 0; from < stationIds.length; from += 1) {
 for (const [key, route] of Object.entries(data.pairs)) {
   assert.ok(Number.isInteger(route.km) && route.km > 0, `Distance invalide : ${key}`);
   assert.equal(route.overrides, undefined, `Ancienne exception calculée encore présente : ${key}`);
-  assert.deepEqual(Object.keys(route.fares), profileIds, `Profils incomplets : ${key}`);
+  assert.deepEqual(Object.keys(route.fares), data.profiles.map(({ id }) => id), `Profils incomplets : ${key}`);
   for (const [profileId, fares] of Object.entries(route.fares)) {
     assert.equal(fares.length, 2, `Deux classes attendues : ${key} / ${profileId}`);
     assert.ok(fares.every((fare) => Number.isInteger(fare) && fare >= 120), `Tarif inférieur au plancher de 1,20 € : ${key} / ${profileId}`);
@@ -88,31 +93,35 @@ assert.ok(!profileIds.includes("child-illico-jeunes"), "Un enfant de 4–11 ans 
 const illicoWeekend = data.profiles.find((profile) => profile.id === "adult-illico-liberte-weekend");
 assert.equal(illicoWeekend.label, "illico LIBERTÉ — Week-end / Jour férié (-50 %)", "Le libellé illico LIBERTÉ principal est incorrect");
 assert.doesNotMatch(illicoWeekend.label, /Porteur/, "La mention Porteur doit rester supprimée");
-assert.deepEqual(data.pairs["meximieux-perouges|amberieu-en-bugey"].fares["child-illico-liberte-weekend-companion"], [120, 180], "Contrôle direct accompagnant Meximieux–Ambérieu altéré");
-assert.deepEqual(data.pairs["virieu-le-grand-belley|culoz"].fares["child-illico-liberte-weekend-companion"], [120, 180], "Contrôle direct accompagnant Virieu–Culoz altéré");
-
-assert.deepEqual(data.pairs["amberieu-en-bugey|tenay-hauteville"].fares["child-famille-nombreuse-75"], [120, 180], "Contrôle direct FN 75 enfant altéré");
-assert.deepEqual(data.pairs["virieu-le-grand-belley|culoz"].fares["child-illico-liberte-weekend-companion"], [120, 180], "Contrôle direct accompagnant Virieu–Culoz altéré");
-assert.deepEqual(data.pairs["meximieux-perouges|amberieu-en-bugey"].fares["child-illico-liberte-weekend-companion"], [120, 180], "Contrôle direct accompagnant Meximieux–Ambérieu altéré");
-assert.deepEqual(data.pairs["lyon-part-dieu|geneve"].fares["adult-military"], [880, 1340], "Contrôle direct Carte Militaire Lyon–Genève altéré");
-assert.deepEqual(data.pairs["lyon-part-dieu|geneve"].fares["adult-family-military"], [2110, 3200], "Contrôle direct Famille Militaire adulte altéré");
-assert.deepEqual(data.pairs["lyon-part-dieu|geneve"].fares["child-family-military"], [1060, 1600], "Contrôle direct Famille Militaire enfant altéré");
-assert.deepEqual(data.pairs["lyon-part-dieu|geneve"].fares["child-famille-nombreuse-30"], [990, 1690]);
-assert.deepEqual(data.pairs["lyon-part-dieu|geneve"].fares["child-famille-nombreuse-40"], [850, 1550]);
-assert.deepEqual(data.pairs["lyon-part-dieu|geneve"].fares["child-famille-nombreuse-50"], [710, 1410]);
-assert.deepEqual(data.pairs["lyon-part-dieu|geneve"].fares["child-famille-nombreuse-75"], [360, 1060]);
+// Les prix ne sont plus gravés ici : ils changent à chaque campagne tarifaire et
+// figeaient la publication. La protection contre une altération des tarifs est
+// assurée autrement, et plus solidement :
+//   - tests/import-tarifs-excel.test.mjs vérifie que le classeur Excel reproduit
+//     EXACTEMENT tarifs-base.json, donc aucune valeur ne peut bouger dans le JSON
+//     sans avoir été relevée et saisie dans le classeur ;
+//   - les invariants ci-dessus (plancher 1,20 €, 1re >= 2de, tous les profils sur
+//     toutes les relations, montants entiers) restent appliqués à chaque ligne.
+// Le repère de calibrage suivant traduit une règle tarifaire réelle, pas un prix :
+// le plancher SNCF de 1,20 € doit rester atteint quelque part dans le relevé.
+assert.ok(
+  Object.values(data.pairs).some((route) => Object.values(route.fares).some(([second]) => second === 120)),
+  "Aucun tarif au plancher de 1,20 € : le relevé est probablement incomplet ou décalé",
+);
 
 assert.match(appHtml, /fetch\("\/tarifs-base\.json"/);
 assert.match(appHtml, /id="result-card"[^>]*hidden/, "Les résultats doivent être masqués avant validation");
 assert.match(appHtml, /id="validate-button"/, "Le bouton Valider est obligatoire");
 assert.match(appHtml, /id="add-traveler"/, "Le sélecteur multi-voyageurs est obligatoire");
 assert.match(appHtml, /profilesByType=\{adult:\[\],child:\[\]\}/, "Les cartes doivent être filtrées selon le profil");
+assert.match(appHtml, /if\(!profilesByType\[profile\.travelerType\]\)profilesByType\[profile\.travelerType\]=\[\]/,
+  "Un profil dont le type de voyageur serait inconnu ne doit jamais empêcher l'application de démarrer");
 assert.match(appHtml, /travelers\.length>=9/, "La limite SNCF de 9 voyageurs doit être respectée");
 assert.match(appHtml, /function markDirty\(\)\{resultCard\.hidden=true;setMessage\(\)\}/, "Toute modification doit remasquer le résultat");
 assert.doesNotMatch(appHtml, /Résultat masqué|pending-card|Prêt —|Calcul effectué avec/, "Les messages supprimés ne doivent pas réapparaître");
 assert.doesNotMatch(appHtml, /détail individuel ci-dessous|Montants indicatifs issus/, "Les mentions supprimées ne doivent pas réapparaître");
 assert.match(appHtml, /caption\.textContent=travelers\.length>1\?travelers\.length\+" voyageurs":""/, "Le nombre de voyageurs ne doit apparaître que pour un groupe");
-assert.match(appHtml, /<footer class="app-footer">Tarifs TER 2026<\/footer>/, "Le pied de page doit rester minimal");
+assert.match(appHtml, new RegExp(`<footer class="app-footer">Tarifs TER ${data.meta.year}</footer>`),
+  "Le pied de page doit rester minimal et afficher l'année de meta.year — lancer scripts/sync-app-from-tariff-base.mjs avant de vérifier");
 assert.match(appHtml, /\.field select\{[^}]*-webkit-appearance:none;appearance:none;/, "Tous les sélecteurs doivent avoir le même rendu sur iPhone, Android et ordinateur");
 assert.match(appHtml, /background-position:right 12px center/, "Les flèches doivent être alignées à droite");
 assert.match(appHtml, /@media \(max-width:370px\)/, "La mise en page Crosscall doit rester couverte");
@@ -160,6 +169,19 @@ assert.doesNotMatch(tariffTableHtml, /\.hero::before|\.hero::after/,
   "La base tarifaire ne doit conserver aucune bulle décorative");
 assert.match(tariffTableHtml, /\.field select\{[^}]*-webkit-appearance:none;appearance:none/,
   "Le sélecteur de la base tarifaire doit être identique sur les différents appareils");
+const SITE = "https://krono-plus-aura.github.io";
+assert.doesNotMatch(appHtml, /chatgpt\.site/,
+  "Aucune balise ne doit plus désigner l'ancien hébergement ChatGPT Sites");
+assert.doesNotMatch(tariffTableHtml, /chatgpt\.site/,
+  "Aucune balise ne doit plus désigner l'ancien hébergement ChatGPT Sites");
+for (const balise of ["og:url", "og:image", "twitter:image"]) {
+  const trouve = appHtml.match(new RegExp(`(?:property|name)="${balise}" content="([^"]+)"`));
+  assert.ok(trouve, `Balise de partage absente : ${balise}`);
+  assert.ok(trouve[1].startsWith(SITE), `${balise} doit pointer vers ${SITE} (trouvé : ${trouve[1]})`);
+}
+const canonique = appHtml.match(/<link rel="canonical" href="([^"]+)"/);
+assert.ok(canonique && canonique[1].startsWith(SITE), "Le lien canonique doit désigner le site GitHub Pages");
+
 assert.equal(manifest.start_url, "/app.html");
 assert.equal(manifest.orientation, "any");
 assert.equal(manifest.background_color, "#7F2171");

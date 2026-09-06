@@ -7,3 +7,6 @@
 # Artefacts locaux
 /dist/
 /outputs/
+
+# Dossier de travail des mises a jour tarifaires (genere par GitHub Actions)
+/preparation/

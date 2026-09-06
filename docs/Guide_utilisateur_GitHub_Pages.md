@@ -57,6 +57,12 @@ Cette préparation se fait une première fois avec Internet :
 Avant une prise de service, ouvrez l'application une fois avec Internet afin de
 recevoir une éventuelle mise à jour tarifaire.
 
+**Sur iPhone et iPad**, le système efface les données mises de côté par une
+application web restée inutilisée pendant environ une semaine. Si vous comptez
+sur le mode hors connexion en zone sans réseau, ouvrez l'application avec
+Internet au moins une fois par semaine : quelques secondes suffisent. Sur
+Android et Crosscall, cet effacement automatique n'existe pas.
+
 ## Dépannage rapide
 
 - **Ancienne version affichée** : ouvrez l'application avec Internet, attendez
