@@ -192,8 +192,12 @@ assert.equal(manifest.start_url, "/app.html");
 assert.equal(manifest.orientation, "any");
 assert.equal(manifest.background_color, "#7F2171");
 assert.equal(manifest.theme_color, "#7F2171");
-assert.match(serviceWorker, new RegExp(`const CACHE_NAME = "krono-${data.meta.version}-r${data.meta.revision}";`),
-  "Le nom du cache doit dériver de meta.version et meta.revision — lancer scripts/sync-app-from-tariff-base.mjs avant de vérifier");
+assert.match(serviceWorker, new RegExp(`const TARIFF_VERSION = "${data.meta.version}-r${data.meta.revision}";`),
+  "La version tarifaire du cache doit dériver de meta.version et meta.revision — lancer scripts/sync-app-from-tariff-base.mjs avant de vérifier");
+assert.match(serviceWorker, /const APP_SHELL_VERSION = "app-[a-f0-9]{12}";/,
+  "Le cache de l'application doit porter une empreinte générée automatiquement");
+assert.match(serviceWorker, /const CACHE_NAME = `krono-\$\{TARIFF_VERSION\}-\$\{APP_SHELL_VERSION\}`;/,
+  "Le cache doit isoler la version tarifaire et la version de l'application");
 assert.doesNotMatch(serviceWorker, /krono-plus-v\d+"/, "Aucun nom de cache ne doit rester écrit en dur (ex. krono-plus-v17)");
 assert.match(serviceWorker, new RegExp(`const TARIFF_DOCUMENT = "${tariffDocument.replaceAll("/", "\\/")}";`));
 assert.match(serviceWorker, /const STABLE_TARIFF_DOCUMENT = "\/tarifs-base\.json";/);
@@ -205,7 +209,9 @@ assert.match(tariffTableHtml, /href="\/app\.html"/, "La base tarifaire doit reve
 assert.match(serviceWorker, /"\/sncf-ter-aura\.webp"/);
 assert.match(serviceWorker, /Promise\.all\(REQUIRED_SHELL\.map/);
 assert.match(serviceWorker, /Promise\.allSettled\(OPTIONAL_SHELL\.map/);
-assert.match(serviceWorker, /isTariff \? freshTariff\(event\.request\) : cacheFirst\(event\.request\)/);
+assert.match(serviceWorker, /const navigation = navigationStrategy\(event\.request\)/);
+assert.match(serviceWorker, /event\.respondWith\(navigation\.response\);[\s\S]*event\.waitUntil\(navigation\.refresh\)/);
+assert.match(serviceWorker, /isStableTariff \? freshTariff\(event\.request\) : cacheFirst\(event\.request\)/);
 assert.match(appHtml, /updateViaCache:"none"/);
 assert.match(appHtml, /async function registerOfflineWorker\(\)/);
 assert.match(appHtml, /if\("serviceWorker" in navigator\)registerOfflineWorker\(\)/);
