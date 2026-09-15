@@ -1,3 +1,4 @@
+import { createHash } from "node:crypto";
 import { readFile, readdir, rm, writeFile } from "node:fs/promises";
 
 // Ce script propage la base tarifaire vers les fichiers publiés.
@@ -12,8 +13,19 @@ const baseUrl = new URL("../public/tarifs-base.json", import.meta.url);
 const fallbackUrl = new URL("../public/tarifs-secours.css", import.meta.url);
 const swUrl = new URL("../public/sw.js", import.meta.url);
 const publicUrl = new URL("../public/", import.meta.url);
+const staticShellUrls = [
+  new URL("../public/index.html", import.meta.url),
+  new URL("../public/manifest.webmanifest", import.meta.url),
+  new URL("../public/icon-192.png", import.meta.url),
+  new URL("../public/icon-512.png", import.meta.url),
+  new URL("../public/icon-maskable-512.png", import.meta.url),
+  new URL("../public/apple-touch-icon.png", import.meta.url),
+  new URL("../public/agc-aura-final.png", import.meta.url),
+  new URL("../public/sncf-ter-aura.webp", import.meta.url),
+];
 
 const baseText = await readFile(baseUrl, "utf8");
+const staticShellAssets = await Promise.all(staticShellUrls.map((url) => readFile(url)));
 const data = JSON.parse(baseText);
 let appHtml = await readFile(appUrl, "utf8");
 let tableHtml = await readFile(tableUrl, "utf8");
@@ -33,9 +45,9 @@ function remplacer(contenu, motif, valeur, fichier, objet) {
   return contenu.replace(motif, valeur);
 }
 
-// Le cache hors ligne change de nom à chaque campagne tarifaire : un agent qui a
-// installé l'app avant une mise à jour reçoit donc bien un nouveau Service Worker
-// au lieu de continuer à servir une base tarifaire périmée depuis le cache.
+// Le cache hors ligne change de nom à chaque campagne tarifaire et à chaque
+// modification de l'application. Cela évite qu'une installation interrompue
+// écrive partiellement dans le cache encore utilisé par l'ancienne version.
 if (!data.meta.version || !Number.isInteger(data.meta.revision)) {
   throw new Error("meta.version et meta.revision (entier) sont obligatoires pour nommer le cache hors ligne.");
 }
@@ -52,10 +64,10 @@ const buildId = `${data.meta.version}-r${data.meta.revision}`;
 const tariffDocument = `/tarifs-base-${buildId}.json`;
 serviceWorker = remplacer(
   serviceWorker,
-  /const CACHE_NAME = "krono-[^"]*";/,
-  `const CACHE_NAME = "krono-${buildId}";`,
+  /const TARIFF_VERSION = "[^"]*";/,
+  `const TARIFF_VERSION = "${buildId}";`,
   "public/sw.js",
-  "le nom du cache hors ligne",
+  "la version tarifaire du cache hors ligne",
 );
 serviceWorker = remplacer(
   serviceWorker,
@@ -125,6 +137,31 @@ const fallbackCss = [
   "",
 ].join("\n");
 
+// Empreinte déterministe du code et des ressources mises en cache. Le nom du
+// cache change automatiquement si l'application, le Service Worker, le manifeste
+// ou une image PWA évolue, même si les tarifs gardent la même révision.
+const normalizedWorker = serviceWorker.replace(
+  /const APP_SHELL_VERSION = "[^"]*";/,
+  'const APP_SHELL_VERSION = "generated";',
+);
+const shellHash = createHash("sha256")
+  .update(normalizedWorker)
+  .update("\0")
+  .update(appHtml)
+  .update("\0")
+  .update(tableHtml)
+  .update("\0")
+  .update(fallbackCss);
+for (const asset of staticShellAssets) shellHash.update("\0").update(asset);
+const appShellVersion = `app-${shellHash.digest("hex").slice(0, 12)}`;
+serviceWorker = remplacer(
+  serviceWorker,
+  /const APP_SHELL_VERSION = "[^"]*";/,
+  `const APP_SHELL_VERSION = "${appShellVersion}";`,
+  "public/sw.js",
+  "l'empreinte du cache de l'application",
+);
+
 // Un nom différent à chaque révision contourne aussi l'ancien Service Worker,
 // qui ignorait les paramètres d'URL et pouvait donc servir un JSON périmé.
 const versionedFileName = tariffDocument.slice(1);
@@ -140,4 +177,4 @@ await Promise.all([
   writeFile(new URL(versionedFileName, publicUrl), baseText),
 ]);
 
-console.log(`Application synchronisée : ${relationCount} relations, ${data.profiles.length} profils, année ${data.meta.year}, cache hors ligne krono-${buildId}.`);
+console.log(`Application synchronisée : ${relationCount} relations, ${data.profiles.length} profils, année ${data.meta.year}, cache hors ligne krono-${buildId}-${appShellVersion}.`);

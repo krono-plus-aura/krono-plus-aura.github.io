@@ -20,6 +20,8 @@ const data = JSON.parse(baseText);
 const buildId = `${data.meta.version}-r${data.meta.revision}`;
 const tariffDocument = `/tarifs-base-${buildId}.json`;
 const versionedBaseText = await read(`public${tariffDocument}`);
+const shellVersion = serviceWorker.match(/const APP_SHELL_VERSION = "([^"]+)";/)?.[1];
+const cacheName = `krono-${buildId}-${shellVersion}`;
 
 test("un nouveau service worker recharge les tarifs une seule fois, sans boucle à l'installation", () => {
   const hook = app.split("\n").find((line) => line.includes('addEventListener("controllerchange"'));
@@ -163,8 +165,11 @@ test("la PWA reste installable et utilisable hors connexion", () => {
   assert.equal(manifest.start_url, "/app.html");
   assert.ok(data.meta.revision >= 6);
   assert.match(serviceWorker, /OFFLINE_DOCUMENT = "\/app\.html"/);
-  assert.match(serviceWorker, new RegExp(`const CACHE_NAME = "krono-${data.meta.version}-r${data.meta.revision}";`),
-    "Le cache doit être nommé d'après la version tarifaire courante, pas une valeur figée en dur");
+  assert.match(serviceWorker, new RegExp(`const TARIFF_VERSION = "${data.meta.version}-r${data.meta.revision}";`));
+  assert.match(shellVersion, /^app-[a-f0-9]{12}$/,
+    "Le cache de l'application doit porter une empreinte générée automatiquement");
+  assert.match(serviceWorker, /const CACHE_NAME = `krono-\$\{TARIFF_VERSION\}-\$\{APP_SHELL_VERSION\}`;/);
+  assert.match(serviceWorker, /const NETWORK_TIMEOUT_MS = 3000;/);
   assert.ok(serviceWorker.includes(`const TARIFF_DOCUMENT = "${tariffDocument}";`));
   assert.match(serviceWorker, /const STABLE_TARIFF_DOCUMENT = "\/tarifs-base\.json";/);
   assert.match(serviceWorker, /NAVIGATION_FALLBACKS = \[OFFLINE_DOCUMENT\]/);
@@ -172,7 +177,9 @@ test("la PWA reste installable et utilisable hors connexion", () => {
   assert.match(serviceWorker, /"\/sncf-ter-aura\.webp"/);
   assert.match(serviceWorker, /Promise\.all\(REQUIRED_SHELL\.map/);
   assert.match(serviceWorker, /Promise\.allSettled\(OPTIONAL_SHELL\.map/);
-  assert.match(serviceWorker, /isTariff \? freshTariff\(event\.request\) : cacheFirst\(event\.request\)/);
+  assert.match(serviceWorker, /const navigation = navigationStrategy\(event\.request\)/);
+  assert.match(serviceWorker, /event\.respondWith\(navigation\.response\);[\s\S]*event\.waitUntil\(navigation\.refresh\)/);
+  assert.match(serviceWorker, /isStableTariff \? freshTariff\(event\.request\) : cacheFirst\(event\.request\)/);
   assert.match(app, /async function registerOfflineWorker\(\)/);
   assert.match(app, /if\("serviceWorker" in navigator\)registerOfflineWorker\(\)/);
   assert.ok(app.indexOf("registerOfflineWorker();") < app.indexOf(`fetch("${tariffDocument}"`),
@@ -219,7 +226,9 @@ test("le cache PWA sert réellement l’application et les tarifs quand le rése
     },
   };
   const handlers = {};
-  let online = true;
+  let networkMode = "online";
+  let rejectPendingNetwork;
+  let networkCalls = 0;
   const workerSelf = {
     location: { origin },
     clients: { claim: async () => {} },
@@ -227,8 +236,15 @@ test("le cache PWA sert réellement l’application et les tarifs quand le rése
     addEventListener(type, handler) { handlers[type] = handler; },
   };
   const workerFetch = async (request) => {
+    networkCalls++;
     const path = new URL(request.url).pathname;
-    if (!online) throw new Error("Réseau indisponible");
+    if (networkMode === "offline") throw new Error("Réseau indisponible");
+    if (networkMode === "wifi-without-internet") {
+      return new Response("Passerelle indisponible", { status: 503 });
+    }
+    if (networkMode === "degraded") {
+      return new Promise((_, reject) => { rejectPendingNetwork = reject; });
+    }
     return new Response(path === "/app.html" ? app : path, { status: 200 });
   };
   runInNewContext(serviceWorker, {
@@ -238,37 +254,81 @@ test("le cache PWA sert réellement l’application et les tarifs quand le rése
     Request: WorkerRequest,
     Response,
     URL,
+    AbortController,
     Promise,
     Error,
     console,
+    setTimeout,
+    clearTimeout,
   });
 
   let installTask;
   handlers.install({ waitUntil(task) { installTask = task; } });
   await installTask;
-  const cache = buckets.get(`krono-${data.meta.version}-r${data.meta.revision}`);
+  const cache = buckets.get(cacheName);
   assert.ok(cache, "Le cache versionné doit être créé");
   assert.ok(await cache.match("/app.html"));
   assert.ok(await cache.match("/tarifs-base.json"));
   assert.ok(await cache.match(tariffDocument));
   assert.ok(await cache.match("/sncf-ter-aura.webp"));
 
+  const backgroundTasks = [];
   const fetchThroughWorker = async (request) => {
     let responseTask;
-    handlers.fetch({ request, respondWith(task) { responseTask = task; } });
+    handlers.fetch({
+      request,
+      respondWith(task) { responseTask = task; },
+      waitUntil(task) { backgroundTasks.push(task); },
+    });
     return responseTask;
   };
-  // Même si le cache contient une ancienne valeur, Internet doit gagner.
-  await cache.put(tariffDocument, new Response("ancien tarif militaire"));
-  const refreshed = await fetchThroughWorker(new WorkerRequest(tariffDocument));
-  assert.equal(await refreshed.text(), tariffDocument);
-  assert.equal(await (await cache.match(tariffDocument)).text(), tariffDocument);
 
-  online = false;
+  // Bon réseau : la page en cache s'affiche d'abord, puis se rafraîchit en arrière-plan.
+  await cache.put("/app.html", new Response("application en cache"));
+  networkMode = "online";
+  const cachedOnline = await fetchThroughWorker(new WorkerRequest("/app.html", { mode: "navigate" }));
+  assert.equal(await cachedOnline.text(), "application en cache");
+  await backgroundTasks.at(-1);
+  assert.match(await (await cache.match("/app.html")).text(), /<!DOCTYPE html>/);
+
+  // Réseau dégradé : une requête qui ne répond pas ne doit jamais retenir l'écran.
+  await cache.put("/app.html", new Response("application immédiate"));
+  networkMode = "degraded";
+  const degraded = await Promise.race([
+    fetchThroughWorker(new WorkerRequest("/app.html", { mode: "navigate" })),
+    new Promise((_, reject) => setTimeout(() => reject(new Error("Ouverture bloquée par le réseau lent")), 100)),
+  ]);
+  assert.equal(await degraded.text(), "application immédiate");
+  rejectPendingNetwork(new Error("Fin de la simulation réseau lent"));
+  await backgroundTasks.at(-1);
+
+  // Wi-Fi sans Internet : une erreur HTTP en arrière-plan ne remplace pas le cache valide.
+  networkMode = "wifi-without-internet";
+  const captive = await fetchThroughWorker(new WorkerRequest("/app.html", { mode: "navigate" }));
+  assert.equal(await captive.text(), "application immédiate");
+  await backgroundTasks.at(-1);
+  assert.equal(await (await cache.match("/app.html")).text(), "application immédiate");
+
+  // Le fichier tarifaire versionné est immuable : s'il est en cache, aucun réseau
+  // lent ne peut bloquer le calcul et aucun ancien chemin stable ne peut le remplacer.
+  await cache.put(tariffDocument, new Response("tarifs versionnés courants"));
+  networkMode = "degraded";
+  const callsBeforeTariff = networkCalls;
+  const cachedTariffs = await fetchThroughWorker(new WorkerRequest(tariffDocument));
+  assert.equal(await cachedTariffs.text(), "tarifs versionnés courants");
+  assert.equal(networkCalls, callsBeforeTariff);
+
+  // Mode avion : navigation connue et tarifs restent disponibles immédiatement.
+  networkMode = "offline";
+  const airplaneNavigation = await fetchThroughWorker(new WorkerRequest("/app.html", { mode: "navigate" }));
+  assert.equal(await airplaneNavigation.text(), "application immédiate");
+  await backgroundTasks.at(-1);
+  const airplaneTariffs = await fetchThroughWorker(new WorkerRequest(tariffDocument));
+  assert.equal(await airplaneTariffs.text(), "tarifs versionnés courants");
+
+  // Une route inconnue retombe toujours sur l'application hors connexion.
   const navigation = await fetchThroughWorker(new WorkerRequest("/trajet-inconnu", { mode: "navigate" }));
-  assert.match(await navigation.text(), /<!DOCTYPE html>/);
-  const tariffs = await fetchThroughWorker(new WorkerRequest(tariffDocument));
-  assert.equal(await tariffs.text(), tariffDocument);
+  assert.equal(await navigation.text(), "application immédiate");
 });
 
 test("une application déjà installée contourne l'ancien JSON mis en cache", async () => {
