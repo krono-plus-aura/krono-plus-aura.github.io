@@ -113,7 +113,15 @@ assert.ok(
   "Aucun tarif au plancher de 1,20 € : le relevé est probablement incomplet ou décalé",
 );
 
-assert.match(appHtml, new RegExp(`fetch\\("${tariffDocument.replaceAll("/", "\\/")}"`));
+assert.match(appHtml, new RegExp(`const TARIFF_DOCUMENT="${tariffDocument.replaceAll("/", "\\/")}";`));
+const embeddedTariffs = appHtml.match(/<script id="tariff-fallback-data" type="application\/json">([\s\S]*?)<\/script>/);
+assert.ok(embeddedTariffs, "La copie locale générée des tarifs est absente de l'application");
+assert.deepEqual(JSON.parse(embeddedTariffs[1]), data,
+  "La copie locale générée doit reproduire exactement public/tarifs-base.json");
+assert.match(appHtml, /DATA=JSON\.parse\(\$\("tariff-fallback-data"\)\.textContent\)/,
+  "L'application doit démarrer depuis la copie locale sans attendre le réseau");
+assert.doesNotMatch(appHtml, /await fetch\([^)]*tarifs-base/,
+  "Le premier affichage ne doit jamais attendre le réseau");
 assert.match(appHtml, /id="result-card"[^>]*hidden/, "Les résultats doivent être masqués avant validation");
 assert.match(appHtml, /id="validate-button"/, "Le bouton Valider est obligatoire");
 assert.match(appHtml, /id="add-traveler"/, "Le sélecteur multi-voyageurs est obligatoire");
@@ -215,10 +223,14 @@ assert.match(serviceWorker, /isStableTariff \? freshTariff\(event\.request\) : c
 assert.match(appHtml, /updateViaCache:"none"/);
 assert.match(appHtml, /async function registerOfflineWorker\(\)/);
 assert.match(appHtml, /if\("serviceWorker" in navigator\)registerOfflineWorker\(\)/);
-assert.ok(appHtml.indexOf("registerOfflineWorker();") < appHtml.indexOf(`fetch("${tariffDocument}"`),
-  "Le service worker doit être lancé avant le chargement asynchrone des tarifs");
-assert.match(appHtml, /await registration\.update\(\)/);
-assert.match(appHtml, /registration\.waiting\.postMessage\(\{type:"SKIP_WAITING"\}\)/);
+assert.ok(appHtml.indexOf("registerOfflineWorker();") < appHtml.indexOf('DATA=JSON.parse($("tariff-fallback-data")'),
+  "Le service worker doit être lancé avant l'initialisation locale des tarifs");
+assert.match(appHtml, /registration\.update\(\)\.catch/,
+  "La vérification de mise à jour doit rester asynchrone");
+assert.doesNotMatch(appHtml, /registration\.waiting|controllerchange|location\.reload\(\)|SKIP_WAITING/,
+  "Une mise à jour ne doit jamais recharger l'application en cours d'utilisation");
+assert.doesNotMatch(serviceWorker, /skipWaiting|SKIP_WAITING/,
+  "Le nouveau Service Worker doit s'activer au prochain lancement");
 
 const directedRoutes = data.stations.length * (data.stations.length - 1);
 const fareStates = directedRoutes * data.profiles.length;
