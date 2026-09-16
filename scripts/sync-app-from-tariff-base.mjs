@@ -78,8 +78,8 @@ serviceWorker = remplacer(
 );
 appHtml = remplacer(
   appHtml,
-  /fetch\("\/tarifs-base(?:-[^"]+)?\.json"/,
-  `fetch("${tariffDocument}"`,
+  /const TARIFF_DOCUMENT="\/tarifs-base(?:-[^"]+)?\.json";/,
+  `const TARIFF_DOCUMENT="${tariffDocument}";`,
   "public/app.html",
   "l'adresse de la base tarifaire versionnée",
 );
@@ -99,6 +99,19 @@ appHtml = remplacer(
   `<footer class="app-footer">Tarifs TER ${data.meta.year}</footer>`,
   "public/app.html",
   "l'année du pied de page",
+);
+
+// La base embarquée est un artefact généré depuis tarifs-base.json. Elle rend
+// le premier écran utilisable dès que app.html est reçu, même si le réseau se
+// bloque avant le chargement d'un second fichier. Elle ne constitue jamais une
+// seconde source à modifier : chaque synchronisation la remplace intégralement.
+const inlineTariffData = JSON.stringify(data).replaceAll("<", "\\u003c");
+appHtml = remplacer(
+  appHtml,
+  /(<script id="tariff-fallback-data" type="application\/json">)[\s\S]*?(<\/script>)/,
+  (_match, opening, closing) => `${opening}${inlineTariffData}${closing}`,
+  "public/app.html",
+  "la copie locale générée de la base tarifaire",
 );
 
 // Page « base tarifaire » : valeurs affichées avant l'exécution du JavaScript.

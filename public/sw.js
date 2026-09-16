@@ -1,5 +1,5 @@
 const TARIFF_VERSION = "2026-09-02-r7";
-const APP_SHELL_VERSION = "app-d62216e3a939";
+const APP_SHELL_VERSION = "app-7d4630b1db2d";
 const CACHE_NAME = `krono-${TARIFF_VERSION}-${APP_SHELL_VERSION}`;
 const NETWORK_TIMEOUT_MS = 3000;
 const OFFLINE_DOCUMENT = "/app.html";
@@ -44,7 +44,6 @@ self.addEventListener("install", (event) => {
     const cache = await caches.open(CACHE_NAME);
     await Promise.all(REQUIRED_SHELL.map((url) => fetchAndCache(cache, url)));
     await Promise.allSettled(OPTIONAL_SHELL.map((url) => fetchAndCache(cache, url)));
-    await self.skipWaiting();
   })());
 });
 
@@ -56,10 +55,6 @@ self.addEventListener("activate", (event) => {
       .map((key) => caches.delete(key)));
     await self.clients.claim();
   })());
-});
-
-self.addEventListener("message", (event) => {
-  if (event.data?.type === "SKIP_WAITING") self.skipWaiting();
 });
 
 async function updateNavigation(cache, request) {

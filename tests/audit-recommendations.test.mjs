@@ -23,27 +23,25 @@ const versionedBaseText = await read(`public${tariffDocument}`);
 const shellVersion = serviceWorker.match(/const APP_SHELL_VERSION = "([^"]+)";/)?.[1];
 const cacheName = `krono-${buildId}-${shellVersion}`;
 
-test("un nouveau service worker recharge les tarifs une seule fois, sans boucle à l'installation", () => {
-  const hook = app.split("\n").find((line) => line.includes('addEventListener("controllerchange"'));
-  assert.ok(hook);
-  for (const alreadyInstalled of [false, true]) {
-    let handler, reloads = 0;
-    const navigator = { serviceWorker: {
-      controller: alreadyInstalled ? {} : null,
-      addEventListener(event, callback) { handler = callback; },
-    } };
-    runInNewContext(hook, { navigator, location: { reload() { reloads++; } } });
-    handler();
-    assert.equal(reloads, alreadyInstalled ? 1 : 0);
-    handler();
-    handler();
-    assert.equal(reloads, 1);
-  }
+test("un nouveau service worker attend le prochain lancement sans interrompre le calcul", () => {
+  assert.match(app, /registration\.update\(\)\.catch/,
+    "La recherche de mise à jour doit rester asynchrone");
+  assert.doesNotMatch(app, /controllerchange|location\.reload\(\)|SKIP_WAITING/,
+    "L'application ouverte ne doit jamais être rechargée par une mise à jour");
+  assert.doesNotMatch(serviceWorker, /skipWaiting|SKIP_WAITING/,
+    "Le nouveau worker doit attendre la fermeture de l'ancienne version");
 });
 
 test("la base tarifaire reste la source unique", () => {
-  assert.ok(app.includes(`fetch("${tariffDocument}"`));
+  assert.ok(app.includes(`const TARIFF_DOCUMENT="${tariffDocument}";`));
   assert.deepEqual(JSON.parse(versionedBaseText), data);
+  const embedded = app.match(/<script id="tariff-fallback-data" type="application\/json">([\s\S]*?)<\/script>/);
+  assert.ok(embedded, "La copie locale générée des tarifs est absente");
+  assert.deepEqual(JSON.parse(embedded[1]), data,
+    "La copie locale doit reproduire exactement tarifs-base.json");
+  assert.match(app, /DATA=JSON\.parse\(\$\("tariff-fallback-data"\)\.textContent\)/);
+  assert.doesNotMatch(app, /await fetch\([^)]*tarifs-base/,
+    "Le premier affichage ne doit jamais attendre le réseau");
   assert.match(app, /href="\/tarifs-secours\.css"/);
   assert.doesNotMatch(app, /const DATA=\{/);
   assert.match(fallback, /FICHIER GÉNÉRÉ — source unique : \/tarifs-base\.json/);
@@ -182,10 +180,11 @@ test("la PWA reste installable et utilisable hors connexion", () => {
   assert.match(serviceWorker, /isStableTariff \? freshTariff\(event\.request\) : cacheFirst\(event\.request\)/);
   assert.match(app, /async function registerOfflineWorker\(\)/);
   assert.match(app, /if\("serviceWorker" in navigator\)registerOfflineWorker\(\)/);
-  assert.ok(app.indexOf("registerOfflineWorker();") < app.indexOf(`fetch("${tariffDocument}"`),
-    "Le service worker doit être lancé avant le chargement asynchrone des tarifs");
-  assert.match(app, /await registration\.update\(\)/);
-  assert.match(app, /registration\.waiting\.postMessage\(\{type:"SKIP_WAITING"\}\)/);
+  assert.ok(app.indexOf("registerOfflineWorker();") < app.indexOf('DATA=JSON.parse($("tariff-fallback-data")'),
+    "Le service worker doit être lancé avant l'initialisation locale des tarifs");
+  assert.match(app, /registration\.update\(\)\.catch/);
+  assert.doesNotMatch(app, /registration\.waiting|controllerchange|location\.reload\(\)|SKIP_WAITING/);
+  assert.doesNotMatch(serviceWorker, /skipWaiting|SKIP_WAITING/);
 });
 
 test("le cache PWA sert réellement l’application et les tarifs quand le réseau tombe", async () => {
